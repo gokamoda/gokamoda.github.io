@@ -1,5 +1,4 @@
 function header(){
-    console.log(1)
     $.ajax({
         url: './template/header.html',
         cache: false,
