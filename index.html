@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/index.css">
-    <script src="/assets/js/logo_move.js" type="module"></script>
+    <!-- <script src="/assets/js/logo_move.js" type="module"></script> -->
+    <script src="/assets/js/email_copy.js"></script>
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,11 +22,10 @@
 
 <body>
     <div class="col col_left">
-        <!-- <div class="links">
-            <a href="/index.html#">TOP</button>
-            <a href="/index.html">CONTACTS</button>
-        </div> -->
         <div class="nav">
+            <a href="/index.html#" class="nav_jump">
+                <img src="/assets/img/logo1.png" alt="logo" class="nav_item nav_top">
+            </a>
             <a href="/index.html#past" class="nav_jump">
                 <img src="/assets/img/nav_past.png" alt="past" class="nav_item nav_item_past">
             </a>
@@ -61,10 +61,15 @@
                             </a>
                         </div>
                         <div class="email">
+                            <button type="button" onclick="email_copy()">
+                                <i class="fa-solid fa-envelope"></i>
+                            </button>
+                        </div>
+                        <!-- <div class="email">
                             <a href="mailto:go.kamoda@dc.tohoku.ac.jp" target="_blank">
                                 <i class="fa-solid fa-envelope"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -160,9 +165,9 @@
         </div>
     </div>
     <div class="col col_right"></div>
-    <a href="/index.html#" class="logo" id = "logo">
+    <!-- <a href="/index.html#" class="logo" id = "logo">
         <img src="/assets/img/logo1.png" alt="logo">
-    </a>
+    </a> -->
 </body>
 
 </html>
