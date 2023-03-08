@@ -14,10 +14,10 @@ window.onscroll = function (e) {
     // console.log(window.innerWidth)
     // console.log(window.innerWidth / 4)
 
-    var init_pos_top = window.innerHeight * 0.2;
+    var init_pos_top = window.innerHeight * 0.23;
     var init_pos_right = window.innerWidth * 0.5;
-    var init_height = window.innerHeight * 0.2;
-    var init_width = init_height * 2;
+    var init_height = window.innerHeight * 0.17;
+    var init_width = init_height * 3;
 
     var final_width = document.body.clientWidth / 4;
     var final_height = final_width * 0.5;
