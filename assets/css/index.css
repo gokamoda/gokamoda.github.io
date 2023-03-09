@@ -61,10 +61,6 @@ body {
     margin: 20px auto;
 }
 
-.col_left .links button {
-    line-height: 1.5rem;
-}
-
 .nav{
     margin-top: 20px;
 }
@@ -80,7 +76,10 @@ body {
 }
 
 .nav_item {
-    width: 85%;
+    width: 70%;
+}
+.nav_top {
+    width: 90%;
 }
 
 .nav_item_present{
@@ -91,7 +90,7 @@ body {
 .profile_image{
     height: 25vh;
     aspect-ratio: 1/1;
-    background-image: url(/assets/img/DALL·E\ 2023-03-02\ 18.49.30\ \(1\).png);
+    background-image: url(/assets/img/profile.jpg);
     background-position: center;
     background-size: cover;
     margin: 0 auto;
