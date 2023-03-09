@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/index.css">
 
     <script src="/assets/js/email_copy.js"></script>
+    <script src="/assets/js/close_hamburger.js"></script>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/fav/apple-touch-icons/apple-touch-icon-152x152.png">
@@ -41,6 +42,48 @@
 </head>
 
 <body>
+    <header class="header_small">
+        <!-- ヘッダーロゴ -->
+
+        <div class="logo_small">LOGO</div>
+
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="nav_small">
+
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input id="drawer_input" class="drawer_hidden_small" type="checkbox">
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer_input" class="drawer_open_small"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="nav_content_small">
+                <ul class="nav_list_small">
+                    <li class="nav_item_small">
+                        <a href="/index.html#" class="nav_jump" onclick="close_hamburger()">
+                            <img src="/assets/img/logo1.png" alt="logo" class="nav_item nav_top">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.html#past" class="nav_jump" onclick="close_hamburger()">
+                            <img src="/assets/img/nav_past.png" alt="past" class="nav_item nav_item_past">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/index.html#present" class="nav_jump" onclick="close_hamburger()">
+                            <img src="/assets/img/nav_present.png" alt="present" class="nav_item nav_item_present" >
+                        </a>
+                    </li>
+                    <li class="nav_item_small">
+                        <a href="/index.html#future" class="nav_jump" onclick="close_hamburger()">
+                            <img src="/assets/img/nav_future.png" alt="present" class="nav_item nav_item_future">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
     <div class="col col_left">
         <div class="nav">
             <a href="/index.html#" class="nav_jump">
@@ -85,11 +128,6 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </button>
                         </div>
-                        <!-- <div class="email">
-                            <a href="mailto:go.kamoda@dc.tohoku.ac.jp" target="_blank">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                        </div> -->
                     </div>
                 </div>
 
@@ -106,8 +144,13 @@
                     <div class="main_subsection">
                         <h2>Carrer/経歴</h2>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, natus minima modi
-                            laborum amet ipsam voluptate officiis deleniti laboriosam minus!
+                            2015 - 2020: Chuo Secondary School (Gunma, Japan)
+                            <br>
+                            2013 - 2015: Community Middle School (NJ, USA)
+                            <br>
+                            2011 - 2013: Millstone River School (NJ, USA)
+                            <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, natus minima modi
+                            laborum amet ipsam voluptate officiis deleniti laboriosam minus! -->
                             <!-- 2011年に渡米し4年間Princeton, NJで過ごす．
                             帰国後，群馬県立中央中等教育学校に編入．
                             在学中はテニス部に所属．
@@ -141,28 +184,19 @@
                     <div class="main_subsection">
                         <h2>Affiliation</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci harum velit eos sequi
-                            quidem.
-                            Ipsam at nobis non possimus facere modi, culpa natus unde sunt dolores vitae esse error rem
-                            molestias neque adipisci veniam quos quibusdam! Earum aspernatur rem dicta!
+                            2020 - : Tohoku University
+                            <br>
+                            2022 - : TohokuNLP
+                            <br>
+                            2021 - : DMM WebCamp (Internship)
                         </p>
                     </div>
                     <div class="main_subsection">
-                        <h2>Affiliation</h2>
+                        <h2>Skills</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci harum velit eos sequi
-                            quidem.
-                            Ipsam at nobis non possimus facere modi, culpa natus unde sunt dolores vitae esse error rem
-                            molestias neque adipisci veniam quos quibusdam! Earum aspernatur rem dicta!
-                        </p>
-                    </div>
-                    <div class="main_subsection">
-                        <h2>Affiliation</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci harum velit eos sequi
-                            quidem.
-                            Ipsam at nobis non possimus facere modi, culpa natus unde sunt dolores vitae esse error rem
-                            molestias neque adipisci veniam quos quibusdam! Earum aspernatur rem dicta!
+                            English: Native (TOEIC 980, EIKEN Grade 1)
+                            <br>
+                            Python: Intermediate
                         </p>
                     </div>
 
