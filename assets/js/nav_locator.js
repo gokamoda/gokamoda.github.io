@@ -1,10 +1,16 @@
 function focus(id){
-    var element = document.getElementById(id);
-    element.style.marginLeft = "15px";
+    // var element = document.getElementById(id);
+    var element1 = document.getElementsByName(id)[0]
+    var element2 = document.getElementsByName(id)[1]
+    element1.style.marginLeft = "20px";
+    element2.style.marginLeft = "15px";
 }
 function unfocus(id){
-    var element = document.getElementById(id);
-    element.style.marginLeft = "0px";
+    // var element = document.getElementById(id);
+    var element1 = document.getElementsByName(id)[0]
+    var element2 = document.getElementsByName(id)[1]
+    element1.style.marginLeft = "-20px";
+    element2.style.marginLeft = "0px";
 }
 
 window.onscroll = function (e) {

@@ -2,9 +2,9 @@ function email_copy(){
     var email = "go.kamoda@dc.tohoku.ac.jp";
     if(navigator.clipboard) {
         navigator.clipboard.writeText(email).then(function() {
-          alert('email copied')
+          alert('Email address copied')
         });
       } else {
-          alert('対応していません。');
+          alert('Copy failed. Email address is go.kamoda@dc.tohoku.ac.jp');
       }
 };

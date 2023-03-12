@@ -331,4 +331,13 @@ a {
     .header_small{
         display: flex;
     }
+
+    .nav_item{
+        margin-left: -20px
+    }
+
+    .nav_item:first-child{
+        margin-left: 0;
+    }
+
 }
