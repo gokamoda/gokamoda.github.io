@@ -285,6 +285,17 @@ body {
     background-color: #272727;
 }
 
+.section_image.section_image_past{
+    background-image: url(/assets/img/D20_0020.JPG);;
+}
+
+.section_image.section_image_present{
+    background-image: url(/assets/img/img_future.png);;
+}
+
+.section_image.section_image_future{
+    background-image: url(/assets/img/DSC_0075_3.JPG);;
+}
 .main_subsection {
     height: 33%;
     width: 100%;
@@ -307,7 +318,7 @@ body {
 }
 
 .section_p {
-    height: 55%;
+    height: 56%;
     width: 100%;
     overflow: hidden;
 }
