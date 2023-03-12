@@ -233,8 +233,7 @@ body {
 
 
 .main_top {
-    height: 75vh;
-    height: calc(var(--vh, 1vh) * 75);
+    height: 75dvh;
     width: 100%;
 }
 .main_top,
