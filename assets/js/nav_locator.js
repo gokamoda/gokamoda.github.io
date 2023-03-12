@@ -1,3 +1,12 @@
+function focus(id){
+    var element = document.getElementById(id);
+    element.style.marginLeft = "15px";
+}
+function unfocus(id){
+    var element = document.getElementById(id);
+    element.style.marginLeft = "0px";
+}
+
 window.onscroll = function (e) {
     var vertical_position = 0;
     if (scrollY)//usual
@@ -12,14 +21,21 @@ window.onscroll = function (e) {
     var page_height = window.innerHeight;
     var offset = page_height / 2
     if (vertical_position < page_height - offset) {
-        console.log('top')
+        unfocus('nav_past')
+        unfocus('nav_present')
+        unfocus('nav_future')
     } else if(vertical_position >= page_height - offset && vertical_position < page_height * 2 - offset){
-        focus('nav_item_past')
-        console.log('1')
+        focus('nav_past')
+        unfocus('nav_present')
+        unfocus('nav_future')
     }else if(vertical_position >= page_height * 2 - offset && vertical_position < page_height * 3 - offset){
-        console.log('2')
+        unfocus('nav_past')
+        focus('nav_present')
+        unfocus('nav_future')
     }else if(vertical_position >= page_height * 3 - offset && vertical_position < page_height * 4 - offset){
-        console.log('3')
+        unfocus('nav_past')
+        unfocus('nav_present')
+        focus('nav_future')
     }
     // var logo_div = document.getElementById('logo');
     // var right_div = document.getElementsByClassName('col_right')[0];
@@ -94,15 +110,5 @@ end:
   height: 20hw
 */
 
-function focus(class_name){
-    var element = document.getElementsByClassName(class_name)[0];
-    element.style.marginLeft = "20px";
-    console.log(element)
-    element.setAttribute('style', 'margin-left: 0px;')
-}
 
-function unfocus(classname){
-    var element = document.getElementsByClassName(classname)[0];
-    console.log(element)
-    element.style.marginLeft = "20px";
-}
+
