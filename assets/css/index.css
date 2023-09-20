@@ -215,7 +215,8 @@ body {
 .profile_image {
     height: 25vh;
     aspect-ratio: 1/1;
-    background-image: url(/assets/img/profile.jpg);
+    /* background-image: url(/assets/img/profile.jpg); */
+    background-image: url(/assets/img/graduation_23-27\ \(1\).jpeg);
     background-position: center;
     background-size: cover;
     margin: 0 auto;
@@ -230,6 +231,7 @@ body {
 
 .main_section {
     height: 100vh;
+    min-height: 748px;
     padding: 5px;
 }
 
@@ -352,4 +354,10 @@ a {
         margin-left: 0;
     }
 
+}
+
+.fa-twitter:before {
+    content: '𝕏' !important;
+    font-family: sans-serif !important;
+    font-weight: bold;
 }
