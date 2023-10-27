@@ -5,8 +5,9 @@
     color: white;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Noto Sans JP', sans-serif;
-    ;
+    color-scheme: dark;
     scroll-behavior: smooth;
+
 }
 
 .header_small {
@@ -140,6 +141,7 @@ body {
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode: lighten;
+    /* background-repeat: repeat; */
 }
 
 .col_left,
