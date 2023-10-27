@@ -146,7 +146,7 @@ body {
 .col_right {
     width: 25%;
     position: fixed;
-    height: 100vh;
+    height: 100dvh;
 
 }
 
@@ -207,13 +207,13 @@ body {
     justify-content: center;
     text-align: center;
     position: absolute;
-    bottom: 3vh;
+    bottom: 3dvh;
     transform: translate(0, -50%);
 }
 
 
 .profile_image {
-    height: 25vh;
+    height: 25dvh;
     aspect-ratio: 1/1;
     /* background-image: url(/assets/img/profile.jpg); */
     background-image: url(/assets/img/graduation_23-27\ \(1\).jpeg);
@@ -229,10 +229,18 @@ body {
     justify-content: center;
 }
 
+.main.small_margin{
+    margin: 18dvh auto 0;
+}
+
 .main_section {
-    height: 100vh;
-    min-height: 748px;
+    height: 100dvh;
+    min-height: 600px;
     padding: 5px;
+}
+
+.readmore_section {
+    padding: 5px
 }
 
 
@@ -264,12 +272,12 @@ body {
     display: flex;
     justify-content: space-around;
     width: 60%;
-    margin: 7vh auto;
+    margin: 7dvh auto;
     font-size: xx-large;
 }
 
 .readmore {
-    height: 4vh;
+    height: 4dvh;
     margin: 0 auto;
 }
 
@@ -316,7 +324,7 @@ body {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 1;
 }
 
 .section_p {
@@ -329,6 +337,60 @@ body {
 
 a {
     text-decoration: none;
+}
+
+
+
+.publication_card {
+    border: 1px solid #989898;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.publication_author {
+    color: #989898;
+}
+
+.publication_link {
+    border: 1px solid #989898;
+    border-radius: 0.3em;
+    padding: 0 0.2em;
+    margin-top: 0.4em;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.backlink_parent{
+    line-height: 3em;
+    padding: 0 5px;
+}
+
+
+.career_card{
+    /* background-color: aqua; */
+    display: flex;
+    padding: 10px 0;
+}
+
+.career_head{
+    /* background-color: aquamarine; */
+    width: 40%;
+}
+
+.career_head h4 {
+    color: #989898;
+}
+
+.career_detail{
+    width: 60%;
+    /* padding: 1em; */
+}
+
+.fa-twitter:before {
+    content: '𝕏' !important;
+    font-family: sans-serif !important;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
@@ -354,10 +416,8 @@ a {
         margin-left: 0;
     }
 
-}
+    .main_top .icons {
+        width: 80%;
+    }
 
-.fa-twitter:before {
-    content: '𝕏' !important;
-    font-family: sans-serif !important;
-    font-weight: bold;
 }
