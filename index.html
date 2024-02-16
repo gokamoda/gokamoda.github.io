@@ -36,8 +36,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/custom_style.css">
 </head>
+
+<style>
+    * {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background-image: url(/assets/img/bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.image-round {
+    display: block;
+    height: 25dvh;
+    /* max-width: 50%; */
+    aspect-ratio: 1/1;
+    /* background-image: url(/assets/img/profile.jpg); */
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.image-round[name="profile"] {
+    background-image: url(/assets/img/graduation_23-27\ \(1\).jpeg);
+}
+
+.section-image {
+    max-height: 30dvh;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-image: url(/assets/img/noimage.png);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(39, 39, 39, 0.6);
+}
+
+.section-image.section-image-past {
+    background-image: url(/assets/img/D20_0020.JPG);
+}
+
+.section-image.section-image-present {
+    background-image: url(/assets/img/img_future.png);
+}
+
+.section-image.section-image-future {
+    background-image: url(/assets/img/DSC_0075_3.JPG);
+}
+
+.btn-outline-secondary{
+    color: white;
+}
+
+.text-author{
+    color: #989898;
+}
+
+.text-education-head{
+    color: #d7d7d7;
+}
+
+.card.publication{
+    background-color: rgba(39, 39, 39, 0.6);
+}
+
+.card {
+    background-color: #333333;
+    color: white;
+}
+
+.fa-twitter:before {
+    content: '𝕏' !important;
+    font-family: sans-serif !important;
+    font-weight: bold;
+}
+</style>
 
 <body>
     <div class="container">
