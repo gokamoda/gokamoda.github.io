@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Go Kamoda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <script src="/assets/js/email_copy.js"></script>
-    
+
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/fav/apple-touch-icons/apple-touch-icon-152x152.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon/tmp/icon-32.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon/tmp/icon-16.ico">
     <link rel="shortcut icon" href="/assets/fav/favicon/favicon.ico">
-    
-    
+
+
     <!-- Google tag (gtag.js) -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQCS7FXG9"></script>
     <script>
@@ -26,115 +26,132 @@
         
         gtag('config', 'G-DDQCS7FXG9');
     </script> -->
-    
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <style>
     * {
-    font-family: 'Noto Sans JP', sans-serif;
-}
+        font-family: 'Noto Sans JP', sans-serif;
+    }
 
-body {
-    background-image: url(/assets/img/bg.png);
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.1);
-    background-blend-mode: lighten;
-    color: white;
-}
+    body {
+        background-image: url(/assets/img/bg.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.1);
+        background-blend-mode: lighten;
+        color: white;
+    }
 
-h1,
-h2,
-h3 {
-    font-family: 'Zen Maru Gothic', sans-serif;
-}
+    h1,
+    h2,
+    h3 {
+        font-family: 'Zen Maru Gothic', sans-serif;
+    }
 
-.image-round {
-    display: block;
-    height: 25dvh;
-    /* max-width: 50%; */
-    aspect-ratio: 1/1;
-    /* background-image: url(/assets/img/profile.jpg); */
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
-    border-radius: 50%;
-}
+    .image-round {
+        display: block;
+        /* height: 25dvh; */
+        /* max-width: 50%; */
+        width: 50%;
+        max-width: 250px;
+        aspect-ratio: 1/1;
+        /* background-image: url(/assets/img/profile.jpg); */
+        background-position: center;
+        background-size: cover;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
 
-.image-round[name="profile"] {
-    background-image: url(/assets/img/graduation_23-27\ \(1\).jpeg);
-}
+    .image-round[name="profile"] {
+        background-image: url(/assets/img/graduation_23-27\ \(1\).jpeg);
+    }
 
-.section-image {
-    max-height: 30dvh;
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-image: url(/assets/img/noimage.png);
-    background-position: center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-color: rgba(39, 39, 39, 0.6);
-}
+    .section-image {
+        max-height: 30dvh;
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-image: url(/assets/img/noimage.png);
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-color: rgba(39, 39, 39, 0.6);
+    }
 
-.section-image.section-image-past {
-    background-image: url(/assets/img/D20_0020.JPG);
-}
+    .section-image.section-image-past {
+        background-image: url(/assets/img/D20_0020.JPG);
+    }
 
-.section-image.section-image-present {
-    background-image: url(/assets/img/img_future.png);
-}
+    .section-image.section-image-present {
+        background-image: url(/assets/img/img_future.png);
+    }
 
-.section-image.section-image-future {
-    background-image: url(/assets/img/DSC_0075_3.JPG);
-}
+    .section-image.section-image-future {
+        background-image: url(/assets/img/DSC_0075_3.JPG);
+    }
 
-.btn-outline-secondary{
-    color: white;
-}
+    .btn-outline-secondary {
+        color: white;
+    }
 
-.text-author{
-    color: #989898;
-}
+    .text-author {
+        color: #989898;
+    }
 
-.text-education-head{
-    color: #d7d7d7;
-}
+    .text-education-head {
+        color: #d7d7d7;
+    }
 
-.card.publication{
-    background-color: rgba(39, 39, 39, 0.6);
-}
+    .card.publication {
+        background-color: rgba(39, 39, 39, 0.6);
+    }
 
-.card {
-    background-color: #333333;
-    color: white;
-}
+    .card {
+        background-color: #333333;
+        color: white;
+    }
 
-.fa-twitter:before {
-    content: '𝕏' !important;
-    font-family: sans-serif !important;
-    font-weight: bold;
-}
+    .fa-twitter:before {
+        content: '𝕏' !important;
+        font-family: sans-serif !important;
+        font-weight: bold;
+    }
 </style>
 
 <body>
-    <div class="container">
+    <div class="container-lg">
 
         <div class="row">
-            <div class="col-2">
-
+            <div class="col-2 position-fixed d-none d-sm-none d-md-block" style="max-width: 200px;">
+                <div class="row">
+                    <div class="col-11">
+                        <a href="/" class="w-100">
+                            <img src="/assets/img/logo1.png" alt="logo" class="img-fluid">
+                        </a>
+                        <a href="/#past" class="nav_jump_past">
+                            <img src="/assets/img/nav_past.png" alt="past" class="img-fluid w-75" name="nav_past">
+                        </a>
+                        <a href="/#present" class="nav_jump_present">
+                            <img src="/assets/img/nav_present.png" alt="present" class="img-fluid w-75" name="nav_present">
+                        </a>
+                        <a href="/#future" class="nav_jump_future">
+                            <img src="/assets/img/nav_future.png" alt="present" class="img-fluid w-75" name="nav_future">
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- main -->
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 offset-md-2">
 
                 <!-- Bio -->
                 <div class="vh-100 d-flex align-items-center border-bottom">
@@ -175,7 +192,7 @@ h3 {
                 </div>
 
                 <!-- Past -->
-                <div class="border-bottom pb-5">
+                <div class="border-bottom pb-5" id="past">
                     <h2 class="my-4">Past</h2>
                     <div class="section-image section-image-past"></div>
                     <h3 class="mt-4">Projects</h3>
@@ -185,15 +202,15 @@ h3 {
                             Go Kamoda, Benjamin Heinzerling, Keisuke Sakaguchi, Kentaro Inui<br>
                             EMNLP2023 Findings
                         </p>
-                        <div class="d-flex justify-content-start g-2">
+                        <div class="g-2">
                             <a href="https://aclanthology.org/2023.findings-emnlp.236/" role="button"
-                                class="btn btn-outline-secondary me-2" target="_blank">Paper</a>
+                                class="btn btn-outline-secondary me-2 mb-2" target="_blank">Paper</a>
                             <a href="https://github.com/gokamoda/TTA4FactualProbing" role="button"
-                                class="btn btn-outline-secondary me-2" target="_blank">GitHub</a>
+                                class="btn btn-outline-secondary me-2 mb-2" target="_blank">GitHub</a>
                             <a href="https://underline.io/events/431/posters/16529/poster/90277-test-time-augmentation-for-factual-probing"
-                                class="btn btn-outline-secondary me-2" target="_blank">Underline</a>
+                                class="btn btn-outline-secondary me-2 mb-2" target="_blank">Underline</a>
                             <a href="javascript:cite_copy('kamoda-etal-2023-test');"
-                                class="btn btn-outline-secondary me-2">Cite</a>
+                                class="btn btn-outline-secondary me-2 mb-2">Cite</a>
                         </div>
                     </div>
                     <div class="card publication p-2 publication my-3" id="emnlp2023">
@@ -201,13 +218,13 @@ h3 {
                         <p class="text-author ">
                             Social Impact Creators' Accelerator Program
                         </p>
-                        <div class="d-flex justify-content-start g-2">
-                            <a href="https://mitouteki.jp/about/" role="button" class="btn btn-outline-secondary me-2"
+                        <div class="g-2">
+                            <a href="https://mitouteki.jp/about/" role="button" class="btn btn-outline-secondary me-2 mb-2"
                                 target="_blank">AKATSUKI</a>
-                            <a href="https://sica-tohoku.com/" role="button" class="btn btn-outline-secondary me-2"
+                            <a href="https://sica-tohoku.com/" role="button" class="btn btn-outline-secondary me-2 mb-2"
                                 target="_blank">SICA</a>
                             <a href="https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/detail/U3NWU05wcHViK2VHc3RSYTJZeFVhZz09"
-                                role="button" class="btn btn-outline-secondary me-2" target="_blank">Open Badge</a>
+                                role="button" class="btn btn-outline-secondary me-2 mb-2" target="_blank">Open Badge</a>
                         </div>
                     </div>
                     <div class="card publication p-2 publication my-3" id="emnlp2023">
@@ -215,10 +232,10 @@ h3 {
                         <p class="text-author ">
                             Japanese quiz competition for AI systems
                         </p>
-                        <div class="d-flex justify-content-start g-2">
+                        <div class="g-2">
                             <a href="https://sites.google.com/view/project-aio/competition4" role="button"
-                                class="btn btn-outline-secondary me-2" target="_blank">Web</a>
-                            <a href="https://youtu.be/5pT5t6e_bLo" role="button" class="btn btn-outline-secondary me-2"
+                                class="btn btn-outline-secondary me-2 mb-2" target="_blank">Web</a>
+                            <a href="https://youtu.be/5pT5t6e_bLo" role="button" class="btn btn-outline-secondary me-2 mb-2"
                                 target="_blank">YouTube</a>
                         </div>
                     </div>
@@ -268,7 +285,7 @@ h3 {
                 </div>
 
                 <!-- Present -->
-                <div class="border-bottom pb-3">
+                <div class="border-bottom pb-3" id="present">
                     <h2 class="my-4">Present</h2>
                     <div class="section-image section-image-present"></div>
                     <h3 class="mt-4">Affiliation</h3>
@@ -311,7 +328,7 @@ h3 {
                 </div>
 
                 <!-- Future -->
-                <div class="border-bottom pb-3">
+                <div class="border-bottom pb-3" id="future">
                     <h2 class="my-4">Future</h2>
                     <div class="section-image section-image-future"></div>
                     <p>
@@ -325,7 +342,7 @@ h3 {
                 crossorigin="anonymous">
                 </script>
         </div>
-    </div>  
+    </div>
 </body>
 
 </html>
