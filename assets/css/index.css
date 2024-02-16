@@ -151,7 +151,6 @@ body {
     width: 25%;
     position: fixed;
     height: 100dvh;
-
 }
 
 .col_left {
@@ -290,8 +289,8 @@ body {
 }
 
 .section_image {
-    height: 30%;
-    width: 100%;
+    max-height: 30dvh;
+    /* width: 100%; */
     background-image: url(/assets/img/noimage.png);
     background-position: center;
     background-size: auto 100%;
