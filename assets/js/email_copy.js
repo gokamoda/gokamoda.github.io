@@ -27,7 +27,7 @@ cite_map = {
 function cite_copy(key){
   if(navigator.clipboard) {
       navigator.clipboard.writeText(cite_map[key]).then(function() {
-        alert('Cpied')
+        alert('Copied')
       });
     } else {
         alert('Copy failed. BibTeX is ' + cite_map[key]);

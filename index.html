@@ -47,6 +47,10 @@
         color-scheme: light dark;
     }
 
+    nav {
+        background-color: rgba(39, 39, 39, 0.0);
+    }
+
     body {
         background-image: url(/assets/img/bg.png);
         background-attachment: fixed;
@@ -81,7 +85,7 @@
     }
 
     .section-image {
-        max-height: 30dvh;
+        max-height: 200px;
         width: 100%;
         aspect-ratio: 16/9;
         background-image: url(/assets/img/noimage.png);
@@ -132,26 +136,65 @@
 </style>
 
 <body>
-    <div class="container-lg">
+    <!-- <div class="container-xl d-block d-md-none  position-fixed">
+        <nav class="navbar navbar-dark navbar-expand-xl">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-secondary vh-100" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="d-flex justify-content-center">
+                            <a href="/" class="w-50">
+                                <img src="/assets/img/logo1.png" alt="logo" class="img-fluid" style="margin-left: 0px">
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="/" class="w-50">
+                                <img src="/assets/img/logo1.png" alt="logo" class="img-fluid" style="margin-left: 0px">
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> -->
 
+    <div class="container-xl">
         <div class="row">
-            <div class="col-2 position-fixed d-none d-sm-none d-md-block mt-2" style="max-width: 200px;">
-                <div class="row">
-                    <div class="col-11">
-                        <a href="/" class="w-100">
-                            <img src="/assets/img/logo1.png" alt="logo" class="img-fluid">
-                        </a>
-                        <a href="/#past" class="nav_jump_past">
-                            <img src="/assets/img/nav_past.png" alt="past" class="img-fluid w-75" name="nav_past">
-                        </a>
-                        <a href="/#present" class="nav_jump_present">
-                            <img src="/assets/img/nav_present.png" alt="present" class="img-fluid w-75"
-                                name="nav_present">
-                        </a>
-                        <a href="/#future" class="nav_jump_future">
-                            <img src="/assets/img/nav_future.png" alt="present" class="img-fluid w-75"
-                                name="nav_future">
-                        </a>
+            <div class="col-2 position-fixed d-none d-sm-none d-md-block mt-2 vh-100" style="max-width: 200px;"
+                id="navbarSupportedContent">
+                <div class="d-flex align-items-start flex-column mb-3 h-100 z-2">
+                    <div class="row mb-auto p-2">
+                        <div class="col-11">
+                            <a href="/" class="w-100">
+                                <img src="/assets/img/logo1.png" alt="logo" class="img-fluid" style="margin-left: 0px">
+                            </a>
+                            <a href="/#past" class="nav_jump_past">
+                                <img src="/assets/img/nav_past.png" alt="past" class="img-fluid w-75" name="nav_past"
+                                    style="margin-left: 0px">
+                            </a>
+                            <a href="/#present" class="nav_jump_present">
+                                <img src="/assets/img/nav_present.png" alt="present" class="img-fluid w-75"
+                                    name="nav_present" style="margin-left: 0px">
+                            </a>
+                            <a href="/#future" class="nav_jump_future">
+                                <img src="/assets/img/nav_future.png" alt="present" class="img-fluid w-75"
+                                    name="nav_future" style="margin-left: 0px">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col-11 d-flex align-items-end">
+                            <p class="text-center">
+                                © 2023 Go Kamoda<br>
+                                Original design by <a href="https://tamakiagency.wixsite.com/homepage"
+                                    class="link-light" target="_blank">Tamaki</a><br>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -348,7 +391,7 @@
                 </div>
 
                 <!-- Future -->
-                <div class="border-bottom pb-3" id="future">
+                <div class="border-bottom pb-3" id="future" style="min-height: calc(0.8 * 100dvh);">
                     <h2 class="my-4">Future</h2>
                     <div class="section-image section-image-future"></div>
                     <p>
@@ -361,6 +404,7 @@
                 integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
                 crossorigin="anonymous">
                 </script>
+            <script src="assets/js/nav_locator.js"></script>
         </div>
     </div>
 </body>
