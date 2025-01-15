@@ -1,0 +1,12 @@
+{% if page.bib_entry == "proceedings" %}
+{% highlight bib %}
+@proceedings{ {{page.bib_key}},
+    author = { {{page.authors  | join: " and "}} },
+    title = { {{page.title}} },
+    booktitle = { {{page.venue}} },
+    year = { {{page.year}} }
+}
+{% endhighlight %}
+{% else %}
+    aa
+{% endif %}
