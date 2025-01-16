@@ -13,9 +13,24 @@ layout: default
   }
 </style>
 
+<script>
+  function email_copy() {
+    var email = "go.kamoda@dc.tohoku.ac.jp";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(function () {
+        alert('Email address copied')
+      });
+    } else {
+      alert('Copy failed. Email address is go.kamoda@dc.tohoku.ac.jp');
+    }
+  };
+</script>
+
+
+
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   <div class="profile">
@@ -30,117 +45,117 @@ layout: default
 
       <div class="profile-row">
         <a href="https://github.com/gokamoda" target="_blank">
-            <i class="fab fa-github"></i>
+          <i class="fab fa-github"></i>
         </a>
         <a href="https://www.linkedin.com/in/gokamoda" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-linkedin"></i>
         </a>
         <a href="https://twitter.com/go2oo2" target="_blank">
-            <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-twitter"></i>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61552671941935" class="link-light"
-            target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-            <a href="javascript:void(0);"  onclick="email_copy()">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-    </div>
+        <a href="https://www.facebook.com/profile.php?id=61552671941935" class="link-light" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+          <a href="javascript:void(0);" onclick="email_copy()">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </a>
+      </div>
 
     </div>
-    
+
   </div>
 
   {% if site.publications.size > 0 %}
-    <h2 class="publication-list-heading">Publications</h2>
-    <div class="publications-container">
-      {% assign sorted_publications = site.publications | sort: 'month' | reverse | sort: 'year' | reverse %}
-      {%- for publication in sorted_publications -%}
-        <div class="publication-container">
-          <h4 class="publication-title">
-            {% if publication.has_content %}
-              <a href="{{ publication.url | relative_url }}">
-                {{ publication.title | escape }}
-              </a>
-            {% else %}
-              {{ publication.title | escape }}
-            {% endif %}
-          </h4>
-          <p class="publication-authors">
-            {%- for author in publication.authors -%}
-              {%- if forloop.last == false -%}
-                {% if site.author_alias contains author %}
-                  <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
-                {% else %}
-                  {{ author | escape }},&nbsp;
-                {% endif %}
-              {%- else -%}
-                {% if site.author_alias contains author %}
-                  <span class="underline">{{ author | escape }}</span>
-                {% else %}
-                  {{ author | escape }}
-                {% endif %}
-              {%- endif -%}
-            {%- endfor -%}
-          </p>
-          <p class="publication-venue">
-            In {{ publication.venue | escape }}
-          </p>
-          <p class="publication-links">
-            {%- for link in publication.links -%}
-              <a href="{{ link.url }}" class="btn btn-{{ link.type }}" target="_blank" >{{ link.name | escape }}</a>
-            {%- endfor -%}
+  <h2 class="publication-list-heading">Publications</h2>
+  <div class="publications-container">
+    {% assign sorted_publications = site.publications | sort: 'month' | reverse | sort: 'year' | reverse %}
+    {%- for publication in sorted_publications -%}
+    <div class="publication-container">
+      <h4 class="publication-title">
+        {% if publication.has_content %}
+        <a href="{{ publication.url | relative_url }}">
+          {{ publication.title | escape }}
+        </a>
+        {% else %}
+        {{ publication.title | escape }}
+        {% endif %}
+      </h4>
+      <p class="publication-authors">
+        {%- for author in publication.authors -%}
+        {%- if forloop.last == false -%}
+        {% if site.author_alias contains author %}
+        <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
+        {% else %}
+        {{ author | escape }},&nbsp;
+        {% endif %}
+        {%- else -%}
+        {% if site.author_alias contains author %}
+        <span class="underline">{{ author | escape }}</span>
+        {% else %}
+        {{ author | escape }}
+        {% endif %}
+        {%- endif -%}
+        {%- endfor -%}
+      </p>
+      <p class="publication-venue">
+        In {{ publication.venue | escape }}
+      </p>
+      <p class="publication-links">
+        {%- for link in publication.links -%}
+        <a href="{{ link.url }}" class="btn btn-{{ link.type }}" target="_blank">{{ link.name | escape }}</a>
+        {%- endfor -%}
 
-          </p>
-        </div>
-      {%- endfor -%}
+      </p>
     </div>
+    {%- endfor -%}
+  </div>
   {% endif %}
 
 
   {% if site.domestic_conferences.size > 0 %}
-    <h2 class="publication-list-heading">Domestic Conferences</h2>
-    <div class="publications-container">
-      {% assign sorted_domestic_conferences = site.domestic_conferences | reverse  %}
-      {%- for publication in sorted_domestic_conferences -%}
-        <div class="publication-container">
-          <h4 class="publication-title">
-            {% if publication.has_content %}
-              <a href="{{ publication.url | relative_url }}">
-                {{ publication.title | escape }}
-              </a>
-            {% else %}
-              {{ publication.title | escape }}
-            {% endif %}
-          </h4>
-          <p class="publication-authors">
-            {%- for author in publication.authors -%}
-              {%- if forloop.last == false -%}
-                {% if site.author_alias contains author %}
-                  <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
-                {% else %}
-                  {{ author | escape }},&nbsp;
-                {% endif %}
-              {%- else -%}
-                {% if site.author_alias contains author %}
-                  <span class="underline">{{ author | escape }}</span>
-                {% else %}
-                  {{ author | escape }}
-                {% endif %}
-              {%- endif -%}
-            {%- endfor -%}
-          </p>
-          <p class="publication-venue">
-            In {{ publication.venue | escape }}
-          </p>
-          <p class="publication-links">
-            {%- for link in publication.links -%}
-              <a href="{{ link.url }}" class="btn btn-{{ link.type }}" target="_blank" >{{ link.name | escape }}</a>
-            {%- endfor -%}
+  <h2 class="publication-list-heading">Domestic Conferences</h2>
+  <div class="publications-container">
+    {% assign sorted_domestic_conferences = site.domestic_conferences | reverse %}
+    {%- for publication in sorted_domestic_conferences -%}
+    <div class="publication-container">
+      <h4 class="publication-title">
+        {% if publication.has_content %}
+        <a href="{{ publication.url | relative_url }}">
+          {{ publication.title | escape }}
+        </a>
+        {% else %}
+        {{ publication.title | escape }}
+        {% endif %}
+      </h4>
+      <p class="publication-authors">
+        {%- for author in publication.authors -%}
+        {%- if forloop.last == false -%}
+        {% if site.author_alias contains author %}
+        <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
+        {% else %}
+        {{ author | escape }},&nbsp;
+        {% endif %}
+        {%- else -%}
+        {% if site.author_alias contains author %}
+        <span class="underline">{{ author | escape }}</span>
+        {% else %}
+        {{ author | escape }}
+        {% endif %}
+        {%- endif -%}
+        {%- endfor -%}
+      </p>
+      <p class="publication-venue">
+        In {{ publication.venue | escape }}
+      </p>
+      <p class="publication-links">
+        {%- for link in publication.links -%}
+        <a href="{{ link.url }}" class="btn btn-{{ link.type }}" target="_blank">{{ link.name | escape }}</a>
+        {%- endfor -%}
 
-          </p>
-        </div>
-      {%- endfor -%}
+      </p>
     </div>
+    {%- endfor -%}
+  </div>
   {% endif %}
 
   <hr>
@@ -172,6 +187,6 @@ layout: default
   </table>
 
 
-  
+
 
 </div>
