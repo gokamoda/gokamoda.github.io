@@ -68,7 +68,7 @@ layout: default
   {% if site.publications.size > 0 %}
   <h2 class="publication-list-heading">Publications</h2>
   <div class="publications-container">
-    {% assign sorted_publications = site.publications | sort: 'month' | reverse | sort: 'year' | reverse %}
+    {% assign sorted_publications = site.publications | reverse %}
     {%- for publication in sorted_publications -%}
     <div class="publication-container">
       <h4 class="publication-title">
