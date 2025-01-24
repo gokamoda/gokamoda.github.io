@@ -2,7 +2,7 @@
 title: "SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパターンマッチャー"
 layout: post
 has_content: false
-venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing: NLP2025"
+venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing (NLP 2025)"
 authors:
   - "出口祥之"
   - "鴨田豪"

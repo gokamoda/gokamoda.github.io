@@ -2,7 +2,7 @@
 title: 言語モデルからの知識削除：頻出実体の知識は副作用が破滅的
 layout: post
 has_content: false
-venue: "Proceedings of the Thirtieth Annual Meeting of the Association for Natural Language Processing: NLP2024"
+venue: "Proceedings of the Thirtieth Annual Meeting of the Association for Natural Language Processing (NLP 2024)"
 authors:
   - "高橋良允"
   - "鴨田豪"

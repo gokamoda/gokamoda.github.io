@@ -2,7 +2,7 @@
 title: 柔らかいgrep/KWICに向けて：高速単語列マッチングの埋め込み表現による連続化
 layout: post
 has_content: false
-venue: "The 19th Symposium of Young Researcher Association for NLP Studies: YANS: YANS2024"
+venue: "The 19th Symposium of Young Researcher Association for NLP Studies (YANS 2024)"
 authors:
   - "出口祥之"
   - "鴨田豪"

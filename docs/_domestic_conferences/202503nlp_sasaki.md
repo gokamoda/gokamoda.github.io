@@ -2,7 +2,7 @@
 title: LM は日本の時系列構造をどうエンコードするか
 layout: post
 has_content: false
-venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing: NLP2025"
+venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing (NLP 2025)"
 authors:
   - "佐々木睦史"
   - "高橋良允"

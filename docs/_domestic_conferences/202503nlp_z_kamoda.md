@@ -2,7 +2,7 @@
 title: 言語モデルのパラメータから探るDetokenizationメカニズム
 layout: post
 has_content: false
-venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing: NLP2025"
+venue: "Proceedings of the Thirty-first Annual Meeting of the Association for Natural Language Processing (NLP 2025)"
 authors:
   - "鴨田豪"
   - "Benjamin Heinzerling"

@@ -2,7 +2,7 @@
 title: 長文生成の多面的評価:人手評価と自動評価の向上を目指して
 layout: post
 has_content: false
-venue: "Proceedings of the Thirtieth Annual Meeting of the Association for Natural Language Processing: NLP2024"
+venue: "Proceedings of the Thirtieth Annual Meeting of the Association for Natural Language Processing (NLP 2024)"
 authors:
   - "鴨田豪"
   - "浅井明里"

@@ -2,7 +2,7 @@
 title: 事前学習–文脈内学習パラダイムで生じる頻度バイアスの較正
 layout: post
 has_content: false
-venue: "The 19th Symposium of Young Researcher Association for NLP Studies: YANS: YANS2024"
+venue: "The 19th Symposium of Young Researcher Association for NLP Studies (YANS 2024)"
 authors:
   - "*伊藤郁海"
   - "*鴨田豪"
