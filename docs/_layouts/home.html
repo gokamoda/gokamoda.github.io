@@ -26,6 +26,8 @@ layout: default
   };
 </script>
 
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
 
 
 <div class="home">
@@ -72,13 +74,7 @@ layout: default
     {%- for publication in sorted_publications -%}
     <div class="publication-container">
       <h4 class="publication-title">
-        {% if publication.has_content %}
-        <a href="{{ publication.url | relative_url }}">
-          {{ publication.title | escape }}
-        </a>
-        {% else %}
         {{ publication.title | escape }}
-        {% endif %}
       </h4>
       <p class="publication-authors">
         {%- for author in publication.authors -%}
@@ -104,9 +100,16 @@ layout: default
         {%- for link in publication.links -%}
         <a href="{{ link.url }}" class="btn btn-{{ link.type }}" target="_blank">{{ link.name | escape }}</a>
         {%- endfor -%}
-
+        {% if publication.bib_key %}
+          <button class="openPopup" data-popup="cite-{{ publication.bib_key | escape }}" class="btn btn-normal">Cite</button>
+        {% endif %}
       </p>
     </div>
+    {% if publication.bib_key %}
+      <div id="cite-{{ publication.bib_key | escape }}" class="popup">
+        {%- include bibtex.html -%}
+      </div>
+    {% endif %}
     {%- endfor -%}
   </div>
   {% endif %}
@@ -130,17 +133,17 @@ layout: default
       <p class="publication-authors">
         {%- for author in publication.authors -%}
         {%- if forloop.last == false -%}
-        {% if site.author_alias contains author %}
-        <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
-        {% else %}
-        {{ author | escape }},&nbsp;
-        {% endif %}
+          {% if site.author_alias contains author %}
+          <span class="underline publication-authors">{{ author | escape }}</span>,&nbsp;
+          {% else %}
+          {{ author | escape }},&nbsp;
+          {% endif %}
         {%- else -%}
-        {% if site.author_alias contains author %}
-        <span class="underline">{{ author | escape }}</span>
-        {% else %}
-        {{ author | escape }}
-        {% endif %}
+          {% if site.author_alias contains author %}
+          <span class="underline">{{ author | escape }}</span>
+          {% else %}
+          {{ author | escape }}
+          {% endif %}
         {%- endif -%}
         {%- endfor -%}
       </p>
@@ -190,3 +193,28 @@ layout: default
 
 
 </div>
+
+<script>
+  const openPopupButtons = document.querySelectorAll(".openPopup");
+  const popups = document.querySelectorAll(".popup");
+  const overlay = document.getElementById("overlay");
+
+  // Function to show a popup
+  openPopupButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          const popupId = button.getAttribute("data-popup");
+          const popup = document.getElementById(popupId);
+          if (popup) {
+              popups.forEach(p => p.style.display = "none"); // Hide other popups
+              popup.style.display = "block";
+              overlay.style.display = "block";
+          }
+      });
+  });
+
+  // Function to hide popups when clicking outside
+  overlay.addEventListener("click", () => {
+      popups.forEach(popup => popup.style.display = "none");
+      overlay.style.display = "none";
+  });
+</script>

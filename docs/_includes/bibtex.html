@@ -1,12 +1,21 @@
-{% if page.bib_entry == "proceedings" %}
+{% if publication.bib_entry == "inproceedings" %}
 {% highlight bib %}
-@proceedings{ {{page.bib_key}},
-    author = { {{page.authors  | join: " and "}} },
-    title = { {{page.title}} },
-    booktitle = { {{page.venue}} },
-    year = { {{page.year}} }
+@inproceedings{ {{publication.bib_key}},
+    author = { {{publication.authors  | join: " and "}} },
+    title = { {{publication.title}} },
+    booktitle = { {{publication.venue}} },
+    year = { {{publication.year}} },
+    url = { {{publication.links[0].url}} }
 }
 {% endhighlight %}
-{% else %}
-    aa
+{% else if publication.bib_entry == "article" %}
+{% highlight bib %}
+@article{ {{publication.bib_key}},
+    author = { {{publication.authors  | join: " and "}} },
+    title = { {{publication.title}} },
+    journal = { {{publication.venue}} },
+    year = { {{publication.year}} },
+    url = { {{publication.links[0].url}} }
+}
+{% endhighlight %}
 {% endif %}

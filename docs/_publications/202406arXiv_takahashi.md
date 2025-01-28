@@ -2,7 +2,7 @@
 title: "The Curse of Popularity: Popular Entities have Catastrophic Side Effects when Deleting Knowledge from Language Models"
 layout: post
 has_content: false
-venue: "arXiv preprint"
+venue: "arXiv [cs.CL]"
 authors:
   - "Ryosuke Takahashi"
   - "Go Kamoda"
@@ -15,4 +15,6 @@ links:
   - name: "arXiv"
     url: "https://arxiv.org/abs/2406.06032"
     type: "normal"
+bib_entry: article
+bib_key: takahashi-arxiv-2024-curse
 ---
