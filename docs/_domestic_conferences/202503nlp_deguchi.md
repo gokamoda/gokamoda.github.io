@@ -18,6 +18,9 @@ links:
   - name: "Conference"
     url: "https://www.anlp.jp/nlp2025/"
     type: "normal"
+  - name: "Paper"
+    url: "https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P8-20.pdf"
+    type: "normal"
 bib_entry: "proceedings"
 bib_key: "deguchi-nlp2025-softmatcha"
 ---

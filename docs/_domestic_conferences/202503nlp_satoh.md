@@ -15,4 +15,7 @@ links:
   - name: "Conference"
     url: "https://www.anlp.jp/nlp2025/"
     type: "normal"
+  - name: "Paper"
+    url: "https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P2-20.pdf"
+    type: "normal"
 ---
