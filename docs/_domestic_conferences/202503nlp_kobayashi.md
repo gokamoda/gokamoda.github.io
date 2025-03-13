@@ -18,4 +18,7 @@ links:
   - name: "Paper"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/A5-1.pdf"
     type: "normal"
+  - name: "Researcher Encouragement Award (20/487)"
+    url: "https://yans.anlp.jp/entry/award"
+    type: "award"
 ---

@@ -20,6 +20,6 @@ links:
     url: "https://www.anlp.jp/nlp2024/"
     type: "normal"
   - name: "Researcher Encouragement Award (18/427)"
-    url: "https://www.anlp.jp/nlp2024/award.html"
+    url: "https://www.anlp.jp/nlp2025/award.html"
     type: "award"
 ---

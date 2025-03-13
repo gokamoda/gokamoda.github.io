@@ -20,4 +20,7 @@ links:
   - name: "Paper"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/A7-5.pdf"
     type: "normal"
+  - name: "Sponsor Award (Nikkei CDIO)"
+    url: "https://www.anlp.jp/nlp2025/award.html"
+    type: "award"
 ---
