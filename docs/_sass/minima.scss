@@ -61,15 +61,21 @@ $on-laptop:        1000px !default;
 a {
   color: $text-color;
   text-decoration: underline;
+  
+  &:visited {
+    color: $text-color;
+    
+    &:hover {
+      color: $brand-color;
+      text-decoration: underline;
+    }
+  }
 
   &:hover {
     color: $brand-color;
     text-decoration: underline;
   }
 
-  &:visited {
-    color: $text-color;
-  }
 }
 
 * {
