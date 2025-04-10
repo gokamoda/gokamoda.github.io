@@ -36,4 +36,4 @@ jobs:
           configured-domain: gokamoda.github.io
           configured-dir: docs
           git-config-name: gokamoda
-          git-config-mail: gokamoda@gmail.com
+          git-config-email: gokamoda@gmail.com
