@@ -1,21 +1,37 @@
-name: Build and Deploy
-on: [push]
+# pull_request and push event is supported.
+# This action also works for pull_request_target event, but should not be used in public repositories.
+# Please read https://securitylab.github.com/research/github-actions-preventing-pwn-requests/ before using this action with pull_request_target event.
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+# contents: write is required for deploying the GitHub Pages if using the default GITHUB_TOKEN
+# pull-requests: write is required if you want to comment the preview page url to the pull request
 permissions:
+  pull-requests: write
   contents: write
+
+# recommended to set a concurrency group
+concurrency:
+  group: preview-pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm ci
-          npm run build
+      # run some build steps here and export the result to a directory
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Preview Pages
+        uses: rajyan/preview-pages@v1
         with:
-          folder: build # The folder the action should deploy.
+          token: ${{ steps.generate-token.outputs.token }}
+          source-dir: docs
+          target-dir: docs/preview-pages
+          configured-domain: gokamoda.github.io
+          configured-dir: docs
