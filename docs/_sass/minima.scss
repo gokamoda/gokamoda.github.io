@@ -244,27 +244,6 @@ body{
       margin-bottom: 0;
     }
 
-    .btn{
-      color: $grey-color-light;
-      padding: 4px 15px;
-      margin-right: 8px;
-      margin-top:8px;
-      border: $grey-color 1px solid;
-      border-radius: 5px;
-      text-decoration: none;
-      text-decoration-line: none;
-      display: inline-block;
-      // font-size: $base-font-size * 1.125;
-    }
-
-    .btn:hover{
-      background-color: $grey-color;
-    }
-
-    .btn-award{
-      color: gold;
-    }
-
     button{
       color: $grey-color-light;
       background-color: rgba(0, 0, 0, 0);
@@ -285,6 +264,27 @@ body{
     }
 
   }
+}
+
+.btn{
+  color: $grey-color-light;
+  padding: 4px 15px;
+  margin-right: 8px;
+  margin-top:8px;
+  border: $grey-color 1px solid;
+  border-radius: 5px;
+  text-decoration: none;
+  text-decoration-line: none;
+  display: inline-block;
+  // font-size: $base-font-size * 1.125;
+}
+
+.btn:hover{
+  background-color: $grey-color;
+}
+
+.btn-award{
+  color: gold;
 }
 
 
