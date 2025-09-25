@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-25T16:04:34+00:00</updated><id>/feed.xml</id><title type="html">Go Kamoda</title><subtitle>Go Kamoda&apos;s profile page.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the 8th BlackboxNLP Workshop</title><link href="/news/bbnlp2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the 8th BlackboxNLP Workshop" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>/news/bbnlp2025-accept</id><content type="html" xml:base="/news/bbnlp2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+    
+    Takahashi, R.
+    ,
+    
+
+    
+    <span class="underline">Kamoda, G.</span>
+    ,
+    
+
+    
+    Heinzerling, B.
+    ,
+    
+
+    
+    Sakaguchi, K.
+    ,
+    
+&amp; 
+    
+    
+    Inui, K.
+    
+
+(2025).<br />
+Understanding the Side Effects of Rank-One Knowledge Editing.<br />
+In
+<i>The 8th BlackboxNLP Workshop</i>.
+
+    <br />[<a href="https://arxiv.org/abs/2406.06032" target="_blank">arXiv</a>]
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Understanding the Side Effects of Rank-One Knowledge Editing"]]></summary></entry><entry><title type="html">🎤 Presentation at YANS 2025</title><link href="/blog/yans2025-presentation/" rel="alternate" type="text/html" title="🎤 Presentation at YANS 2025" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>/blog/yans2025-presentation</id><content type="html" xml:base="/blog/yans2025-presentation/"><![CDATA[<p>YANS 2025 にて以下の発表があります。</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    熊谷雄介
+    ,
+    
+
+    
+    松井孝太
+    ,
+    
+
+    
+    横井祥
+    
+
+(2024).<br />
+密度比の直接推定に基づく言語モデルの出力較正.<br />
+第20回言語処理若手シンポジウム (YANS).
+
+    
+
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="Blog" /><summary type="html"><![CDATA["密度比の直接推定に基づく言語モデルの出力較正"]]></summary></entry><entry><title type="html">✅ Paper accepted to the Findings of EMNLP 2025</title><link href="/news/emnlp2025findings-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the Findings of EMNLP 2025" /><published>2025-08-21T00:00:00+00:00</published><updated>2025-08-21T00:00:00+00:00</updated><id>/news/emnlp2025findings-accept</id><content type="html" xml:base="/news/emnlp2025findings-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+    
+    Inaba, T.
+    ,
+    
+
+    
+    <span class="underline">Kamoda, G.</span>
+    ,
+    
+
+    
+    Inui, K.
+    ,
+    
+
+    
+    Isonuma, M.
+    ,
+    
+
+    
+    Miyao, Y.
+    ,
+    
+
+    
+    Oseki, Y.
+    ,
+    
+
+    
+    Takagi, Y.
+    ,
+    
+&amp; 
+    
+    
+    Heinzerling, B.
+    
+
+(2025).<br />
+How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.<br />
+In
+<i>Findings of the Association for Computational Linguistics: EMNLP 2025</i>.
+
+    <br />[<a href="https://openreview.net/forum?id=PoeWX7M8CK#discussion" target="_blank">OpenReview</a>]
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders"]]></summary></entry><entry><title type="html">🌸 Enrollment in SOKENDAI for Doctoral Program</title><link href="/news/sokendai-enrollment/" rel="alternate" type="text/html" title="🌸 Enrollment in SOKENDAI for Doctoral Program" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>/news/sokendai-enrollment</id><content type="html" xml:base="/news/sokendai-enrollment/"><![CDATA[<p>総合研究大学院大学 (SOKENDAI) 日本語言語科学コースの博士後期課程に進学しました。<br />
+JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語研究所 (NINJAL) で研究活動を行います。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[as Special Research Student]]></summary></entry><entry><title type="html">👑 Completed Master’s course and received the Dean’s Award</title><link href="/news/dean-award/" rel="alternate" type="text/html" title="👑 Completed Master’s course and received the Dean’s Award" /><published>2025-03-25T00:00:00+00:00</published><updated>2025-03-25T00:00:00+00:00</updated><id>/news/dean-award</id><content type="html" xml:base="/news/dean-award/"><![CDATA[<p>東北大学 情報科学研究科 学位授与式にて、学位記 (修士: 情報科学) とともに「研究科長賞」をいただきました。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[Graduate School of Information Sciences, Tohoku University]]></summary></entry><entry><title type="html">👑 2 papers received awards at NLP 2025</title><link href="/news/nlp-awards/" rel="alternate" type="text/html" title="👑 2 papers received awards at NLP 2025" /><published>2025-03-13T00:00:00+00:00</published><updated>2025-03-13T00:00:00+00:00</updated><id>/news/nlp-awards</id><content type="html" xml:base="/news/nlp-awards/"><![CDATA[<p>言語処理学会 第31回年次大会 (NLP 2025) にて、以下の2件の論文がそれぞれ「若手奨励賞」「日本経済新聞社 CDIO室賞」を受賞しました。</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    小林春斗
+    ,
+    
+
+    
+    原知正
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    横井祥
+    
+
+(2025).<br />
+層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.<br />
+言語処理学会 第31回年次大会, pp. 1751-1756.
+
+    <br />
+        <i class="fa-solid fa-crown"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a>
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A5-1" target="_blank">予稿</a>]
+
+    </li>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    佐々木睦史
+    ,
+    
+
+    
+    高橋良允
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    Benjamin Heinzerling
+    ,
+    
+
+    
+    坂口慶祐
+    ,
+    
+
+    
+    乾健太郎
+    
+
+(2025).<br />
+LM は日本の時系列構造をどうエンコードするか.<br />
+言語処理学会 第31回年次大会, pp. 2642-2647.
+
+    <br />
+        <i class="fa-solid fa-crown"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A7-5" target="_blank">予稿</a>]
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[若手奨励賞 + 日本経済新聞社 CDIO室賞]]></summary></entry><entry><title type="html">🎤 Presentations at NLP 2025</title><link href="/news/nlp-presentation/" rel="alternate" type="text/html" title="🎤 Presentations at NLP 2025" /><published>2025-03-10T00:00:00+00:00</published><updated>2025-03-10T00:00:00+00:00</updated><id>/news/nlp-presentation</id><content type="html" xml:base="/news/nlp-presentation/"><![CDATA[<p>言語処理学会 第31回年次大会 (NLP 2025) にて、以下の6件の発表があります。</p>
+
+<div>
+  <ul>
+    
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    出口祥之
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    松下祐介
+    ,
+    
+
+    
+    田口智大
+    ,
+    
+
+    
+    末永幸平
+    ,
+    
+
+    
+    和賀正樹
+    ,
+    
+
+    
+    横井祥
+    
+
+(2024).<br />
+SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパターンマッチャー.<br />
+言語処理学会 第31回年次大会, pp. 3310-3315.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#P8-20" target="_blank">予稿</a>]
+
+    </li>
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    Benjamin Heinzerling
+    ,
+    
+
+    
+    稲葉達郎
+    ,
+    
+
+    
+    工藤慧音
+    ,
+    
+
+    
+    坂口慶祐
+    ,
+    
+
+    
+    乾健太郎
+    
+
+(2025).<br />
+言語モデルのパラメータから探るDetokenizationメカニズム.<br />
+言語処理学会 第31回年次大会, pp. 634-639.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#P2-9" target="_blank">予稿</a>]
+
+    </li>
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    小林春斗
+    ,
+    
+
+    
+    原知正
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    横井祥
+    
+
+(2025).<br />
+層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.<br />
+言語処理学会 第31回年次大会, pp. 1751-1756.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A5-1" target="_blank">予稿</a>]
+
+    </li>
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    工藤慧音
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    塩野大輝
+    ,
+    
+
+    
+    鈴木潤
+    
+
+(2025).<br />
+日本語バイト符号化マスク言語モデルの開発と分析.<br />
+言語処理学会 第31回年次大会, pp. 3356-3361.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#Q8-5" target="_blank">予稿</a>, <a href="https://huggingface.co/collections/tohoku-nlp/bybert-jp-68ca50cd4ea72d6d6b348fcd" target="_blank">🤗ByBERT-JP</a>, <a href="https://huggingface.co/collections/tohoku-nlp/bygpt-jp-68ccbe1f36bc9c5b20f3d59e" target="_blank">🤗ByGPT-JP</a>]
+
+    </li>
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    佐々木睦史
+    ,
+    
+
+    
+    高橋良允
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    Benjamin Heinzerling
+    ,
+    
+
+    
+    坂口慶祐
+    ,
+    
+
+    
+    乾健太郎
+    
+
+(2025).<br />
+LM は日本の時系列構造をどうエンコードするか.<br />
+言語処理学会 第31回年次大会, pp. 2642-2647.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A7-5" target="_blank">予稿</a>]
+
+    </li>
+    
+    <li>
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    佐藤宏亮
+    ,
+    
+
+    
+    <span class="underline">鴨田豪</span>
+    ,
+    
+
+    
+    Benjamin Heinzerling
+    ,
+    
+
+    
+    坂口慶祐
+    
+
+(2025).<br />
+言語モデルの内部表現における文法情報の局所性について.<br />
+言語処理学会 第31回年次大会, pp. 697-701.
+
+
+    <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#P2-20" target="_blank">予稿</a>]
+
+    </li>
+    
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[6 presentations]]></summary></entry><entry><title type="html">✅ Paper accepted to the ICLR 2025</title><link href="/news/iclr2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICLR 2025" /><published>2025-01-23T00:00:00+00:00</published><updated>2025-01-23T00:00:00+00:00</updated><id>/news/iclr2025-accept</id><content type="html" xml:base="/news/iclr2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICLR 2025.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+    
+    Deguchi, H.
+    ,
+    
+
+    
+    <span class="underline">Kamoda, G.</span>
+    ,
+    
+
+    
+    Matsushita, Y.
+    ,
+    
+
+    
+    Taguchi, C.
+    ,
+    
+
+    
+    Waga, M.
+    ,
+    
+
+    
+    Suenaga, K.
+    ,
+    
+&amp; 
+    
+    
+    Yokoi, S.
+    
+
+(2025).<br />
+SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches.<br />
+In
+<i>The Thirteenth International Conference on Learning Representations (ICLR 2025)</i>.
+
+    <br />[<a href="https://openreview.net/forum?id=Q6PAnqYVpo" target="_blank">OpenReview</a>, <a href="https://arxiv.org/abs/2503.03703" target="_blank">arXiv</a>, <a href="https://softmatcha.github.io" target="_blank">Project Page</a>]
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches"]]></summary></entry><entry><title type="html">✅ Paper accepted to the COLING 2025</title><link href="/news/coling2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the COLING 2025" /><published>2024-11-30T00:00:00+00:00</published><updated>2024-11-30T00:00:00+00:00</updated><id>/news/coling2025-accept</id><content type="html" xml:base="/news/coling2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to COLING 2025.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+    
+    <span class="underline">Kamoda, G.</span>
+    ,
+    
+
+    
+    Asai, A.
+    ,
+    
+
+    
+    Brassard, A.
+    ,
+    
+&amp; 
+    
+    
+    Sakaguchi, K.
+    
+
+(2025).<br />
+Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment.<br />
+In
+<i>Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025)</i>.
+
+    <br />[<a href="https://aclanthology.org/2025.coling-main.588/" target="_blank">ACL Anthology</a>, <a href="https://github.com/gokamoda/lfqa-weighted-eval" target="_blank">GitHub</a>]
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment"]]></summary></entry></feed>
