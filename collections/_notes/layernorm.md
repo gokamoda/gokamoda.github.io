@@ -117,7 +117,7 @@ $$
 \end{align}
 $$
 
-Thus only non-linear operation in LayerNorm is the division by $s(\bm{x})$.
+Thus only non-linear operation in LayerNorm is the division by $\sqrt{\text{Var}(\bm{x})+\varepsilon}$.
 
 
 
