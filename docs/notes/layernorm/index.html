@@ -280,7 +280,7 @@ Therefore, LayerNorm can be rewritten as:</p>
 &amp;= \frac{\bm{x}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\left(I - \frac{1}{d}\bm{1}^\top\bm{1}\right)\text{diag}(\bm{\gamma}) + \bm{\beta}\\
 \end{align}\]
 
-<p>Thus only non-linear operation in LayerNorm is the division by $s(\bm{x})$.</p>
+<p>Thus only non-linear operation in LayerNorm is the division by $\sqrt{\text{Var}(\bm{x})+\varepsilon}$.</p>
 
 
     </section>
