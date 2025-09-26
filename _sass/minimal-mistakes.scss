@@ -203,3 +203,26 @@
   margin-top:200px;
   margin-bottom: 200px;
 }
+
+.mjx-chtml.MJXc-display{
+  overflow-x: scroll !important;
+  overflow-y: hidden !important;
+  scrollbar-color: #c4c4c4 $background-color !important;
+  padding-bottom: 0.4em !important;
+}
+
+figure {
+  width: 100%;
+  justify-content: center;
+  margin: 20px auto;
+
+  img{
+    margin-bottom: 5px;
+  }
+
+  @include breakpoint($large) {
+    width: 70%;
+  }
+
+
+}

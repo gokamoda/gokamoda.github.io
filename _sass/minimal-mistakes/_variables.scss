@@ -57,7 +57,7 @@ $default-serif: Georgia, Times, serif;
 $default-monospace: Monaco, Consolas, "Lucida Console", monospace;
 
 /* Emoji native from modern font stack - add to the end of the font-face for native emojis */
-$emoji-native: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$emoji-native: 'Noto Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 /* system typefaces */
 $serif: $default-serif !default;

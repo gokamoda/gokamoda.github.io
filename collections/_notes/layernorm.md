@@ -7,7 +7,7 @@ header:
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
-date: 2024-06-10
+date: 2024-07-12 # moved from DissectingGPT
 excerpt: "Relationship between RMSNorm and LayerNorm and rewritten LayerNorm using centering matrix."
 ---
 ## Preparation
