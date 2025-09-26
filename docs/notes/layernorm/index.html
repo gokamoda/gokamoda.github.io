@@ -37,7 +37,7 @@
 
 
 
-  <meta property="article:published_time" content="2024-06-10T00:00:00+00:00">
+  <meta property="article:published_time" content="2024-07-12T00:00:00+00:00">
 
 
 
@@ -88,6 +88,10 @@
 <link rel="shortcut icon" href=/assets/favicon/favicon.ico />
 <link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
 <link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
 <!-- end custom head snippets -->
 
   </head>
@@ -171,7 +175,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-06-10T00:00:00+00:00">June 10, 2024</time>
+        <time datetime="2024-07-12T00:00:00+00:00">July 12, 2024</time>
       </span>
     
 
@@ -193,7 +197,7 @@
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="RMSNorm and LayerNorm">
     <meta itemprop="description" content="Relationship between RMSNorm and LayerNorm and rewritten LayerNorm using centering matrix.">
-    <meta itemprop="datePublished" content="2024-06-10T00:00:00+00:00">
+    <meta itemprop="datePublished" content="2024-07-12T00:00:00+00:00">
     
     <section class="page__content" itemprop="text">
       <h2 id="preparation">Preparation</h2>
@@ -336,7 +340,8 @@ Therefore, LayerNorm can be rewritten as:</p>
       extensions: ["AMSmath.js","AMSsymbols.js"],
       Macros: {
         bm: ["\\boldsymbol{#1}", 1]
-      }
+      },
+      equationNumbers: { autoNumber: "all" } 
     },
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -344,7 +349,6 @@ Therefore, LayerNorm can be rewritten as:</p>
       processEscapes: true
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
-    
   });
 
 

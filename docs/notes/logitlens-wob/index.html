@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>👑 Completed Master’s course and received the Dean’s Award - Go Kamoda</title>
-<meta name="description" content="Graduate School of Information Sciences, Tohoku University">
+<!-- begin _includes/seo.html --><title>LogitLens without bias - Go Kamoda</title>
+<meta name="description" content="Removing bias term from LogitLens.">
 
 
   <meta name="author" content="Go Kamoda">
@@ -23,19 +23,21 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Go Kamoda">
-<meta property="og:title" content="👑 Completed Master’s course and received the Dean’s Award">
-<meta property="og:url" content="/news/dean-award/">
+<meta property="og:title" content="LogitLens without bias">
+<meta property="og:url" content="/notes/logitlens-wob/">
 
 
-  <meta property="og:description" content="Graduate School of Information Sciences, Tohoku University">
-
-
-
+  <meta property="og:description" content="Removing bias term from LogitLens.">
 
 
 
+  <meta property="og:image" content="/assets/img/logit_lens_nobias_gpt2.png">
 
-  <meta property="article:published_time" content="2025-03-25T00:00:00+00:00">
+
+
+
+
+  <meta property="article:published_time" content="2024-07-24T00:00:00+00:00">
 
 
 
@@ -46,7 +48,7 @@
   
 
 
-<link rel="canonical" href="/news/dean-award/">
+<link rel="canonical" href="/notes/logitlens-wob/">
 
 
 
@@ -160,7 +162,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          👑 Completed Master’s course and received the Dean’s Award
+          LogitLens without bias
 
         
       </h1>
@@ -173,7 +175,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2025-03-25T00:00:00+00:00">March 25, 2025</time>
+        <time datetime="2024-07-24T00:00:00+00:00">July 24, 2024</time>
       </span>
     
 
@@ -193,12 +195,90 @@
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="👑 Completed Master’s course and received the Dean’s Award">
-    <meta itemprop="description" content="Graduate School of Information Sciences, Tohoku University">
-    <meta itemprop="datePublished" content="2025-03-25T00:00:00+00:00">
+    <meta itemprop="headline" content="LogitLens without bias">
+    <meta itemprop="description" content="Removing bias term from LogitLens.">
+    <meta itemprop="datePublished" content="2024-07-24T00:00:00+00:00">
     
     <section class="page__content" itemprop="text">
-      <p>東北大学 情報科学研究科 学位授与式にて、学位記 (修士: 情報科学) とともに「研究科長賞」をいただきました。</p>
+      <p><span id="top"></span></p>
+
+<p><a href="#nostalgibraist2020logit">LogitLens[1]</a> applies $\text{LMHead}$ to the internal representations $(\bm{h} \in \mathbb{R}^{1\times d})$ of the transformer model.</p>
+
+\[\begin{equation}
+\text{LMHead}(\bm{h}) = \text{LN}_\text{f}(\bm{h})\bm{E}^O \label{eq:lm_head}
+\end{equation}\]
+
+<p>Here,
+$\bm{E}^O \in \mathbb{R}^{d\times |\mathcal{V}|}$
+is the unembedding matrix and
+$\text{LN}_\text{f}$
+is the final layer normalization of a transformer model.
+In this page, we assume LayerNorm (not RMSNorm) is used for
+$\text{LN}_\text{f}$
+, which is defined as follows.</p>
+
+\[\begin{equation}
+\text{LN}_\text{f}(\bm{h}) = \frac{\bm{x} - \mu(\bm{x})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma} +\bm{\beta}
+\label{eq:lm_f}
+\end{equation}\]
+
+<p>Here,
+$\mu(\bm{h}): \mathbb{R}^{d}\rightarrow \mathbb{R}$ is a function that returns element-wise mean of a row-vector $\bm{h}$ and
+$\bm{\gamma}, \bm{\beta} \in \mathbb{R}^{d}$ are learnable parameters.
+$\odot$ represents element-wise multiplication.</p>
+
+<p>With LogitLens, one can project the hidden states after each transformer layers to the vocabulary space.</p>
+
+<figure class="center">
+    <img src="/assets/img/logit_lens_gpt2.png" alt="LogitLensExample" />
+    <figcaption>Example of LogitLens.</figcaption>
+</figure>
+
+<p>By combining Equation\eqref{eq:lm_head} and \eqref{eq:lm_f}, we get a bias term for the projection to vocabulary space.</p>
+
+\[\begin{align}
+\text{LogitLens}(\bm{h})
+&amp;= \left(\frac{\bm{h} - \mu(\bm{h})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma} +
+\bm{\beta}\right)\bm{E}^O\\
+&amp;= \left(\frac{\bm{h} - \mu(\bm{h})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma}\right)\bm{E}^O +
+\bm{\beta}\bm{E}^O \label{eq:lm_head_bias}
+\end{align}\]
+
+<p>The second term in Equation\eqref{eq:lm_head_bias}, which is $\bm{\beta}\bm{E}^O \in \mathbb{R}^{|\mathcal{V}|}$ is the bias term, which is added to the result of LogitLens regardless of the input. Adding such bias may not reasonable when analyzing “what the model’s intermediate states represent” as <a href="#kobayashi2023transformer">Kobayashi et al. (2023)</a>
+reports that word frequency in the training corpus is encoded in this bias term of $\text{LN}_\text{f}$ in GPT-2 model.</p>
+
+<p>By removing the bias term, we get the following result.</p>
+
+<figure class="center">
+    <img src="/assets/img/logit_lens_gpt2.png" alt="LogitLensExample" />
+    <figcaption>Vanilla LogitLens (GPT-2)</figcaption>
+</figure>
+<figure class="center">
+    <img src="/assets/img/logit_lens_nobias_gpt2.png" alt="LogitLensNobiasExample" />
+    <figcaption>LogitLens w/o Bias (GPT-2)</figcaption>
+</figure>
+
+<figure class="center">
+    <img src="/assets/img/logit_lens_opt.png" alt="LogitLensExample" />
+    <figcaption>Vanilla LogitLens (OPT)</figcaption>
+</figure>
+<figure class="center">
+    <img src="/assets/img/logit_lens_nobias_opt.png" alt="LogitLensNobiasExample" />
+    <figcaption>LogitLens w/o Bias (OPT)</figcaption>
+</figure>
+
+<h2 id="references">References</h2>
+<ol>
+    <li id="nostalgibraist2020logit">
+        <a href="https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens" target="_blank">
+        Nostalgibraist 2020, interpreting GPT: the logit lens.
+        </a>
+    </li>
+    <li id="kobayashi2023transformer">
+        <a href="https://aclanthology.org/2023.findings-acl.276/" target="_blank">Kobayashi et al. 2023, Transformer Language Models Handle Word Frequency in Prediction
+        Head.</a>
+    </li>
+</ol>
 
     </section>
   </article>
@@ -248,6 +328,38 @@
 
 
 
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1]
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
     
   </body>
 </html>
