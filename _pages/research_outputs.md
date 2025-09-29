@@ -10,7 +10,7 @@ header:
 ---
 
 ## Education
-- Ph.D. in Philosophy, April 2025 - March 2028 (expected).<br>Graduate Institute for Advanced Studies, SOKENDAI.<br>Supervisor: Assoc. Prof. Sho Yokoi<br>
+- Doctoral Student, April 2025 - <br>Graduate Institute for Advanced Studies, SOKENDAI.<br>Supervisor: Assoc. Prof. Sho Yokoi<br>
 - Master of Information Science, April 2023 - March 2025.<br>Graduate School of Information Sciences, Tohoku University.<br>Supervisor: Prof. Jun Suzuki & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-crown"></i> Dean Award (4/126)
 - Bachelor of Engineering, April 2020 - March 2023.<br>School of Engineering, Tohoku University.<br>Supervisor: Prof. Kentaro Inui & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-crown"></i>Early Graduation (1/252)
 

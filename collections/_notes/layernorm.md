@@ -3,7 +3,7 @@ layout: splash
 title: "RMSNorm and LayerNorm"
 use_math: true
 header:
-  teaser: /assets/img/centering_matrix.png
+  teaser: /assets/img/layernorm_rmsnorm.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
@@ -122,3 +122,10 @@ Thus only non-linear operation in LayerNorm is the division by $\sqrt{\text{Var}
 
 
 
+
+
+$$
+\begin{align}
+&\text{LayerNorm}(\bm{x})\\& = \text{RMSNorm}(c(\bm{x})) + \bm{\beta}
+\end{align}
+$$

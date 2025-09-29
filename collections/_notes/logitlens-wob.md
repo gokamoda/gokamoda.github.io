@@ -12,7 +12,7 @@ excerpt: "Removing bias term from LogitLens."
 ---
 <span id="top"></span>
 
-[LogitLens\[1\]](#nostalgibraist2020logit) applies $\text{LMHead}$ to the internal representations $(\bm{h} \in \mathbb{R}^{1\times d})$ of the transformer model.
+[LogitLens\[1\]](#nostalgibraist2020logit) applies $\text{LMHead}$ to the internal representations $(\bm{h} \in \mathbb{R}^{1\times d})$ of a transformer model.
 
 $$
 \begin{equation}
