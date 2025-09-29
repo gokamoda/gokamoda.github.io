@@ -1,0 +1,469 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>メモ: PCA - Go Kamoda</title>
+<meta name="description" content="PCAの基礎と実装">
+
+
+  <meta name="author" content="Go Kamoda">
+  
+  <meta property="article:author" content="Go Kamoda">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Go Kamoda">
+<meta property="og:title" content="メモ: PCA">
+<meta property="og:url" content="/notes/pca/">
+
+
+  <meta property="og:description" content="PCAの基礎と実装">
+
+
+
+  <meta property="og:image" content="/assets/img/pca.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-08-06T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/notes/pca/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Go Kamoda Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href=/assets/favicon/favicon-96x96.png sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href=/assets/favicon/favicon.svg />
+<link rel="shortcut icon" href=/assets/favicon/favicon.ico />
+<link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
+<link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          G<img src=/assets/enaga-transparent-blackline.svg alt="" class="img-site-title"/>&nbsp;Kamoda
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/notes/"
+                
+                
+              >Notes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #59876F; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          メモ: PCA
+
+        
+      </h1>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-08-06T00:00:00+00:00">August 6, 2025</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="メモ: PCA">
+    <meta itemprop="description" content="PCAの基礎と実装">
+    <meta itemprop="datePublished" content="2025-08-06T00:00:00+00:00">
+    
+    <section class="page__content" itemprop="text">
+      <p>$n$ 個の $d$ 次元のデータ $\bm{X}$ を、$d’$ 次元に圧縮するための線形変換行列 $\bm{W}$ を求める。</p>
+
+\[\bm{X}
+=\begin{bmatrix}
+\bm{x}_1 \\
+\bm{x}_2 \\
+\vdots \\
+\bm{x}_n
+\end{bmatrix}
+= \begin{bmatrix}
+x_{1,1} &amp; x_{1,2} &amp; \cdots &amp; x_{1,d} \\
+x_{2,1} &amp; x_{2,2} &amp; \cdots &amp; x_{2,d} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+x_{n,1} &amp; x_{n,2} &amp; \cdots &amp; x_{n,d}
+\end{bmatrix}
+\in \mathbb{R}^{n \times d}\]
+
+\[\bm{W}
+= \begin{bmatrix}
+\bm{w}_1 &amp; \bm{w}_2 &amp; \cdots &amp; \bm{w}_{d'} \\
+\end{bmatrix}
+= \begin{bmatrix}
+w_{1,1} &amp; w_{1,2} &amp; \cdots &amp; w_{1,d'} \\
+w_{2,1} &amp; w_{2,2} &amp; \cdots &amp; w_{2,d'} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+w_{d,1} &amp; w_{d,2} &amp; \cdots &amp; w_{d,d'}
+\end{bmatrix}
+\in \mathbb{R}^{d \times d'}\]
+
+<p>変換後のデータ $\bm{Y}$ は次のように表される。
+\(\bm{Y} = \bm{X} \bm{W} \in \mathbb{R}^{n \times d'}\)</p>
+
+<p>PCAでは、圧縮後の各次元の分散を最大化することを考える。<br />
+圧縮後の $j\ (1\le j \le d’)$次元目 の分散は、定義より以下で表せる:</p>
+
+\[\begin{align}
+s_j^2 
+&amp;= \frac{1}{n}\sum_{i=1}^{n}(y_{ij}-\bar{y_j})^2\\
+&amp;= \frac{1}{n}\sum_{i=1}^{n}\left(
+    \bm{x}_i \bm{w}_j - \frac{1}{n}\sum_{k=1}^{n}\bm{x}_k \bm{w}_j
+\right)^2 \\
+&amp;= \frac{1}{n}\sum_{i=1}^{n}\left(
+    \left(\bm{x}_i - \frac{1}{n}\sum_{k=1}^{n}\bm{x}_k\right) \bm{w}_j
+\right)^2 \\
+\end{align}\]
+
+<p>ただし $\bar{y_j} = \frac{1}{n}\sum_{i=1}^{n}y_{ij}$ は $j$ 次元目の平均値を表す。</p>
+
+<p>ここで、$\bar{\bm{x}} = \frac{1}{n}\sum_{i=1}^{n}\bm{x}_i \in \mathbb{R}^{d}$ とし、 中心化 (各次元の平均をゼロに) されたデータを $\bm{X}^c$ とする。 $\bm{X}^c$ は以下で定義される。</p>
+
+\[\begin{align}
+\bm{X}^c
+&amp;=
+\begin{bmatrix}
+\bm{x}_1 \\
+\bm{x}_2 \\
+\vdots \\
+\bm{x}_n
+\end{bmatrix}
+- 
+\begin{bmatrix}
+\bar{\bm{x}} \\
+\bar{\bm{x}} \\
+\vdots \\
+\bar{\bm{x}} \\
+\end{bmatrix}
+=\begin{bmatrix}
+\bm{x}_1^c \\
+\bm{x}_2^c \\
+\vdots \\
+\bm{x}_n^c
+\end{bmatrix}
+\end{align}\]
+
+\[\begin{align}
+\bm{x}^c_i
+&amp;=\bm{x}_i - \bar{\bm{x}}\\
+&amp;=\bm{x}_i - \frac{1}{n}\sum_{k=1}^{n}\bm{x}_k
+\end{align}\]
+
+<p>すると、次元 $j\ (1\le j \le d’)$ の分散は以下で表せる:</p>
+
+\[\begin{align}
+s_j^2 
+&amp;= \frac{1}{n}\sum_{i=1}^{n}(\bm{x}_i^c \bm{w}_j)^2 \\
+&amp;= \frac{1}{n}\sum_{i=1}^{n}(\bm{x}_i\bm{w}_j^c)^\top (\bm{x}_i^c \bm{w}_j) \\
+&amp;= \frac{1}{n}\sum_{i=1}^{n}\bm{w}_j^\top(\bm{x}_i^c\top\bm{x}_i^c)\bm{w}_j \\
+&amp;= \frac{1}{n}\bm{w}_j^\top \left(\sum_{i=1}^{n}\bm{x}_i^c\top\bm{x}_i^c\right) \bm{w}_j \\
+&amp;= \bm{w}_j^\top \left(\frac{1}{n}\bm{X}^{c\top}\bm{X}^c\right) \bm{w}_j \\
+&amp;= \bm{w}_j^\top \bm{S} \bm{w}_j
+\end{align}\]
+
+<p>ここで、$\bm{S} \in \mathbb{R}^{d \times d}$ はデータ$\bm{X}$の、共分散行列と呼ばれる。</p>
+
+<p>PCAでは、$s_j^2 (1\le j \le d’)$を最大化する $\bm{w}_j$ を求める。
+なお、ここで$\bm{w}_j$を大きくすれば$s_j^2$も大きくなるため、$\bm{w}_j$は単位ベクトル、つまり \(\|\bm{w}_j\|^2 = \bm{w}_j^\top \bm{w}_j = 1\) の成約を設ける。</p>
+
+<p>結果、解きたい問題は</p>
+
+\[\underset{\bm{w}_j}{\text{argmax}}\quad \bm{w}_j^\top \bm{S} \bm{w}_j \quad \text{subject to}\quad  \bm{w}_j^\top \bm{w}_j = 1\]
+
+<p>これをラグランジュの未定乗数法を用いて解くことを考える。ラグランジュ関数は以下のようになる。</p>
+
+\[\begin{align}
+\mathcal{L}(\bm{w}_j, \lambda) &amp;= \bm{w}_j^\top \bm{S} \bm{w}_j - \lambda (\bm{w}_j^\top \bm{w}_j - 1) \\
+\end{align}\]
+
+<p>これを$W_j$で微分すれば、</p>
+
+\[\begin{align}
+\frac{\partial \mathcal{L}}{\partial \bm{w}_j} &amp;= 2 \bm{S} \bm{w}_j - 2 \lambda \bm{w}_j
+\end{align}\]
+
+<p>したがって、以下を満たすときに極値をとる。</p>
+
+\[\bm{S} \bm{w}_j = \lambda \bm{w}_j\]
+
+<p>したがって、$\bm{w}_j$は$\bm{S}$の固有ベクトルであり、$\lambda$は対応する固有値である。<br />
+また、$s_j^2$は、以下のように書き換えられる。
+\(\begin{align}
+s_j^2 &amp;= \bm{w}_j^\top \bm{S} \bm{w}_j \\
+&amp;= \bm{w}_j^\top \lambda \bm{w}_j \\
+&amp;= \lambda \bm{w}_j^\top \bm{w}_j \\
+&amp;= \lambda
+\end{align}\)</p>
+
+<p>PCAでは、$d’$ 個の次元の分散を最大化することを考えるため、$\bm{S}$の固有値が大きい順に対応する$d’$ 個の固有ベクトルをとり並べたものを$\bm{W}$とすればよい。</p>
+
+<h2 id="復習-固有値分解で求められる">(復習) 固有値分解で求められる</h2>
+
+<p>行列 $\bm{A} \in \mathbb{R}^{d\times d}$ の固有値分解は、直交行列$\bm{V}$を用いて以下のように表される。</p>
+
+\[\bm{A} = \bm{V} \bm{\Lambda} \bm{V}^\top\]
+
+<p>ここで、</p>
+
+\[\bm{\Lambda} = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_d)\]
+
+\[\bm{V} = \begin{bmatrix}
+\bm{v}_1 &amp; \bm{v}_2 &amp; \cdots &amp; \bm{v}_d
+\end{bmatrix}\]
+
+<p>とする。 $\lambda_i$ は $\bm{A}$ の固有値、$\bm{v}_i$ は対応する固有ベクトルである。</p>
+
+<p>また、以下のように変形できる。</p>
+
+\[\begin{align}
+\bm{A} &amp;= \bm{V} \bm{\Lambda} \bm{V}^\top\\
+&amp;= 
+\begin{bmatrix}
+\bm{v}_1 &amp; \bm{v}_2 &amp; \cdots &amp; \bm{v}_d
+\end{bmatrix}
+\begin{bmatrix}
+\lambda_1 \bm{v}_1 \\
+\lambda_2 \bm{v}_2 \\
+\vdots \\
+\lambda_d \bm{v}_d
+\end{bmatrix} \\
+&amp;= \sum_{i=1}^{d} \lambda_i \bm{v}_i \bm{v}_i^\top
+\end{align}\]
+
+<h2 id="bmsの固有値ベクトルはxの特異値分解-svd-で求められる">$\bm{S}$の固有値/ベクトルは$X$の特異値分解 (SVD) で求められる</h2>
+
+<p>再掲: $\bm{S} \in \mathbb{R}^{d\times d}$, $\bm{X}^c \in \mathbb{R}^{n\times d}$.</p>
+
+<p>変換行列 $\bm{W} \in \mathbb{R}^{d\times d’}$ を求めるために、$\bm{S}$の固有値を求める必要がある。
+ここで、$\bm{S}$ を $\bm{X}^c$ に関して書き換え、$\bm{X}^c$ の特異値分解 (SVD) を用いると以下のようになる。</p>
+
+\[\begin{align}
+\bm{S} &amp;= \frac{1}{n} \bm{X}^{c\top} \bm{X}^c \\
+&amp;= \frac{1}{n} \left(\bm{U}\bm{\Sigma} \bm{V}^{\top}\right)^\top \left(\bm{U}\bm{\Sigma} \bm{V}^{\top}\right) \\
+&amp;= \frac{1}{n} \bm{V} \bm{\Sigma}^\top \bm{U}^\top \bm{U} \bm{\Sigma} \bm{V}^{\top} \\
+&amp;= \frac{1}{n} \bm{V} \bm{\Sigma}^{2} \bm{V}^{\top}\quad (\because \bm{U} \text{ is orthogonal})\\
+&amp;= \bm{V} \left(\frac{\bm{\Sigma}^{2}}{n} \right) \bm{V}^{\top} \\
+\end{align}\]
+
+<p>つまり、以下が言える:</p>
+<ul>
+  <li>$\bm{S}$ の 固有値は $\bm{X}^c$ を特異値分解して得られる固有値からなる行列$\bm{\Sigma}$ を用いて表される $\bm{\Sigma}^{2}/n$ の各対角成分</li>
+  <li>$\bm{S}$ の 固有ベクトルは $\bm{X}^c$ を特異値分解して得られる $\bm{V}$ の各列ベクトルである。</li>
+</ul>
+
+<p>したがって、PCAを行う際は、$\bm{X}^{c\top}\bm{X}^c$ を計算する必要はなく、$\bm{X}^c$ を特異値分解して、$\bm{V}$ のうち、対応する固有値が大きい $d’$ 個の列ベクトルをとり並べたものを $\bm{W}$ とすればよい。</p>
+
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2020 - 2025 <a href="">Go Kamoda</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1]
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </body>
+</html>

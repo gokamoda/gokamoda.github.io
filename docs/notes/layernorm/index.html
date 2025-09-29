@@ -31,7 +31,7 @@
 
 
 
-  <meta property="og:image" content="/assets/img/centering_matrix.png">
+  <meta property="og:image" content="/assets/img/layernorm_rmsnorm.png">
 
 
 
@@ -282,6 +282,9 @@ Therefore, LayerNorm can be rewritten as:</p>
 
 <p>Thus only non-linear operation in LayerNorm is the division by $\sqrt{\text{Var}(\bm{x})+\varepsilon}$.</p>
 
+\[\begin{align}
+&amp;\text{LayerNorm}(\bm{x})\\&amp; = \text{RMSNorm}(c(\bm{x})) + \bm{\beta}
+\end{align}\]
 
     </section>
   </article>
