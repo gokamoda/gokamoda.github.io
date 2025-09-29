@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-29T03:06:11+00:00</updated><id>/feed.xml</id><title type="html">Go Kamoda</title><subtitle>Go Kamoda&apos;s profile page.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the 8th BlackboxNLP Workshop</title><link href="/news/bbnlp2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the 8th BlackboxNLP Workshop" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>/news/bbnlp2025-accept</id><content type="html" xml:base="/news/bbnlp2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-09-29T04:20:19+00:00</updated><id>/feed.xml</id><title type="html">Go Kamoda</title><subtitle>Go Kamoda&apos;s profile page.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the 8th BlackboxNLP Workshop</title><link href="/news/bbnlp2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the 8th BlackboxNLP Workshop" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>/news/bbnlp2025-accept</id><content type="html" xml:base="/news/bbnlp2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
 
 <div>
   <ul>
@@ -32,7 +32,7 @@
     
 
 (2025).<br />
-Understanding the Side Effects of Rank-One Knowledge Editing.<br />
+<strong>Understanding the Side Effects of Rank-One Knowledge Editing</strong>.<br />
 In
 <i>The 8th BlackboxNLP Workshop</i>.
 
@@ -70,7 +70,7 @@ In
     
 
 (2024).<br />
-密度比の直接推定に基づく言語モデルの出力較正.<br />
+<strong>密度比の直接推定に基づく言語モデルの出力較正</strong>.<br />
 第20回言語処理若手シンポジウム (YANS).
 
     
@@ -129,7 +129,7 @@ In
     
 
 (2025).<br />
-How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.<br />
+<strong>How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders</strong>.<br />
 In
 <i>Findings of the Association for Computational Linguistics: EMNLP 2025</i>.
 
@@ -168,11 +168,11 @@ JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語�
     
 
 (2025).<br />
-層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.<br />
+<strong>層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ</strong>.<br />
 言語処理学会 第31回年次大会, pp. 1751-1756.
 
     <br />
-        <i class="fa-solid fa-crown"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a>
+        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a>
 
 
     <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A5-1" target="_blank">予稿</a>]
@@ -212,11 +212,11 @@ JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語�
     
 
 (2025).<br />
-LM は日本の時系列構造をどうエンコードするか.<br />
+<strong>LM は日本の時系列構造をどうエンコードするか</strong>.<br />
 言語処理学会 第31回年次大会, pp. 2642-2647.
 
     <br />
-        <i class="fa-solid fa-crown"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
+        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
 
 
     <br />[<a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A7-5" target="_blank">予稿</a>]
@@ -269,7 +269,7 @@ LM は日本の時系列構造をどうエンコードするか.<br />
     
 
 (2024).<br />
-SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパターンマッチャー.<br />
+<strong>SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパターンマッチャー</strong>.<br />
 言語処理学会 第31回年次大会, pp. 3310-3315.
 
 
@@ -310,7 +310,7 @@ SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパ�
     
 
 (2025).<br />
-言語モデルのパラメータから探るDetokenizationメカニズム.<br />
+<strong>言語モデルのパラメータから探るDetokenizationメカニズム</strong>.<br />
 言語処理学会 第31回年次大会, pp. 634-639.
 
 
@@ -341,7 +341,7 @@ SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパ�
     
 
 (2025).<br />
-層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.<br />
+<strong>層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ</strong>.<br />
 言語処理学会 第31回年次大会, pp. 1751-1756.
 
 
@@ -372,7 +372,7 @@ SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパ�
     
 
 (2025).<br />
-日本語バイト符号化マスク言語モデルの開発と分析.<br />
+<strong>日本語バイト符号化マスク言語モデルの開発と分析</strong>.<br />
 言語処理学会 第31回年次大会, pp. 3356-3361.
 
 
@@ -413,7 +413,7 @@ SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパ�
     
 
 (2025).<br />
-LM は日本の時系列構造をどうエンコードするか.<br />
+<strong>LM は日本の時系列構造をどうエンコードするか</strong>.<br />
 言語処理学会 第31回年次大会, pp. 2642-2647.
 
 
@@ -444,7 +444,7 @@ LM は日本の時系列構造をどうエンコードするか.<br />
     
 
 (2025).<br />
-言語モデルの内部表現における文法情報の局所性について.<br />
+<strong>言語モデルの内部表現における文法情報の局所性について</strong>.<br />
 言語処理学会 第31回年次大会, pp. 697-701.
 
 
@@ -499,7 +499,7 @@ LM は日本の時系列構造をどうエンコードするか.<br />
     
 
 (2025).<br />
-SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches.<br />
+<strong>SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches</strong>.<br />
 In
 <i>The Thirteenth International Conference on Learning Representations (ICLR 2025)</i>.
 
@@ -538,7 +538,7 @@ In
     
 
 (2025).<br />
-Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment.<br />
+<strong>Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment</strong>.<br />
 In
 <i>Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025)</i>.
 
