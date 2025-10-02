@@ -5,9 +5,9 @@
     {% endif %}
     {% if author.last_name == "Kamoda" and author.first_name == "Go" %}
     <span class="underline">{{ author.last_name }}, {{ author.first_name | slice: 0}}.</span>
-    {% else %}
+    {%- else -%}
     {{ author.last_name }}, {{ author.first_name | slice: 0}}.
-    {% endif %}
+    {%- endif -%}
     {%- if forloop.last == false -%}
     ,
     {% endif %}

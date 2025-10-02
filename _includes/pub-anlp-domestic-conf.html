@@ -6,9 +6,9 @@
 {% for author in publication.authors %}
     {% if author.name contains "鴨田豪" or author.name contains "Go Kamoda" %}
     <span class="underline">{{ author.name }}</span>
-    {% else %}
+    {%- else -%}
     {{ author.name }}
-    {% endif %}
+    {%- endif -%}
     {%- if forloop.last == false -%}
     ,
     {% endif %}
@@ -24,7 +24,7 @@
     {% if publication.awards %}
         {%- for award in publication.awards -%}
         <br>
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="{{ award.url }}" target="_blank">{{ award.name}}</a>{% if forloop.last == false %}, {% endif %}
+        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="{{ award.url }}" target="_blank">{{ award.name}}</a>{%- if forloop.last == false -%}, {% endif %}
         {%- endfor -%}
     {% endif %}
 {% endunless %}

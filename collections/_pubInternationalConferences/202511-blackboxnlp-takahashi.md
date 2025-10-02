@@ -1,6 +1,6 @@
 ---
 title: "Understanding the Side Effects of Rank-One Knowledge Editing"
-proceedings_title: "The 8th BlackboxNLP Workshop"
+proceedings_title: "BlackboxNLP 2025: The 8th Workshop on Analyzing and Interpreting Neural Networks for NLP"
 authors:
   - first_name: Ryosuke
     last_name: Takahashi
