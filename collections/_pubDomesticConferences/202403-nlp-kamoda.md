@@ -22,7 +22,7 @@ month: 3
 links:
   - name: "予稿"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2024/#C3-2"
-    type: "normal"
+    icon: "fa-regular fa-file"
 awards:
   - name: "優秀賞 (12/599)"
     url: "https://www.anlp.jp/nlp2024/award.html"

@@ -21,4 +21,5 @@ pages: 3F1-GS-10-03
 links:
   - name: "予稿"
     url: "https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_3F1GS1003/_article/-char/ja"
+    icon: "fa-regular fa-file"
 ---

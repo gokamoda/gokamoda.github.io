@@ -38,8 +38,11 @@ pages:
 links:
   - name: "OpenReview"
     url: "https://openreview.net/forum?id=Q6PAnqYVpo"
+    icon: "fa-regular fa-file"
   - name: "arXiv"
     url: "https://arxiv.org/abs/2503.03703"
+    logo: "/assets/arxiv-logomark-small.svg"
   - name: "Project Page"
     url: "https://softmatcha.github.io"
+    logo: "/assets/softmatcha-logo.png"
 ---

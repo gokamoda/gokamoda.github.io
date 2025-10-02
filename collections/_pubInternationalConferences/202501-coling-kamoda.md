@@ -26,6 +26,8 @@ pages:
 links:
   - name: "ACL Anthology"
     url: "https://aclanthology.org/2025.coling-main.588/"
+    logo: "/assets/acl-logo.svg"
   - name: "GitHub"
     url: "https://github.com/gokamoda/lfqa-weighted-eval"
+    icon: "fa-brands fa-github"
 ---

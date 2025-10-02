@@ -319,6 +319,9 @@ collections:
   pubInvitedTalks:
     output: false
     permalink: /:name
+  experiences:
+    output: false
+    permalink: /:name
   notes:
     output: true
     permalink: /:collection/:path/

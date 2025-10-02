@@ -48,4 +48,5 @@ pages:
 links:
   - name: "OpenReview"
     url: "https://openreview.net/forum?id=PoeWX7M8CK#discussion"
+    icon: "fa-regular fa-file"
 ---

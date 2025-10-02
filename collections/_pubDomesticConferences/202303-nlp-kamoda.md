@@ -23,4 +23,5 @@ pages: 1350-1355
 links:
   - name: "予稿"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2023/#D6-1"
+    icon: "fa-regular fa-file"
 ---

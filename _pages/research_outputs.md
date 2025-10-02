@@ -10,9 +10,9 @@ header:
 ---
 
 ## Education
-- Doctoral Student, April 2025 - <br>Graduate Institute for Advanced Studies, SOKENDAI.<br>Supervisor: Assoc. Prof. Sho Yokoi<br>
-- Master of Information Science, April 2023 - March 2025.<br>Graduate School of Information Sciences, Tohoku University.<br>Supervisor: Prof. Jun Suzuki & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-award" style="color: #5d9679;"></i> Dean Award (4/126)
-- Bachelor of Engineering, April 2020 - March 2023.<br>School of Engineering, Tohoku University.<br>Supervisor: Prof. Kentaro Inui & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-award" style="color: #5d9679;"></i>Early Graduation (1/252)
+- <strong>Doctoral Student</strong> [2025.04 - ]<br> Graduate Institute for Advanced Studies, SOKENDAI.<br>Supervisor: Assoc. Prof. Sho Yokoi<br>
+- <strong>Master of Information Science</strong> [2023.04 - 2025.03]<br>Graduate School of Information Sciences, Tohoku University.<br>Supervisor: Prof. Jun Suzuki & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-award" style="color: #5d9679;"></i> Dean Award (4/126)
+- <strong>Bachelor of Engineering</strong> [2020.04 - 2023.03]<br>School of Engineering, Tohoku University.<br>Supervisor: Prof. Kentaro Inui & Assoc. Prof. Keisuke Sakaguchi<br><i class="fa-solid fa-award" style="color: #5d9679;"></i>Early Graduation (1/252)
 
 ## International Conferences
 
@@ -59,18 +59,21 @@ header:
 </div>
 {% endif %}
 
-
+{% if site.experiences.size > 0 %}
 ## Experiences
-- [2025.04 -] SOKENDAI<br>Special Researcher Program (Supported by JST BOOST)
-- [2025.04 -] NINJAL<br>Part-time Researcher
-- [2023.10 -] Joint Research with Hakuhodo DY holdings Inc.
-- [2024.04 - 2025.03] Tohoku University<br>GP-DS Research Assistant (Competitive research fellowship)
-- [2023.09] NS Solutions <br>R&D Internship
-- [2023.10 - 2024.02] [AKATSUKI-SICA](https://mitouteki.jp/r4/supporters/outline/r4_b07/)([Certificate](https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/detail/U3NWU05wcHViK2VHc3RSYTJZeFVhZz09))<br>Social Impact Creators' Accelerator Program (supported by Ministry of Economy, Trade and Industry of Japan)
-- [2023.05 - 2024.01] [AI王](https://sites.google.com/view/project-aio/competition4?pli=1)([YouTube](https://youtu.be/5pT5t6e_bLo), [News: 東洋経済](https://toyokeizai.net/articles/-/732641?page=5), [News: Tech+](https://news.mynavi.jp/techplus/article/20240206-2877452/?&utm_medium=email&utm_campaign=20240213))<br>Committee Member
-- [2021.03 - 2023.08] Infratop (DMM WebCamp)<br>Programming Mentor, School Managemenent Member
+<div>
+  <ul>
+    {% for experience in site.experiences reversed %}
+    <li>
+        {% include experiences.html  %}
+      </li>
+    {% endfor %}
 
-## Invited Talks
+  </ul>
+</div>
+{% endif %}
+
+<!-- ## Invited Talks -->
 <div>
   <ol>
     {% for talk in site.oubInvitedTalks reversed %}

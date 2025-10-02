@@ -36,8 +36,11 @@ pages:
 links:
   - name: "ACL Anthology"
     url: "https://aclanthology.org/2025.findings-naacl.355/"
+    logo: "/assets/acl-logo.svg"
   - name: "arXiv"
     url: "https://arxiv.org/abs/2501.15754"
+    logo: "/assets/arxiv-logomark-small.svg"
   - name: "GitHub"
     url: "https://github.com/gokamoda/lm-detokenization"
+    icon: "fa-brands fa-github"
 ---

@@ -23,9 +23,12 @@ pages: 3356-3361
 links:
   - name: "予稿"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2025/#Q8-5"
-  - name: "🤗ByBERT-JP"
+    icon: "fa-regular fa-file"
+  - name: "ByBERT-JP"
     url: "https://huggingface.co/collections/tohoku-nlp/bybert-jp-68ca50cd4ea72d6d6b348fcd"
-  - name: "🤗ByGPT-JP"
+    logo: "/assets/hf-logo.svg"
+  - name: "ByGPT-JP"
     url: "https://huggingface.co/collections/tohoku-nlp/bygpt-jp-68ccbe1f36bc9c5b20f3d59e"
+    logo: "/assets/hf-logo.svg"
   
 ---

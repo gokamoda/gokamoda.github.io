@@ -28,8 +28,11 @@ pages:
 links:
   - name: "ACL Anthology"
     url: "https://aclanthology.org/2023.findings-emnlp.236/"
+    logo: "/assets/acl-logo.svg"
   - name: "arXiv"
     url: "https://arxiv.org/abs/2310.17121"
+    logo: "/assets/arxiv-logomark-small.svg"
   - name: "GitHub"
     url: "https://github.com/gokamoda/TTA4FactualProbing"
+    icon: "fa-brands fa-github"
 ---

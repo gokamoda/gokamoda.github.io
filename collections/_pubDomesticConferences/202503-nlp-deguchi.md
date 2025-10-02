@@ -31,5 +31,5 @@ month: 3
 links:
   - name: "予稿"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2025/#P8-20"
-    type: "normal"
+    icon: "fa-regular fa-file"
 ---

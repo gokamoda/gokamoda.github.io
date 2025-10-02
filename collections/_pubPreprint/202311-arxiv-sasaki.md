@@ -41,4 +41,5 @@ pages:
 links:
   - name: "arXiv"
     url: "https://arxiv.org/abs/2509.04432"
+    logo: "/assets/arxiv-logomark-small.svg"
 ---

@@ -27,6 +27,7 @@ pages: 2864-2869
 links:
   - name: "予稿"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2024/#P10-3"
+    icon: "fa-regular fa-file"
 awards:
   - name: "若手奨励賞 (18/427)"
     url: "https://www.anlp.jp/nlp2025/award.html"

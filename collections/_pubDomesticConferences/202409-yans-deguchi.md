@@ -26,6 +26,7 @@ month: 9
 links:
   - name: "Project Page"
     url: "https://softmatcha.github.io/"
+    logo: "/assets/softmatcha-logo.png"
 awards:
   - name: "デモ賞 (1/15)"
     url: "https://yans.anlp.jp/entry/award"
