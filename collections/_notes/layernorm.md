@@ -118,14 +118,3 @@ $$
 $$
 
 Thus only non-linear operation in LayerNorm is the division by $\sqrt{\text{Var}(\bm{x})+\varepsilon}$.
-
-
-
-
-
-
-$$
-\begin{align}
-&\text{LayerNorm}(\bm{x})\\& = \text{RMSNorm}(c(\bm{x})) + \bm{\beta}
-\end{align}
-$$

@@ -3,7 +3,7 @@ layout: splash
 title: "Folding weights in transformers"
 use_math: true
 header:
-  teaser: 
+  teaser: /assets/img/folding-weights.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
@@ -205,7 +205,7 @@ The same can be done for key and value transformations, and thus LayerNorm follo
 $$
 \begin{align}
     \overset{\text{new}}{\text{LN}}(\bm{x}) &:= \frac{\bm{x}}{\sigma(\bm{x})} &\hspace{1em}\in&\mathbb{R}^d\\
-    \text{ATTN}(i, \bm{X})
+    \overset{\text{new}}{\text{ATTN}}(i, \bm{X})
         &:= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h} \bm{x}_j\overset{\text{new}}{\bm{W}^{VO}_h} + \overset{\text{new}}{\bm{b}^{VO}} &\hspace{1em}\in&\mathbb{R}^d\\
 \end{align}
 $$
@@ -214,7 +214,7 @@ where
 
 $$
 \begin{align}
-    \alpha_{i, j, h} &:= \underset{\bm{x}_j,\bm{x}_j \in \bm{X}, j \leq i}{\text{softmax}}\frac{\overset{\text{new}}{\bm{q}_h}(\bm{x}_i)\overset{\text{new}}{\bm{k}_h}(\bm{x}_j)^\top}{\sqrt{d'}} &\hspace{1em}\in&\mathbb{R}\\
+    \overset{\text{new}}{\alpha_{i, j, h}} &:= \underset{\bm{x}_j,\bm{x}_j \in \bm{X}, j \leq i}{\text{softmax}}\frac{\overset{\text{new}}{\bm{q}_h}(\bm{x}_i)\overset{\text{new}}{\bm{k}_h}(\bm{x}_j)^\top}{\sqrt{d'}} &\hspace{1em}\in&\mathbb{R}\\
     \overset{\text{new}}{\bm{q}_h}(\bm{x}) &:= \bm{x}\overset{\text{new}}{\bm{W}^Q_h} + \overset{\text{new}}{\bm{b}^Q_h} &\hspace{1em}\in&\mathbb{R}^d\\
     \overset{\text{new}}{\bm{k}_h}(\bm{x}) &:= \bm{x}\overset{\text{new}}{\bm{W}^K_h} + \overset{\text{new}}{\bm{b}^K_h} &\hspace{1em}\in&\mathbb{R}^d\\
     \overset{\text{new}}{\bm{W}^Q_h} &:= \left(\bm{I}-\frac{1}{d}\bm{1}^\top\bm{1}\right)\diag{\bm{\gamma}}\bm{W}^Q_h &\hspace{1em}\in&\mathbb{R}^{d \times d}\\
