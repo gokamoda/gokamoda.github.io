@@ -92,7 +92,7 @@ Layer Normalization can be expressed as follows (org stands for original):
 
 $$
 \begin{alignat}{3}
-    &\text{LN}(\bm{x}) &:=&\ \frac{\bm{x}-\mu(x)\bm{1}}{\sigma(\bm{x})}\odot\bm{\gamma} + \bm{\beta}&\hspace{1em}\in&\mathbb{R}^d\\
+    &\text{LN}(\bm{x}) &:=&\ \frac{\bm{x}-\mu(\bm{x})\bm{1}}{\sigma(\bm{x})}\odot\bm{\gamma} + \bm{\beta}&\hspace{1em}\in&\mathbb{R}^d\\
     &\bm{x} &:=&\ 
     \begin{bmatrix}
         x^{(1)} & \cdots & x^{(d)}
