@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "✅ Paper accepted to the Findings of EMNLP 2025",
-        "excerpt":"We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.                               Inaba, T.,                Kamoda, G.,           Inui, K.,           Isonuma, M.,           Miyao, Y.,           Oseki, Y.,           Takagi, Y.,      &amp;           Heinzerling, B.  (2025).  How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.  In Findings of the Association for Computational Linguistics: EMNLP 2025.                                                OpenReview                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.                               Inaba, T.,                Kamoda, G.,           Inui, K.,           Isonuma, M.,           Miyao, Y.,           Oseki, Y.,           Takagi, Y.,      &amp;           Heinzerling, B.  (2025).  How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.  In Findings of the Association for Computational Linguistics: EMNLP 2025.                                                OpenReview     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/emnlp2025findings-accept/",
         "teaser": null
