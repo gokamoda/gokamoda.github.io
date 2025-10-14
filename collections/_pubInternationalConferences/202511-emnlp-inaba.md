@@ -49,4 +49,7 @@ links:
   - name: "OpenReview"
     url: "https://openreview.net/forum?id=PoeWX7M8CK#discussion"
     icon: "fa-regular fa-file"
+  - name: "arXiv"
+    url: "https://arxiv.org/abs/2503.06394"
+    logo: "/assets/arxiv-logomark-small.svg"
 ---
