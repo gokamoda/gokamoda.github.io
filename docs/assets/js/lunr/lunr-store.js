@@ -120,13 +120,13 @@ var store = [{
         "teaser": null
       },{
         "title": "✅ Paper accepted to the Findings of EMNLP 2025",
-        "excerpt":"We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.                               Inaba, T.,                Kamoda, G.,           Inui, K.,           Isonuma, M.,           Miyao, Y.,           Oseki, Y.,           Takagi, Y.,      &amp;           Heinzerling, B.  (2025).  How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.  In Findings of the Association for Computational Linguistics: EMNLP 2025.                                                OpenReview     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.                               Inaba, T.,                Kamoda, G.,           Inui, K.,           Isonuma, M.,           Miyao, Y.,           Oseki, Y.,           Takagi, Y.,      &amp;           Heinzerling, B.  (2025).  How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders.  In Findings of the Association for Computational Linguistics: EMNLP 2025.                                                ACL Anthology     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/emnlp2025findings-accept/",
         "teaser": null
       },{
         "title": "✅ Paper accepted to the 8th BlackboxNLP Workshop",
-        "excerpt":"We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.                               Takahashi, R.,                Kamoda, G.,           Heinzerling, B.,           Sakaguchi, K.,      &amp;           Inui, K.  (2025).  Understanding the Side Effects of Rank-One Knowledge Editing.  In BlackboxNLP 2025: The 8th Workshop on Analyzing and Interpreting Neural Networks for NLP.                                                arXiv                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.                               Takahashi, R.,                Kamoda, G.,           Heinzerling, B.,           Sakaguchi, K.,      &amp;           Inui, K.  (2025).  Understanding the Side Effects of Rank-One Knowledge Editing.  In BlackboxNLP 2025: The 8th Workshop on Analyzing and Interpreting Neural Networks for NLP.                                                ACL Anthology     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/bbnlp2025-accept/",
         "teaser": null
