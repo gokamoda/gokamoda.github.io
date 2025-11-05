@@ -237,3 +237,35 @@ $$
 - $\bm{S}$ の 固有ベクトルは $\bm{X}^c$ を特異値分解して得られる $\bm{V}$ の各列ベクトルである。
 
 したがって、PCAを行う際は、$\bm{X}^{c\top}\bm{X}^c$ を計算する必要はなく、$\bm{X}^c$ を特異値分解して、$\bm{V}$ のうち、対応する固有値が大きい $d'$ 個の列ベクトルをとり並べたものを $\bm{W}$ とすればよい。
+
+
+## 重み付きPCA
+
+PCAでは、各データ点のサンプリング確率が等しいことを仮定している (もちろん、その分重複を許してサンプリングすれば良い)。
+各点のサンプリング確率 $p(x)$ を考慮した重み付きのPCAについて考える。
+
+まず、中心化について、各点のサンプリング確率を考慮した平均 $\bar{\bm{x}}$ は以下で定義される:
+
+$$
+\bar{\bm{x}} := \sum_{i} p(x_i) \bm{x}_i
+$$
+
+この平均を使って中心化されたデータを再度 $\bm{X}^c$ とする。
+
+次に分散について、次元 $j\ (1\le j \le d')$ の分散は以下で表せる:
+
+$$
+\begin{align}
+s_j^2 
+&= \frac{1}{n}\sum_{i=1}^{n}p(x_i)(\bm{x}_i^c \bm{w}_j)^2 \\
+&= \frac{1}{n}\sum_{i=1}^{n}p(x_i)(\bm{x}_i\bm{w}_j^c)^\top (\bm{x}_i^c \bm{w}_j) \\
+&= \frac{1}{n}\sum_{i=1}^{n}\bm{w}_j^\top(p(x_i)\bm{x}_i^c\top\bm{x}_i^c)\bm{w}_j \\
+&= \frac{1}{n}\bm{w}_j^\top \left(\sum_{i=1}^{n}\left(\sqrt{p(x_i)}\bm{x}_i^c\right)^\top\left(\sqrt{p(x_i)}\bm{x}_i^c\right)\right) \bm{w}_j \\
+&= \frac{1}{n}\bm{w}_j^\top \left(\bm{P}(X) \bm{X}^c \right)^\top\left(\bm{P}(X) \bm{X}^c \right)\bm{w}_j \\
+&= \bm{w}_j^\top \bm{S} \bm{w}_j
+\end{align}
+$$
+
+ただし $\bm{P}(X) = \diag{\sqrt{p(x_1)}, \ldots, \sqrt{p(x_n)}}$ とする。
+
+したがって、通常のPCAと同様に考えれば、PCAは $\bm{P}(X) \bm{X}^c $ の右特異ベクトルを並べれば良いことがわかる
