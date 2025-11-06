@@ -399,11 +399,11 @@ s_j^2 &amp;= \bm{w}_j^\top \bm{S} \bm{w}_j \\
 
 \[\begin{align}
 s_j^2 
-&amp;= \frac{1}{n}\sum_{i=1}^{n}p(x_i)(\bm{x}_i^c \bm{w}_j)^2 \\
-&amp;= \frac{1}{n}\sum_{i=1}^{n}p(x_i)(\bm{x}_i\bm{w}_j^c)^\top (\bm{x}_i^c \bm{w}_j) \\
-&amp;= \frac{1}{n}\sum_{i=1}^{n}\bm{w}_j^\top(p(x_i)\bm{x}_i^c\top\bm{x}_i^c)\bm{w}_j \\
-&amp;= \frac{1}{n}\bm{w}_j^\top \left(\sum_{i=1}^{n}\left(\sqrt{p(x_i)}\bm{x}_i^c\right)^\top\left(\sqrt{p(x_i)}\bm{x}_i^c\right)\right) \bm{w}_j \\
-&amp;= \frac{1}{n}\bm{w}_j^\top \left(\bm{P}(X) \bm{X}^c \right)^\top\left(\bm{P}(X) \bm{X}^c \right)\bm{w}_j \\
+&amp;= \sum_{i=1}^{n}p(x_i)(\bm{x}_i^c \bm{w}_j)^2 \\
+&amp;= \sum_{i=1}^{n}p(x_i)(\bm{x}_i\bm{w}_j^c)^\top (\bm{x}_i^c \bm{w}_j) \\
+&amp;= \sum_{i=1}^{n}\bm{w}_j^\top(p(x_i)\bm{x}_i^c\top\bm{x}_i^c)\bm{w}_j \\
+&amp;= \bm{w}_j^\top \left(\sum_{i=1}^{n}\left(\sqrt{p(x_i)}\bm{x}_i^c\right)^\top\left(\sqrt{p(x_i)}\bm{x}_i^c\right)\right) \bm{w}_j \\
+&amp;= \bm{w}_j^\top \left(\bm{P}(X) \bm{X}^c \right)^\top\left(\bm{P}(X) \bm{X}^c \right)\bm{w}_j \\
 &amp;= \bm{w}_j^\top \bm{S} \bm{w}_j
 \end{align}\]
 
