@@ -21,7 +21,7 @@ title                    : "Go Kamoda"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Go Kamoda"
-description              : "Go Kamoda's profile page. Ph.D. Student at SOKENDAI/NINJAL researching computational linguistics and natural language processing."
+description              : "This is Go Kamoda's profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more."
 url                      : https://gokamoda.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : gokamoda/gokamoda.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
