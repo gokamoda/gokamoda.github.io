@@ -54,10 +54,25 @@ $$
 Here, $\theta_i = \theta_\text{RoPE}^{-2(i-1)/d}$ and $\theta_\text{RoPE}$ is a hyperparameter (typically $10,000$).
 
 
-## Implementation
-`modeling_llama.py`: [github](https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py)
+## Implementation: Llama (-Llama3)
 
-In implementation, the first half of the dimentions correspond to the odd dimentions in the paper. The second half correspond to the even dimentions in the paper.
+`modeling_llama.py`: [github](https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/modeling_llama.py)
+```python
+def rotate_half(x):
+    x1 = x[..., : x.shape[-1] // 2]
+    x2 = x[..., x.shape[-1] // 2 :]
+    return torch.cat((-x2, x1), dim=-1)
+
+def apply_rotary_pos_emb(q, k, cos, sin, unsqueeze_dim=1):
+    cos = cos.unsqueeze(unsqueeze_dim)
+    sin = sin.unsqueeze(unsqueeze_dim)
+    q_embed = (q * cos) + (rotate_half(q) * sin)
+    k_embed = (k * cos) + (rotate_half(k) * sin)
+    return q_embed, k_embed
+```
+
+
+In Llama implementation, the first half of the dimentions correspond to the odd dimentions in the paper. The second half correspond to the even dimentions in the paper.
 
 $$
 \begin{align}
@@ -104,6 +119,23 @@ $$
 \end{align}
 $$
 
+## Implementation: GPT-OSS
+
+`modeling_gpt_oss.py`: [github](https://github.com/huggingface/transformers/blob/main/src/transformers/models/gpt_oss/modeling_gpt_oss.py)
+```python
+def _apply_rotary_emb(
+    x: torch.Tensor,
+    cos: torch.Tensor,
+    sin: torch.Tensor,
+) -> torch.Tensor:
+    first_half, second_half = torch.chunk(x, 2, dim=-1)
+    first_ = first_half * cos - second_half * sin
+    second_ = second_half * cos + first_half * sin
+    return torch.cat((first_, second_), dim=-1)
+```
+
+In GPT-OSS implementation, the core idea is the same as Llama implementation, the size of `cos` and `sin` tensors are different. 
+In Llama, $ \text{cos}, \text{sin} \in \mathbb{R}^{d} $ while in GPT-OSS, $ \text{cos}, \text{sin} \in \mathbb{R}^{d/2} $.
 
 
 ## References

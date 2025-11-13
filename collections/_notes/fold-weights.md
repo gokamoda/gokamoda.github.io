@@ -140,8 +140,12 @@ $$
 
 Let attention weight from token position $i$ to $j$  ($i \ge j$) in head $h$ be expressed as follows:
 
+
 $$
-\alpha_{i, j, h} = \underset{\bm{x}_j,\bm{x}_j \in \bm{X}, j \leq i}{\text{softmax}}\frac{\bm{q}_h(\bm{x}_i)\bm{k}_h(\bm{x}_j)^\top}{\sqrt{d'}}
+\begin{align}
+\alpha_{i, j, h} &= \frac{\exp(s_{i, j, h})}{\sum_{j'} \exp(s_{i, j', h})}\\
+s_{i, j, h} &:= \frac{\bm{q}_h(\bm{x}_i)\bm{k}_h(\bm{x}_j)^\top}{\sqrt{d'}}
+\end{align}
 $$
 
 where $d' = d/H$ is the dimension of each head.
