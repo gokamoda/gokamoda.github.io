@@ -1,1 +1,1 @@
-Sitemap: https://github.com/pages/gokamoda/sitemap.xml
+Sitemap: https://gokamoda.github.io/pages/gokamoda/sitemap.xml
