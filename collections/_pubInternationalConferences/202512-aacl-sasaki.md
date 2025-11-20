@@ -1,5 +1,5 @@
 ---
-title: "Can Language Models Handle a Non-Gregorian Calendar?"
+title: "Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki"
 proceedings_title: "Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL 2025)"
 authors:
   - first_name: Mutsumi
