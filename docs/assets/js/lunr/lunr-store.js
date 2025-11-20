@@ -138,7 +138,7 @@ var store = [{
         "teaser": null
       },{
         "title": "✅ Paper accepted to the IJCNLP-AACL 2025",
-        "excerpt":"We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.                               Sasaki, M.,                Kamoda, G.,           Takahashi, R.,           Sato, K.,           Heinzerling, B.,           Sakaguchi, K.,      &amp;           Inui, K.  (2025).  Can Language Models Handle a Non-Gregorian Calendar?.  In Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL 2025).                                                arXiv                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.                               Sasaki, M.,                Kamoda, G.,           Takahashi, R.,           Sato, K.,           Heinzerling, B.,           Sakaguchi, K.,      &amp;           Inui, K.  (2025).  Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki.  In Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL 2025).                                                arXiv                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/ijcnlpaacl2025-accept/",
         "teaser": null
@@ -263,7 +263,7 @@ var store = [{
         "url": "/202511-emnlp-inaba",
         "teaser": null
       },{
-        "title": "Can Language Models Handle a Non-Gregorian Calendar?",
+        "title": "Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki",
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/202512-aacl-sasaki",
