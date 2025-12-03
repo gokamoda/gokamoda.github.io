@@ -31,6 +31,7 @@ excerpt: ""
     - `プログラマーやプロフェッショナルの方に愛用者の多いハッピーな配列を踏襲している`
     - 似たもので[Choco60](https://shop.yushakobo.jp/products/choco60-rev-2)もあるが、違いはあまりわかってない。一つ確かなのは、7sProはスペース部分の分割が多い。
     - 自作キーボードなら大体そうだろうが、Cherry MX互換スイッチが使える (選択肢が多い)
+    - はんだ付けは記憶が正しければ10箇所くらい
 - キースイッチ [Kailh Box Mute Brown Switch](http://www.kailh.com/en/Products/Ks/BOXS/753.html)
     - ※ おそらく廃盤で正式名称があやふや (2023/9/16は72個入りで7,356円だった)
     - HHKBに近い
@@ -50,7 +51,7 @@ excerpt: ""
     - 現在は完全有線で使用中
 - アクセサリ
     - [パームレスト](https://amzn.asia/d/5nIQZV1)
-    - [TTRSケーブル](https://amzn.asia/d/9kKXdji)
+    - [TRRSケーブル](https://amzn.asia/d/9kKXdji)
         - TTRSである必要は実はなかった気がするが、脳死で選択
         - 両端子ともL字になっているのが良い
     - USBケーブル
