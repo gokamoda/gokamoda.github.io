@@ -34,7 +34,7 @@ $$
 \end{aligned}
 $$
 
-By the way, \(I - \frac{1}{d}\bm{1}^\top\bm{1}\) is called the 
+By the way, $I - \frac{1}{d}\bm{1}^\top\bm{1}$ is called the 
 <a href="https://en.wikipedia.org/wiki/Centering_matrix">centering matrix</a>.
 
 
