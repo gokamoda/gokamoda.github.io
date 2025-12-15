@@ -1,0 +1,404 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>メモ: torch.nn.functional.kl_div - Go Kamoda</title>
+<meta name="description" content="torch.nn.functional.kl_divのメモ">
+
+
+  <meta name="author" content="Go Kamoda">
+  
+  <meta property="article:author" content="Go Kamoda">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Go Kamoda">
+<meta property="og:title" content="メモ: torch.nn.functional.kl_div">
+<meta property="og:url" content="https://gokamoda.github.io/notes/kl_div/">
+
+
+  <meta property="og:description" content="torch.nn.functional.kl_divのメモ">
+
+
+
+  <meta property="og:image" content="https://gokamoda.github.io/assets/img/kl_div.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-12-15T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://gokamoda.github.io/notes/kl_div/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Go Kamoda Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href=/assets/favicon/favicon-96x96.png sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href=/assets/favicon/favicon.svg />
+<link rel="shortcut icon" href=/assets/favicon/favicon.ico />
+<link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
+<link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          G<img src=/assets/enaga-transparent-blackline.svg alt="" class="img-site-title"/>&nbsp;Kamoda
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/notes/"
+                
+                
+              >Notes</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #59876F; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          メモ: torch.nn.functional.kl_div
+
+        
+      </h1>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-12-15T00:00:00+00:00">December 15, 2025</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="メモ: torch.nn.functional.kl_div">
+    <meta itemprop="description" content="torch.nn.functional.kl_divのメモ">
+    <meta itemprop="datePublished" content="2025-12-15T00:00:00+00:00">
+    
+    <section class="page__content" itemprop="text">
+      <h2 id="メモの目的">メモの目的</h2>
+<ul>
+  <li>以下の問いへの回答を書いておく
+    <ul>
+      <li>$D_{\text{KL}}(P||Q)$ の、PとQはどっちが予測分布でどっちが正解分布か</li>
+      <li>torch.nn.functional.kl_div の引数には何を渡せばよいのか</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="一般的な式">一般的な式</h2>
+
+\[D_{KL}(P || Q) = \sum_{i} P(i) \log\frac{P(i)}{Q(i)}\]
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">a measure of how much an approximating probability distribution Q is different from a true probability distribution P</code> [Wikipedia (2025-12-15)]
+    <ul>
+      <li>(他の参考書を参照したほうが良いのだが、まぁ。)</li>
+    </ul>
+  </li>
+  <li>つまり、$P$ を真の分布 (正解分布)、$Q$ を予測分布とする。</li>
+</ul>
+
+<h2 id="torchnnfunctionalkl_div-の引数">torch.nn.functional.kl_div の引数</h2>
+<ul>
+  <li>結論
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">input</code> は予測分布の対数を渡す</li>
+      <li><code class="language-plaintext highlighter-rouge">target</code> は正解分布を渡す</li>
+    </ul>
+  </li>
+  <li><a href="https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.kl_div.html">公式ドキュメント</a> より (2025-12-15, v2.9.1):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">torch.nn.functional.kl_div(input, target, size_average=None, reduce=None, reduction='mean', log_target=False)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">input</code> : Tensor of arbitrary shape in log-probabilities</li>
+      <li><code class="language-plaintext highlighter-rouge">target</code> : Tensor of the same shape as input.</li>
+      <li><code class="language-plaintext highlighter-rouge">size_average</code>: Deprecated</li>
+      <li><code class="language-plaintext highlighter-rouge">reduce</code>: Deprecated</li>
+      <li><code class="language-plaintext highlighter-rouge">reduction</code>: Specifies the reduction to apply to the output. Default: ‘mean’
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">'none'</code>: no reduction will be applied</li>
+          <li><code class="language-plaintext highlighter-rouge">'batchmean'</code>: the sum of the output will be divided by batchsize</li>
+          <li><code class="language-plaintext highlighter-rouge">'sum'</code>: the output will be summed</li>
+          <li><code class="language-plaintext highlighter-rouge">'mean'</code>: the output will be divided by the number of elements in the output</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="上の結論に至った検証コード">上の結論に至った検証コード</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">tensor</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+<span class="p">])</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">tensor</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">],</span>
+<span class="p">])</span>
+
+<span class="n">no_reduction</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">tensor</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="n">torch</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="n">torch</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">torch</span><span class="p">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">],</span>
+<span class="p">])</span>
+
+</code></pre></div></div>
+
+<h3 id="引数の確認とbatchmeanの動作確認">引数の確認とbatchmeanの動作確認</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">def</span> <span class="nf">test_kl_div</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">functional</span><span class="p">.</span><span class="n">kl_div</span><span class="p">(</span><span class="nb">input</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">log</span><span class="p">(),</span> <span class="n">target</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s">'batchmean'</span><span class="p">)</span>
+    <span class="n">should_equal</span> <span class="o">=</span> <span class="n">no_reduction</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">torch</span><span class="p">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">kl_div</span><span class="p">,</span> <span class="n">should_equal</span><span class="p">),</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">kl_div</span><span class="si">}</span><span class="s"> != </span><span class="si">{</span><span class="n">should_equal</span><span class="si">}</span><span class="s">"</span>
+<span class="n">test_kl_div</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="reductionnone-の動作確認"><code class="language-plaintext highlighter-rouge">reduction='none'</code> の動作確認</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_kl_div_none</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">functional</span><span class="p">.</span><span class="n">kl_div</span><span class="p">(</span><span class="nb">input</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">log</span><span class="p">(),</span> <span class="n">target</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s">'none'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">torch</span><span class="p">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">kl_div</span><span class="p">,</span> <span class="n">no_reduction</span><span class="p">),</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">kl_div</span><span class="si">}</span><span class="s"> != </span><span class="si">{</span><span class="n">no_reduction</span><span class="si">}</span><span class="s">"</span>
+<span class="n">test_kl_div_none</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="reductionsum-の動作確認"><code class="language-plaintext highlighter-rouge">reduction='sum'</code> の動作確認</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_kl_div_sum</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">functional</span><span class="p">.</span><span class="n">kl_div</span><span class="p">(</span><span class="nb">input</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">log</span><span class="p">(),</span> <span class="n">target</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s">'sum'</span><span class="p">)</span>
+    <span class="n">should_equal</span> <span class="o">=</span> <span class="n">no_reduction</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="nb">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">torch</span><span class="p">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">kl_div</span><span class="p">,</span> <span class="n">should_equal</span><span class="p">),</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">kl_div</span><span class="si">}</span><span class="s"> != </span><span class="si">{</span><span class="n">should_equal</span><span class="si">}</span><span class="s">"</span>
+<span class="n">test_kl_div_sum</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="reductionmean"><code class="language-plaintext highlighter-rouge">reduction='mean'</code></h3>
+<p>WARNING: doesn’t return the true kl divergence value, please use reduction = ‘batchmean’ which aligns with KL math definition.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_kl_div_mean</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="n">kl_div</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">nn</span><span class="p">.</span><span class="n">functional</span><span class="p">.</span><span class="n">kl_div</span><span class="p">(</span><span class="nb">input</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">log</span><span class="p">(),</span> <span class="n">target</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s">'mean'</span><span class="p">)</span>
+    <span class="n">should_equal</span> <span class="o">=</span> <span class="n">no_reduction</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">torch</span><span class="p">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">kl_div</span><span class="p">,</span> <span class="n">should_equal</span><span class="p">),</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">kl_div</span><span class="si">}</span><span class="s"> != </span><span class="si">{</span><span class="n">should_equal</span><span class="si">}</span><span class="s">"</span>
+<span class="n">test_kl_div_mean</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+</code></pre></div></div>
+
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2020 - 2025 <a href="https://gokamoda.github.io">Go Kamoda</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQCS7FXG9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDQCS7FXG9', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1],
+        diag: ["\\mathrm{diag}\\left(#1\\right)", 1],
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </body>
+</html>
