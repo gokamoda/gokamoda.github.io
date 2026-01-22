@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-01-22T13:17:19+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-01-22T13:19:26+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
 
 <div>
   <ul>
@@ -34,7 +34,12 @@ In
 <i>Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL 2025)</i>.
 
     <br />
-    <span class="link-row"><a href="https://arxiv.org/abs/2509.04432" target="_blank" class="link-btn btn">
+    <span class="link-row"><a href="https://aclanthology.org/2025.ijcnlp-short.36/" target="_blank" class="link-btn btn">
+        
+        <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
+        
+        ACL Anthology
+    </a>&nbsp;<a href="https://arxiv.org/abs/2509.04432" target="_blank" class="link-btn btn">
         
         <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
