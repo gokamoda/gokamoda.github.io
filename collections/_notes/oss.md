@@ -3,7 +3,7 @@ layout: splash
 title: "GPT-OSS Attnention Sink"
 use_math: true
 header:
-  teaser: /assets/img/folding-weights.png
+  teaser: /assets/img/gptoss-bias.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
@@ -12,6 +12,8 @@ excerpt: "The bias term for preventing attention sink in GPT-OSS may have other 
 ---
 
 tl;dr: The bias term for preventing attention sink in GPT-OSS may have other effects than just preventing attention sink.
+(made public on 2026-01-22)
+
 
 ## Notation
 
