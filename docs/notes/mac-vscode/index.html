@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>✅ Paper accepted to the IJCNLP-AACL 2025 - Go Kamoda</title>
-<meta name="description" content="“Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki”">
+<!-- begin _includes/seo.html --><title>メモ: VSCodeで開くボタンをMacのFinderに追加する - Go Kamoda</title>
+<meta name="description" content="VSCodeで開くボタンをMacのFinderに追加する方法のメモ">
 
 
   <meta name="author" content="Go Kamoda">
@@ -23,19 +23,21 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Go Kamoda">
-<meta property="og:title" content="✅ Paper accepted to the IJCNLP-AACL 2025">
-<meta property="og:url" content="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/">
+<meta property="og:title" content="メモ: VSCodeで開くボタンをMacのFinderに追加する">
+<meta property="og:url" content="https://gokamoda.github.io/notes/mac-vscode/">
 
 
-  <meta property="og:description" content="“Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki”">
-
-
-
+  <meta property="og:description" content="VSCodeで開くボタンをMacのFinderに追加する方法のメモ">
 
 
 
+  <meta property="og:image" content="https://gokamoda.github.io/assets/img/open-in-vscode.png">
 
-  <meta property="article:published_time" content="2025-10-26T00:00:00+00:00">
+
+
+
+
+  <meta property="article:published_time" content="2026-01-21T00:00:00+00:00">
 
 
 
@@ -46,7 +48,7 @@
   
 
 
-<link rel="canonical" href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/">
+<link rel="canonical" href="https://gokamoda.github.io/notes/mac-vscode/">
 
 
 
@@ -160,7 +162,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          ✅ Paper accepted to the IJCNLP-AACL 2025
+          メモ: VSCodeで開くボタンをMacのFinderに追加する
 
         
       </h1>
@@ -173,7 +175,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2025-10-26T00:00:00+00:00">October 26, 2025</time>
+        <time datetime="2026-01-21T00:00:00+00:00">January 21, 2026</time>
       </span>
     
 
@@ -193,59 +195,31 @@
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="✅ Paper accepted to the IJCNLP-AACL 2025">
-    <meta itemprop="description" content="“Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki”">
-    <meta itemprop="datePublished" content="2025-10-26T00:00:00+00:00">
+    <meta itemprop="headline" content="メモ: VSCodeで開くボタンをMacのFinderに追加する">
+    <meta itemprop="description" content="VSCodeで開くボタンをMacのFinderに追加する方法のメモ">
+    <meta itemprop="datePublished" content="2026-01-21T00:00:00+00:00">
     
     <section class="page__content" itemprop="text">
-      <p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+      <ol>
+  <li>Automatorを開く</li>
+  <li>画面上部のメニューバーで「File」-&gt;「New」を選択</li>
+  <li>「Quick Action」を選択</li>
+  <li>「Workflow receives current」のドロップダウンメニューで「files or folders」を選択</li>
+  <li>「in」ドロップダウンメニューで「Finder.app」を選択</li>
+  <li>左側のライブラリから「Run Shell Script」をダブルクリックし，画面右側に追加</li>
+  <li>「Pass input:」のドロップダウンメニューで「as arguments」を選択</li>
+  <li>以下のスクリプトを入力
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">for </span>f <span class="k">in</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+ <span class="k">do
+     </span>open <span class="nt">-a</span> <span class="s2">"Visual Studio Code"</span> <span class="s2">"</span><span class="nv">$f</span><span class="s2">"</span>
+ <span class="k">done</span>
+</code></pre></div>    </div>
+  </li>
+  <li>画面上部のメニューバーで「File」-&gt;「Save」を選択</li>
+  <li>「Save As:」に「Open in VSCode」などと入力し，「Save」ボタンをクリック</li>
+</ol>
 
-<div>
-  <ul>
-    <li>
-      
-      
-
-    Sasaki, M.,
-    
-
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Takahashi, R.,
-    
-
-    Sato, K.,
-    
-
-    Heinzerling, B.,
-    
-
-    Sakaguchi, K.,
-    
-&amp; 
-    
-    Inui, K.
-
-(2025).<br />
-<strong>Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki</strong>.<br />
-In
-<i>Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL 2025)</i>.
-
-    <br />
-    <span class="link-row"><a href="https://arxiv.org/abs/2509.04432" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        arXiv
-    </a></span>
-
-    </li>
-  </ul>
-</div>
-
-<p>-&gt; <a href="/cv/">Publications</a></p>
+<p>※ Terminalからなら<code class="language-plaintext highlighter-rouge">code</code>コマンドを使うのが早い．</p>
 
     </section>
   </article>
@@ -310,6 +284,39 @@ In
 
 
 
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1],
+        diag: ["\\mathrm{diag}\\left(#1\\right)", 1],
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
     
   </body>
 </html>

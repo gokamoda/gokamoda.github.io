@@ -10,8 +10,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>LogitLens without bias - Go Kamoda</title>
-<meta name="description" content="Removing bias term from LogitLens.">
+<!-- begin _includes/seo.html --><title>GPT-OSS Attnention Sink - Go Kamoda</title>
+<meta name="description" content="The bias term for preventing attention sink in GPT-OSS may have other effects than just preventing attention sink.">
 
 
   <meta name="author" content="Go Kamoda">
@@ -23,32 +23,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Go Kamoda">
-<meta property="og:title" content="LogitLens without bias">
-<meta property="og:url" content="https://gokamoda.github.io/notes/logitlens-wob/">
+<meta property="og:title" content="GPT-OSS Attnention Sink">
+<meta property="og:url" content="https://gokamoda.github.io/notes/oss/">
 
 
-  <meta property="og:description" content="Removing bias term from LogitLens.">
-
-
-
-  <meta property="og:image" content="https://gokamoda.github.io/assets/img/logit_lens_nobias_gpt2.png">
+  <meta property="og:description" content="The bias term for preventing attention sink in GPT-OSS may have other effects than just preventing attention sink.">
 
 
 
-
-
-  <meta property="article:published_time" content="2024-07-24T00:00:00+00:00">
+  <meta property="og:image" content="https://gokamoda.github.io/assets/img/folding-weights.png">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2025-05-12T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://gokamoda.github.io/notes/logitlens-wob/">
+
+<link rel="canonical" href="https://gokamoda.github.io/notes/oss/">
 
 
 
@@ -162,7 +162,7 @@
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          LogitLens without bias
+          GPT-OSS Attnention Sink
 
         
       </h1>
@@ -175,7 +175,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2024-07-24T00:00:00+00:00">July 24, 2024</time>
+        <time datetime="2025-05-12T00:00:00+00:00">May 12, 2025</time>
       </span>
     
 
@@ -195,90 +195,129 @@
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="LogitLens without bias">
-    <meta itemprop="description" content="Removing bias term from LogitLens.">
-    <meta itemprop="datePublished" content="2024-07-24T00:00:00+00:00">
+    <meta itemprop="headline" content="GPT-OSS Attnention Sink">
+    <meta itemprop="description" content="The bias term for preventing attention sink in GPT-OSS may have other effects than just preventing attention sink.">
+    <meta itemprop="datePublished" content="2025-05-12T00:00:00+00:00">
     
     <section class="page__content" itemprop="text">
-      <p><span id="top"></span></p>
+      <p>tl;dr: The bias term for preventing attention sink in GPT-OSS may have other effects than just preventing attention sink.</p>
 
-<p><a href="#nostalgibraist2020logit">LogitLens[1]</a> applies $\text{LMHead}$ to the internal representations $(\bm{h} \in \mathbb{R}^{1\times d})$ of a transformer model.</p>
+<h2 id="notation">Notation</h2>
 
-\[\begin{equation}
-\text{LMHead}(\bm{h}) = \text{LN}_\text{f}(\bm{h})\bm{E}^O \label{eq:lm_head}
-\end{equation}\]
+\[\begin{alignat}{4}
+    &amp;\bm{X} &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{x}_1\\
+        \vdots\\
+        \bm{x}_n
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{n \times d}\\
+    &amp;\bm{W}^O &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{W}^O_1\\
+        \vdots\\
+        \bm{W}^O_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d \times d}\\
+    &amp;\bm{W}^Q &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{W}^Q_1 &amp; \cdots &amp; \bm{W}^Q_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d \times d}&amp; \label{eq:wq_split}\\
+    &amp;\bm{W}^K &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{W}^K_1 &amp; \cdots &amp; \bm{W}^K_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d \times d}&amp; \label{eq:wk_split}\\
+    &amp;\bm{W}^V &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{W}^V_1 &amp; \cdots &amp; \bm{W}^V_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d \times d}&amp;\label{eq:wv_split}\\
+    &amp;\bm{b}^Q &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{b}^Q_1 &amp; \cdots &amp; \bm{b}^Q_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d}&amp; \label{eq:bq_split}\\
+    &amp;\bm{b}^K &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{b}^K_1 &amp; \cdots &amp; \bm{b}^K_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in&amp; \mathbb{R}^{d}&amp; \label{eq:bk_split}\\
+    &amp;\bm{b}^V &amp;:= &amp;
+    \begin{bmatrix}
+        \bm{b}^V_1 &amp; \cdots &amp; \bm{b}^V_H
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d}&amp; \\
+    &amp;\bm{I} &amp;:= &amp;
+    \begin{bmatrix}
+        1 &amp; 0 &amp; \cdots &amp; 0 \\
+        0 &amp; 1 &amp; \cdots &amp; 0 \\
+        \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        0 &amp; 0 &amp; \cdots &amp; 1 \\
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d\times d}&amp; \\
+    &amp;\bm{1} &amp;:= &amp;
+    \begin{bmatrix}
+        1 &amp; \cdots &amp; 1
+    \end{bmatrix}
+    &amp;\hspace{1em}\in &amp;\mathbb{R}^{d}
+\end{alignat}\]
 
-<p>Here,
-$\bm{E}^O \in \mathbb{R}^{d\times |\mathcal{V}|}$
-is the unembedding matrix and
-$\text{LN}_\text{f}$
-is the final layer normalization of a transformer model.
-In this page, we assume LayerNorm (not RMSNorm) is used for
-$\text{LN}_\text{f}$
-, which is defined as follows.</p>
+<h2 id="self-attention">Self-Attention</h2>
 
-\[\begin{equation}
-\text{LN}_\text{f}(\bm{h}) = \frac{\bm{x} - \mu(\bm{x})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma} +\bm{\beta}
-\label{eq:lm_f}
-\end{equation}\]
-
-<p>Here,
-$\mu(\bm{h}): \mathbb{R}^{d}\rightarrow \mathbb{R}$ is a function that returns element-wise mean of a row-vector $\bm{h}$ and
-$\bm{\gamma}, \bm{\beta} \in \mathbb{R}^{d}$ are learnable parameters.
-$\odot$ represents element-wise multiplication.</p>
-
-<p>With LogitLens, one can project the hidden states after each transformer layers to the vocabulary space.</p>
-
-<figure class="center">
-    <img src="/assets/img/logit_lens_gpt2.png" alt="LogitLensExample" />
-    <figcaption>Example of LogitLens.</figcaption>
-</figure>
-
-<p>By combining Equation\eqref{eq:lm_head} and \eqref{eq:lm_f}, we get a bias term for the projection to vocabulary space.</p>
+<p>Let query, key, value transformations of each head $h$ be expressed as follows:</p>
 
 \[\begin{align}
-\text{LogitLens}(\bm{h})
-&amp;= \left(\frac{\bm{h} - \mu(\bm{h})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma} +
-\bm{\beta}\right)\bm{E}^O\\
-&amp;= \left(\frac{\bm{h} - \mu(\bm{h})\bm{1}}{\sqrt{\text{Var}(\bm{x})+\varepsilon}}\odot \bm{\gamma}\right)\bm{E}^O +
-\bm{\beta}\bm{E}^O \label{eq:lm_head_bias}
+    \bm{q}_h(\bm{x}) &amp;:= \bm{x}\bm{W}_h^Q + \bm{b}_h^Q\\
+    \bm{k}_h(\bm{x}) &amp;:= \bm{x}\bm{W}_h^K + \bm{b}_h^K\\
+    \bm{v}_h(\bm{x}) &amp;:= \bm{x}\bm{W}_h^V + \bm{b}_h^V\\
 \end{align}\]
 
-<p>The second term in Equation\eqref{eq:lm_head_bias}, which is $\bm{\beta}\bm{E}^O \in \mathbb{R}^{|\mathcal{V}|}$ is the bias term, which is added to the result of LogitLens regardless of the input. Adding such bias may not reasonable when analyzing “what the model’s intermediate states represent” as <a href="#kobayashi2023transformer">Kobayashi et al. (2023)</a>
-reports that word frequency in the training corpus is encoded in this bias term of $\text{LN}_\text{f}$ in GPT-2 model.</p>
+<p>Let attention weight from token position $i$ to $j$  ($i \ge j$) in head $h$ be expressed as follows:</p>
 
-<p>By removing the bias term, we get the following result.</p>
+\[\begin{align}
+\alpha_{i, j, h} &amp;= \frac{\exp(s_{i, j, h})}{\exp(b^{S}_h)+\sum_{j'} \exp(s_{i, j', h})}\\
+s_{i, j, h} &amp;:= \frac{\bm{q}_h(\bm{x}_i)\bm{k}_h(\bm{x}_j)^\top}{\sqrt{d'}}
+\end{align}\]
 
-<figure class="center">
-    <img src="/assets/img/logit_lens_gpt2.png" alt="LogitLensExample" />
-    <figcaption>Vanilla LogitLens (GPT-2)</figcaption>
-</figure>
-<figure class="center">
-    <img src="/assets/img/logit_lens_nobias_gpt2.png" alt="LogitLensNobiasExample" />
-    <figcaption>LogitLens w/o Bias (GPT-2)</figcaption>
-</figure>
+<p>where $d’ = d/H$ is the dimension of each head, and $b^{S}_h$ is a learned scalar parameter introduced in GPT-OSS for preventing attention sink.</p>
 
-<figure class="center">
-    <img src="/assets/img/logit_lens_opt.png" alt="LogitLensExample" />
-    <figcaption>Vanilla LogitLens (OPT)</figcaption>
-</figure>
-<figure class="center">
-    <img src="/assets/img/logit_lens_nobias_opt.png" alt="LogitLensNobiasExample" />
-    <figcaption>LogitLens w/o Bias (OPT)</figcaption>
-</figure>
+<p>Now, let the attention weight assigned to the sink be expressed as follows:</p>
 
-<h2 id="references">References</h2>
-<ol>
-    <li id="nostalgibraist2020logit">
-        <a href="https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens" target="_blank">
-        Nostalgibraist 2020, interpreting GPT: the logit lens.
-        </a>
-    </li>
-    <li id="kobayashi2023transformer">
-        <a href="https://aclanthology.org/2023.findings-acl.276/" target="_blank">Kobayashi et al. 2023, Transformer Language Models Handle Word Frequency in Prediction
-        Head.</a>
-    </li>
-</ol>
+\[\alpha_{i, \text{sink}, h} := \frac{\exp(b^{S}_h)}{\exp(b^{S}_h)+\sum_{j'} \exp(s_{i, j', h})}\]
+
+<p>Due to the presence of $b^{S}_h$, the following holds:</p>
+
+\[\begin{align}
+&amp;1 = \alpha_{i, \text{sink}, h} + \sum_j \alpha_{i, j, h}\\
+&amp;\Leftrightarrow \sum_j \alpha_{i, j, h} = 1 - \alpha_{i, \text{sink}, h}
+\end{align}\]
+
+<p>The output of Attention layer of an causal model at position $i$ can be expressed as follows:</p>
+
+\[\begin{align}
+    \text{ATTN}(i, \bm{X})
+        &amp;:=\left[\text{head}_1(i, \bm{X})\hspace{0.5em}\cdots\hspace{0.5em}\text{head}_H(i, \bm{X})\right]
+            \bm{W}^O + \bm{b}^O\\
+        &amp;=\sum_{h=1}^H \text{head}_h(i, \bm{X})\bm{W}^O_h + \bm{b}^O\\
+        &amp;=\sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h} \bm{v}_h(\bm{x}_j)\right)\bm{W}^O_h + \bm{b}^O\\
+        &amp;=\sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h} \left(\bm{x}_j\bm{W}^V_h + \bm{b}^V_h\right)\right)\bm{W}^O_h + \bm{b}^O\\
+        &amp;=\sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h} \left(\bm{x}_j\bm{W}^V_h + \bm{b}^V_h\right)\bm{W}^O_h\right) + \bm{b}^O\\
+        &amp;=\sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h} \left(\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \bm{b}^V_h\bm{W}^O_h\right)\right) + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h}\bm{b}^V_h\bm{W}^O_h\right) + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \sum_{h=1}^H \left(\sum_{j=1}^i \alpha_{i, j, h}\right)\bm{b}^V_h\bm{W}^O_h + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \sum_{h=1}^H \left(1-\alpha_{i, \text{sink}, h}\right)\bm{b}^V_h\bm{W}^O_h + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \sum_{h=1}^H\bm{b}^V_h\bm{W}^O_h - \sum_{h=1}^H\alpha_{i, \text{sink}, h}\bm{b}^V_h\bm{W}^O_h + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h + \sum_{h=1}^H\alpha_{i, \text{sink}, h}(-\bm{b}^V_h\bm{W}^O_h)+ \sum_{h=1}^H\bm{b}^V_h\bm{W}^O_h  + \bm{b}^O\\
+        &amp;= \sum_{h=1}^H \sum_{j=1}^i \alpha_{i, j, h}\bm{x}_j\bm{W}^V_h\bm{W}^O_h+ \sum_{h=1}^H\alpha_{i, \text{sink}, h}(-\bm{b}^V_h\bm{W}^O_h) + \bm{b}^V\bm{W}^O + \bm{b}^O\\
+\end{align}\]
+
+<p>Thus, in GPT-OSS, the newly introduced attention sink bias $b^{S}_h$</p>
+<ul>
+  <li>makes the attention weights sum to less than 1 for non-sink tokens, and</li>
+  <li>changes the intensity of the bias term of the value transformation based on the attention weight assigned to the sink.</li>
+</ul>
 
     </section>
   </article>
