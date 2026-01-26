@@ -1,0 +1,37 @@
+
+{% for author in publication.authors %}
+    {%- if forloop.last == true -%}
+    & 
+    {% endif %}
+    {% if author.last_name == "Kamoda" and author.first_name == "Go" %}
+    <span class="underline">{{ author.first_name}} {{ author.last_name }}</span>
+    {%- else -%}
+    {{ author.first_name}} {{ author.last_name }}
+    {%- endif -%}
+    {%- if forloop.last == false -%}
+    ,
+    {% endif %}
+{% endfor %}
+({{ publication.year }}).<br>
+<strong>{{ publication.title }}</strong>.<br>
+In
+<i>{{ publication.proceedings_title }}</i>
+{%- if publication.pages -%}
+    , {{ publication.pages }}
+{%- endif -%}
+.
+{% if publication.links %}
+    <br>
+    <span class="link-row">
+    {%- for link in publication.links -%}
+    <a href="{{ link.url }}" target="_blank" class="link-btn btn">
+        {% if link.icon %}
+        <i class="{{ link.icon }}" style="margin-right: 0.15em;"></i>
+        {% elsif link.logo %}
+        <img src="{{ link.logo }}" alt="{{ link.name }} logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;">
+        {% endif %}
+        {{ link.name}}
+    </a>{% if forloop.last == false %}&nbsp;{% endif %}
+    {%- endfor -%}
+    </span>
+{% endif %}
