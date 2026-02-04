@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-01-26T01:15:58+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-02-04T04:36:31+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
 
 <div>
   <ul>
@@ -39,6 +39,11 @@ In
         <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
         ACL Anthology
+    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:Y0pCki6q_DkC" target="_blank" class="link-btn btn">
+        
+        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
+        
+        Google Scholar
     </a>&nbsp;<a href="https://arxiv.org/abs/2509.04432" target="_blank" class="link-btn btn">
         
         <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
@@ -85,6 +90,11 @@ In
         <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
         ACL Anthology
+    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:IjCSPb-OGe4C" target="_blank" class="link-btn btn">
+        
+        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
+        
+        Google Scholar
     </a>&nbsp;<a href="https://arxiv.org/abs/2406.06032" target="_blank" class="link-btn btn">
         
         <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
@@ -171,6 +181,11 @@ In
         <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
         ACL Anthology
+    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:UeHWp8X0CEIC" target="_blank" class="link-btn btn">
+        
+        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
+        
+        Google Scholar
     </a>&nbsp;<a href="https://arxiv.org/abs/2503.06394" target="_blank" class="link-btn btn">
         
         <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
@@ -528,6 +543,11 @@ In
         <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
         arXiv
+    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:qjMakFHDy7sC" target="_blank" class="link-btn btn">
+        
+        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
+        
+        Google Scholar
     </a>&nbsp;<a href="https://softmatcha.github.io" target="_blank" class="link-btn btn">
         
         <img src="/assets/softmatcha-logo.png" alt="Project Page logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
@@ -571,6 +591,11 @@ In
         <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
         
         ACL Anthology
+    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:9yKSN-GCB0IC" target="_blank" class="link-btn btn">
+        
+        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
+        
+        Google Scholar
     </a>&nbsp;<a href="https://github.com/gokamoda/lfqa-weighted-eval" target="_blank" class="link-btn btn">
         
         <i class="fa-brands fa-github" style="margin-right: 0.15em;"></i>
