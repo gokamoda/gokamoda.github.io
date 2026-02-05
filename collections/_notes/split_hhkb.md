@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "HHKB配列分割キーボードのメモ"
+title: "HHKB配列分割キーボード"
 use_math: true
 header:
   teaser: /assets/img/7spro.jpg
@@ -8,7 +8,7 @@ header:
   overlay_color: "#59876F"
 show_date: true
 date: 2023-12-01
-excerpt: ""
+excerpt: "7sProのメモ"
 ---
 ※7sProを2023年9月に購入し、ケーブルなどなど揃い、キースイッチ情報等消えそうなので2025/12/01に備忘録的にまとめた
 

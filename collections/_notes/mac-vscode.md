@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "メモ: VSCodeで開くボタンをMacのFinderに追加する"
+title: "VSCodeで開くボタンをMacのFinderに追加する"
 use_math: true
 header:
   teaser: /assets/img/open-in-vscode.png

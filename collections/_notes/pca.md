@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "メモ: PCA"
+title: "PCA"
 use_math: true
 header:
   teaser: /assets/img/pca.png
@@ -8,7 +8,7 @@ header:
   overlay_color: "#59876F"
 show_date: true
 date: 2025-08-06 # moved from DissectingGPT
-excerpt: "PCAの基礎と実装"
+excerpt: "PCAの基礎と実装について"
 ---
 
 $n$ 個の $d$ 次元のデータ $\bm{X}$ を、$d'$ 次元に圧縮するための線形変換行列 $\bm{W}$ を求める。

@@ -243,3 +243,96 @@ figure {
     cursor: pointer;
   }
 }
+
+.copy-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+
+  font-size: inherit;          /* コードと同じサイズ */
+  font-family: inherit;
+
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+
+  background: #3a3a3a;         /* ダークグレー */
+  color: #e6e6e6;
+
+  border: 1px solid #555;
+  cursor: pointer;
+
+  opacity: 0.75;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+  background: #4a4a4a;
+}
+
+.copy-btn:active {
+  background: #2f2f2f;
+}
+
+pre:hover .copy-btn {
+  opacity: 1;                  /* hover時だけ目立たせる */
+}
+
+
+.highlighter-rouge {
+  position: relative;
+  max-height: 30em;
+  overflow: hidden;
+}
+
+/* smoke */
+.highlighter-rouge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4.5em;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,0.9)
+  );
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+
+.highlighter-rouge.expanded {
+  max-height: none;
+}
+
+.highlighter-rouge.expanded::after {
+  opacity: 0;
+}
+
+/* button */
+.code-toggle {
+  position: absolute;
+  bottom: 0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.55em 1.6em;
+  border-radius: 999px;
+
+  background: rgba(40, 40, 40, 0.95);
+  color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+.highlighter-rouge:hover .code-toggle {
+  opacity: 1;
+}

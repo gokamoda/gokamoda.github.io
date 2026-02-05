@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "メモ: torch.nn.functional.kl_div"
+title: "torch.nn.functional.kl_div"
 use_math: true
 header:
   teaser: /assets/img/kl_div.png
