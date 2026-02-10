@@ -200,7 +200,8 @@
     <meta itemprop="datePublished" content="2025-12-15T00:00:00+00:00">
     
     <section class="page__content" itemprop="text">
-      <div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- BEGIN CODE FOR CMD-EIKANA</span>
+      <p>参考: <a href="https://zenn.dev/ytk6565/articles/hammerspoon-switch-input-source">Tashiro Yutaka: Hammerspoon で英数・かなの切り替えを行う</a></p>
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- BEGIN CODE FOR CMD-EIKANA</span>
 <span class="kd">local</span> <span class="n">map</span> <span class="o">=</span> <span class="n">hs</span><span class="p">.</span><span class="n">keycodes</span><span class="p">.</span><span class="n">map</span>
 <span class="kd">local</span> <span class="n">keyDown</span> <span class="o">=</span> <span class="n">hs</span><span class="p">.</span><span class="n">eventtap</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="n">keyDown</span>
 <span class="kd">local</span> <span class="n">flagsChanged</span> <span class="o">=</span> <span class="n">hs</span><span class="p">.</span><span class="n">eventtap</span><span class="p">.</span><span class="n">event</span><span class="p">.</span><span class="n">types</span><span class="p">.</span><span class="n">flagsChanged</span>
