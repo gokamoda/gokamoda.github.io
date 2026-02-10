@@ -1,0 +1,51 @@
+---
+layout: splash
+title: "cmd英かな on Hammerspoon"
+use_math: true
+header:
+  teaser: /assets/img/cmd-eikana.png
+  show_overlay_excerpt: false
+  overlay_color: "#59876F"
+show_date: true
+date: 2025-12-15
+excerpt: "configのコード"
+---
+
+
+```lua
+-- BEGIN CODE FOR CMD-EIKANA
+local map = hs.keycodes.map
+local keyDown = hs.eventtap.event.types.keyDown
+local flagsChanged = hs.eventtap.event.types.flagsChanged
+local keyStroke = hs.eventtap.keyStroke
+
+local isCmdAsModifier = false
+
+local function switchInputSourceEvent(event)
+    local eventType = event:getType()
+    local keyCode = event:getKeyCode()
+    local flags = event:getFlags()
+    local isCmd = flags['cmd']
+
+    if eventType == keyDown then
+        if isCmd then
+            isCmdAsModifier = true
+        end
+    elseif eventType == flagsChanged then
+        if not isCmd then
+            if isCmdAsModifier == false then
+                if keyCode == map['cmd'] then
+                    keyStroke({}, 0x66, 0) -- 英数キー
+                elseif keyCode == map['rightcmd'] then
+                    keyStroke({}, 0x68, 0) -- かなキー
+                end
+            end
+            isCmdAsModifier = false
+        end
+    end
+end
+
+eventTap = hs.eventtap.new({keyDown, flagsChanged}, switchInputSourceEvent)
+eventTap:start()
+-- END CODE FOR CMD-EIKANA
+```
