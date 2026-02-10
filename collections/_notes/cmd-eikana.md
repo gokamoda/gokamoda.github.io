@@ -11,7 +11,7 @@ date: 2025-12-15
 excerpt: "configのコード"
 ---
 
-
+参考: [Tashiro Yutaka: Hammerspoon で英数・かなの切り替えを行う](https://zenn.dev/ytk6565/articles/hammerspoon-switch-input-source)
 ```lua
 -- BEGIN CODE FOR CMD-EIKANA
 local map = hs.keycodes.map
