@@ -7,7 +7,7 @@ header:
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
-date: 2025-12-15
+date: 2026-02-10
 excerpt: "configのコード"
 ---
 
