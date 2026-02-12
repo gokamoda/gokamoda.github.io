@@ -10,7 +10,7 @@ show_date: true
 ---
 
 {: align="center"}
-<img src='{{ "/assets/img/nlp2026_program.png" | relative_url }}' alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto;">
+<img src='{{ "/assets/img/nlp2026_program.png" | relative_url }}' alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto; width: 100%;"/>
 
 
 
