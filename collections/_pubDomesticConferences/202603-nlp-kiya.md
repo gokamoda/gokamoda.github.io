@@ -13,4 +13,7 @@ authors:
   - 小林悟郎
 year: 2026
 month: 3
+links:
+  - name: "NLP 2026 プログラム"
+    url: "https://www.anlp.jp/proceedings/annual_meeting/2026/#B6-13"
 ---

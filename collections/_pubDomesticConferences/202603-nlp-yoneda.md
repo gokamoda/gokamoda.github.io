@@ -14,4 +14,6 @@ month: 3
 links:
   - name: "Project Page"
     url: "https://softmatcha.github.io/v2/ja/"
+  - name: "NLP 2026 プログラム"
+    url: "https://www.anlp.jp/proceedings/annual_meeting/2026/#Q1-5"
 ---

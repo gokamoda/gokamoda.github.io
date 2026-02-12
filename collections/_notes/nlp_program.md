@@ -3,7 +3,7 @@ layout: splash
 title: "言語処理学会年次大会のプログラムスクショ"
 use_math: true
 header:
-  teaser: /assets/img/nlp_program.png
+  teaser: /assets/img/nlp2026_program.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
@@ -16,9 +16,10 @@ excerpt: "自分の発表部分を抜き出すためのスクリプトメモ"
 - 発表者名を指定して実行すると，該当発表だけを抽出して，ページ上部に一覧表示する
 - DevToolsコンソール用スクリプトとBookmarkletの2種類を用意
 - スクショのために，ロゴと大会名の部分を少し小さくする微調整も含む
+  - ※以下画像は、スペーシングを後から微調整している 
 
-![スクショ例]({{ "/assets/img/nlp_program.png" | relative_url }})
-
+{: align="center"}
+![スクショ例]({{ "/assets/img/nlp2026_program.png" | relative_url }})
 
 
 ## DevTools コンソール用スクリプト
