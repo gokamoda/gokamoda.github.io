@@ -2,21 +2,10 @@
 title: "日本語バイト符号化マスク言語モデルの開発と分析"
 proceedings_title: "言語処理学会 第31回年次大会"
 authors:
-  - name: 工藤慧音
-    affiliation:
-    - 東北大学
-    - 理化学研究所
-  - name: 鴨田豪
-    affiliation:
-      - 東北大学
-  - name: 塩野大輝
-    affiliation:
-      - 東北大学
-  - name: 鈴木潤
-    affiliation:
-      - 東北大学
-      - 理化学研究所
-      - 国立情報学研究所
+  - 工藤慧音
+  - 鴨田豪
+  - 塩野大輝
+  - 鈴木潤
 year: 2025
 month: 3
 pages: 3356-3361

@@ -4,10 +4,10 @@
 {%- assign publication = include.publication -%}
 
 {% for author in publication.authors %}
-    {% if author.name contains "鴨田豪" or author.name contains "Go Kamoda" %}
-    <span class="underline">{{ author.name }}</span>
+    {% if author contains "鴨田豪" or author.name contains "Go Kamoda" %}
+    <span class="underline">{{ author }}</span>
     {%- else -%}
-    {{ author.name }}
+    {{ author }}
     {%- endif -%}
     {%- if forloop.last == false -%}
     ,

@@ -2,25 +2,11 @@
 title: 言語モデルからの知識削除：頻出実体の知識は副作用が破滅的
 proceedings_title: "言語処理学会 第30回年次大会"
 authors:
-  - name: 良允高橋
-    affiliation:
-    - 東北大学
-  - name: 鴨田豪
-    affiliation:
-      - 東北大学
-  - name: Benjamin Heinzerling
-    affiliation:
-      - 理化学研究所
-      - 東北大学
-  - name: 坂口慶祐
-    affiliation:
-      - 東北大学
-      - 理化学研究所
-  - name: 乾健太郎
-    affiliation:
-      - MBZUAI
-      - 東北大学
-      - 理化学研究所
+  - 良允高橋
+  - 鴨田豪
+  - Benjamin Heinzerling
+  - 坂口慶祐
+  - 乾健太郎
 year: 2024
 month: 3
 pages: 2864-2869

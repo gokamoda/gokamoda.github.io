@@ -2,21 +2,10 @@
 title: Test-time Augmentation for Factual Probing
 proceedings_title: "言語処理学会 第29回年次大会"
 authors:
-  - name: Go Kamoda
-    affiliation:
-    - Tohoku University
-  - name: Benjamin Heinzerling
-    affiliation:
-      - RIKEN
-      - Tohoku University
-  - name: Keisuke Sakaguchi
-    affiliation:
-      - Tohoku University
-      - RIKEN
-  - name: Kentaro Inui
-    affiliation:
-      - Tohoku University
-      - RIKEN
+  - Go Kamoda
+  - Benjamin Heinzerling
+  - Keisuke Sakaguchi
+  - Kentaro Inui
 year: 2023
 month: 3
 pages: 1350-1355
