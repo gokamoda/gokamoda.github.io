@@ -1,4 +1,146 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-02-10T09:52:45+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-02-12T12:56:06+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">🎤 Presentation at NLP 2026</title><link href="https://gokamoda.github.io/news/nlp2026-presentation/" rel="alternate" type="text/html" title="🎤 Presentation at NLP 2026" /><published>2026-02-12T00:00:00+00:00</published><updated>2026-02-12T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/nlp2026-presentation</id><content type="html" xml:base="https://gokamoda.github.io/news/nlp2026-presentation/"><![CDATA[<p align="center"><img src="/assets/img/nlp2026_program.png" alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto;" /></p>
+
+<p>NLP 2026 にて以下の発表があります。</p>
+<div>
+  <ul>
+    <li>
+    
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    米田優峻,
+    
+
+    
+    <span class="underline">鴨田豪</span>,
+    
+
+    松下祐介,
+    
+
+    末永幸平,
+    
+
+    秋葉拓哉,
+    
+
+    和賀正樹,
+    
+
+    横井祥
+
+(2026).<br />
+<strong>SoftMatcha 2: 一兆語規模のコーパスに対する柔らかく超高速な検索システム</strong>.<br />
+言語処理学会 第32回年次大会.
+
+    
+
+
+    <br />
+    <span class="link-row"><a href="https://softmatcha.github.io/v2/ja/" target="_blank" class="link-btn btn">
+        
+        Project Page
+    </a>&nbsp;<a href="https://www.anlp.jp/proceedings/annual_meeting/2026/#Q1-5" target="_blank" class="link-btn btn">
+        
+        NLP 2026 プログラム
+    </a></span>
+
+    </li>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    木谷頼斗,
+    
+
+    大橋諭貴,
+    
+
+    佐藤宏亮,
+    
+
+    
+    <span class="underline">鴨田豪</span>,
+    
+
+    高橋良允,
+    
+
+    山本悠士,
+    
+
+    塩野大輝,
+    
+
+    坂口慶祐,
+    
+
+    小林悟郎
+
+(2026).<br />
+<strong>Attention Sink および Massive Activation の発生機序の分解</strong>.<br />
+言語処理学会 第32回年次大会.
+
+    
+
+
+    <br />
+    <span class="link-row"><a href="https://www.anlp.jp/proceedings/annual_meeting/2026/#B6-13" target="_blank" class="link-btn btn">
+        
+        NLP 2026 プログラム
+    </a></span>
+
+    </li>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    大橋諭貴,
+    
+
+    木谷頼斗,
+    
+
+    佐藤宏亮,
+    
+
+    高橋良允,
+    
+
+    
+    <span class="underline">鴨田豪</span>,
+    
+
+    山本悠士,
+    
+
+    塩野大輝,
+    
+
+    坂口慶祐,
+    
+
+    小林悟郎
+
+(2026).<br />
+<strong>注意機構における Attention Sink のバイアス項的解釈</strong>.<br />
+言語処理学会 第32回年次大会.
+
+    
+
+
+    <br />
+    <span class="link-row"><a href="https://www.anlp.jp/proceedings/annual_meeting/2026/#B6-15" target="_blank" class="link-btn btn">
+        
+        NLP 2026 プログラム
+    </a></span>
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>
+
+<p>※ ちなみに、発表部分だけを抜き出してスクショを撮るためのスクリプトメモは <a href="/notes/nlp_program/">こちらのノート</a> にあります。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[NLP 2026 にて3件の発表があります。]]></summary></entry><entry><title type="html">✅ Paper accepted to the IJCNLP-AACL 2025</title><link href="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the IJCNLP-AACL 2025" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ijcnlpaacl2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/ijcnlpaacl2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
 
 <div>
   <ul>
@@ -559,52 +701,4 @@ In
   </ul>
 </div>
 
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches"]]></summary></entry><entry><title type="html">✅ Paper accepted to the COLING 2025</title><link href="https://gokamoda.github.io/news/coling2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the COLING 2025" /><published>2024-11-30T00:00:00+00:00</published><updated>2024-11-30T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/coling2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/coling2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to COLING 2025.</p>
-
-<div>
-  <ul>
-    <li>
-      
-      
-
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Asai, A.,
-    
-
-    Brassard, A.,
-    
-&amp; 
-    
-    Sakaguchi, K.
-
-(2025).<br />
-<strong>Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment</strong>.<br />
-In
-<i>Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025)</i>.
-
-    <br />
-    <span class="link-row"><a href="https://aclanthology.org/2025.coling-main.588/" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        ACL Anthology
-    </a>&nbsp;<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:9yKSN-GCB0IC" target="_blank" class="link-btn btn">
-        
-        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
-        
-        Google Scholar
-    </a>&nbsp;<a href="https://github.com/gokamoda/lfqa-weighted-eval" target="_blank" class="link-btn btn">
-        
-        <i class="fa-brands fa-github" style="margin-right: 0.15em;"></i>
-        
-        GitHub
-    </a></span>
-
-    </li>
-  </ul>
-</div>
-
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment"]]></summary></entry></feed>
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches"]]></summary></entry></feed>
