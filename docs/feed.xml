@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-02-12T13:01:26+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">🎤 Presentation at NLP 2026</title><link href="https://gokamoda.github.io/news/nlp2026-presentation/" rel="alternate" type="text/html" title="🎤 Presentation at NLP 2026" /><published>2026-02-12T00:00:00+00:00</published><updated>2026-02-12T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/nlp2026-presentation</id><content type="html" xml:base="https://gokamoda.github.io/news/nlp2026-presentation/"><![CDATA[<p align="center"><img src="/assets/img/nlp2026_program.png" alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto; width: 100%;" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-02-20T16:40:21+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">🎤 Presentation at NLP 2026</title><link href="https://gokamoda.github.io/news/nlp2026-presentation/" rel="alternate" type="text/html" title="🎤 Presentation at NLP 2026" /><published>2026-02-12T00:00:00+00:00</published><updated>2026-02-12T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/nlp2026-presentation</id><content type="html" xml:base="https://gokamoda.github.io/news/nlp2026-presentation/"><![CDATA[<p align="center"><img src="/assets/img/nlp2026_program.png" alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto; width: 100%;" /></p>
 
 <p>NLP 2026 にて以下の発表があります。</p>
 <div>
@@ -148,27 +148,26 @@
       
       
 
-    Sasaki, M.,
+    , .,
     
 
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Takahashi, R.,
+    , .,
     
 
-    Sato, K.,
+    , .,
     
 
-    Heinzerling, B.,
+    , .,
     
 
-    Sakaguchi, K.,
+    , .,
+    
+
+    , .,
     
 &amp; 
     
-    Inui, K.
+    , .
 
 (2025).<br />
 <strong>Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki</strong>.<br />
@@ -205,21 +204,20 @@ In
       
       
 
-    Takahashi, R.,
+    , .,
     
 
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Heinzerling, B.,
+    , .,
     
 
-    Sakaguchi, K.,
+    , .,
+    
+
+    , .,
     
 &amp; 
     
-    Inui, K.
+    , .
 
 (2025).<br />
 <strong>Understanding the Side Effects of Rank-One Knowledge Editing</strong>.<br />
@@ -287,30 +285,29 @@ In
       
       
 
-    Inaba, T.,
+    , .,
     
 
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Inui, K.,
+    , .,
     
 
-    Isonuma, M.,
+    , .,
     
 
-    Miyao, Y.,
+    , .,
     
 
-    Oseki, Y.,
+    , .,
     
 
-    Takagi, Y.,
+    , .,
+    
+
+    , .,
     
 &amp; 
     
-    Heinzerling, B.
+    , .
 
 (2025).<br />
 <strong>How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders</strong>.<br />
@@ -647,27 +644,26 @@ JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語�
       
       
 
-    Deguchi, H.,
+    , .,
     
 
-    
-    <span class="underline">Kamoda, G.</span>,
-    
-
-    Matsushita, Y.,
+    , .,
     
 
-    Taguchi, C.,
+    , .,
     
 
-    Waga, M.,
+    , .,
     
 
-    Suenaga, K.,
+    , .,
+    
+
+    , .,
     
 &amp; 
     
-    Yokoi, S.
+    , .
 
 (2025).<br />
 <strong>SoftMatcha: A Soft and Fast Pattern Matcher for Billion-Scale Corpus Searches</strong>.<br />
