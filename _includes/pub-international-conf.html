@@ -3,10 +3,10 @@
     {%- if forloop.last == true -%}
     & 
     {% endif %}
-    {% if author.last_name == "Kamoda" and author.first_name == "Go" %}
-    <span class="underline">{{ author.first_name}} {{ author.last_name }}</span>
+    {% if author == "Go Kamoda" %}
+    <span class="underline">{{ author }}</span>
     {%- else -%}
-    {{ author.first_name}} {{ author.last_name }}
+    {{ author }}
     {%- endif -%}
     {%- if forloop.last == false -%}
     ,

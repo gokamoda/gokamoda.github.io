@@ -51,7 +51,7 @@ header:
   <ul>
     {% for publication in site.pubPreprint reversed %}
     <li>
-        {% include pub-apa-international-conf.html  %}
+        {% include pub-international-conf.html  %}
       </li>
     {% endfor %}
 
