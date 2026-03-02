@@ -10,13 +10,14 @@ show_date: true
 ---
 
 {: align="center"}
-<img src='{{ "/assets/img/nlp2026_program.png" | relative_url }}' alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto; width: 100%;"/>
+<img src='{{ "/assets/img/nlp2026_program_oral.png" | relative_url }}' alt="NLP 2026 プログラム" style="max-width: 1000px; height: auto; padding: 0 auto; width: 100%;"/>
 
 
 
 
 
-NLP 2026 にて以下の発表があります。
+NLP 2026 にて以下の発表があります。  
+[Update 2026/03/02]: 全て口頭発表に選出されました！
 <div>
   <ul>
     <li>
