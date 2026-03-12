@@ -16,4 +16,7 @@ month: 3
 links:
   - name: "NLP 2026 プログラム"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2026/#B6-15"
+awards:
+  - name: "言語処理学会第32回年次大会 若手奨励賞 (21/517件)"
+    url: "hhttps://anlp.jp/nlp2026/award.html"
 ---

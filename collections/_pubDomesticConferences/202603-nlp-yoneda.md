@@ -16,4 +16,7 @@ links:
     url: "https://softmatcha.github.io/v2/ja/"
   - name: "NLP 2026 プログラム"
     url: "https://www.anlp.jp/proceedings/annual_meeting/2026/#Q1-5"
+awards:
+  - name: "言語処理学会第32回年次大会 優秀賞 (13/789件)"
+    url: "https://anlp.jp/nlp2026/award.html"
 ---
