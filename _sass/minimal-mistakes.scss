@@ -279,14 +279,14 @@ pre:hover .copy-btn {
 }
 
 
-.highlighter-rouge {
+.highlighter-rouge:has(pre) {
   position: relative;
   max-height: 30em;
   overflow: hidden;
 }
 
 /* smoke */
-.highlighter-rouge::after {
+.highlighter-rouge:has(pre)::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -303,15 +303,15 @@ pre:hover .copy-btn {
   transition: opacity 0.2s ease;
 }
 
-.highlighter-rouge.expanded {
+.highlighter-rouge.expanded:has(pre) {
   max-height: none;
 }
 
-.highlighter-rouge.expanded::after {
+.highlighter-rouge.expanded:has(pre)::after {
   opacity: 0;
 }
 
-/* button */
+// /* button */
 .code-toggle {
   position: absolute;
   bottom: 0.8em;
