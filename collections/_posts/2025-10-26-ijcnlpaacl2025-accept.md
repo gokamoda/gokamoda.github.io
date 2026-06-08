@@ -14,7 +14,7 @@ We are pleased to announce that our paper has been accepted to the 8th BlackboxN
   <ul>
     <li>
       {% assign publication = site.pubInternationalConferences | where: "title", "Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki" | first %}
-      {% include pub-apa-international-conf.html  publication=publication %}
+      {% include pub-international-conf.html  publication=publication %}
     </li>
   </ul>
 </div>

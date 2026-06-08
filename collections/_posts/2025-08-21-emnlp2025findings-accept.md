@@ -14,7 +14,7 @@ We are pleased to announce that our paper has been accepted to the Findings of E
   <ul>
     <li>
       {% assign publication = site.pubInternationalConferences | where: "title", "How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders" | first %}
-      {% include pub-apa-international-conf.html  publication=publication %}
+      {% include pub-international-conf.html  publication=publication %}
     </li>
   </ul>
 </div>
