@@ -11,16 +11,16 @@ date: 2025-05-12 # moved from DissectingGPT
 excerpt: ""
 ---
 
+
 This reformulation of LayerNorm and Self-Attention is used in our paper:
 <div>
   <ul>
     <li>
       {% assign publication = site.pubInternationalConferences | where: "title", "Weight-based Analysis of Detokenization in Language Models: Understanding the First Stage of Inference Without Inference" | first %}
-      {% include pub-apa-international-conf.html  publication=publication %}
+      {% include pub-international-conf.html %}
     </li>
   </ul>
 </div>
-
 
 ## Notation
 
