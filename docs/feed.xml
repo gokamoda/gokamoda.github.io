@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-06-08T06:56:04+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">🏆 Won 1st place in open-source division and 2nd place overall in the math task of the FT-LLM 2026 competition.</title><link href="https://gokamoda.github.io/news/ft-llm/" rel="alternate" type="text/html" title="🏆 Won 1st place in open-source division and 2nd place overall in the math task of the FT-LLM 2026 competition." /><published>2026-03-13T00:00:00+00:00</published><updated>2026-03-13T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ft-llm</id><content type="html" xml:base="https://gokamoda.github.io/news/ft-llm/"><![CDATA[<p><a href="https://anlp.jp/nlp2026/index.html">言語処理学会第32回年次大会 (NLP 2026)</a> にて開催された <a href="https://llm-jp.github.io/tuning-competition/">LLM-JP ファインチューニングコンペ</a> (FT-LLM 2026) の数学タスクにおいて、所属する <strong>Team dentaku</strong> が以下の成績を収めました。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-06-08T07:10:01+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the ICML 2026</title><link href="https://gokamoda.github.io/news/icml2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICML 2026" /><published>2026-05-01T00:00:00+00:00</published><updated>2026-05-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/icml2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/icml2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICML 2026.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+
+    Masataka Yoneda,
+    
+
+    Yusuke Matsushita,
+    
+
+    
+    <span class="underline">Go Kamoda</span>,
+    
+
+    Kohei Suenaga,
+    
+
+    Takuya Akiba,
+    
+
+    Masaki Waga,
+    
+&amp; 
+    
+    Sho Yokoi
+
+(2026).<br />
+<strong>SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora</strong>.<br />
+In
+<i>arXiv [cs.CL]</i>.
+
+    <br />
+    <span class="link-row"><a href="https://softmatcha.github.io/v2" target="_blank" class="link-btn btn">
+        
+        Project Page
+    </a>&nbsp;<a href="https://arxiv.org/abs/2602.10908" target="_blank" class="link-btn btn">
+        
+        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
+        
+        arXiv
+    </a></span>
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora"]]></summary></entry><entry><title type="html">🏆 Won 1st place in open-source division and 2nd place overall in the math task of the FT-LLM 2026 competition.</title><link href="https://gokamoda.github.io/news/ft-llm/" rel="alternate" type="text/html" title="🏆 Won 1st place in open-source division and 2nd place overall in the math task of the FT-LLM 2026 competition." /><published>2026-03-13T00:00:00+00:00</published><updated>2026-03-13T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/ft-llm</id><content type="html" xml:base="https://gokamoda.github.io/news/ft-llm/"><![CDATA[<p><a href="https://anlp.jp/nlp2026/index.html">言語処理学会第32回年次大会 (NLP 2026)</a> にて開催された <a href="https://llm-jp.github.io/tuning-competition/">LLM-JP ファインチューニングコンペ</a> (FT-LLM 2026) の数学タスクにおいて、所属する <strong>Team dentaku</strong> が以下の成績を収めました。</p>
 
 <ul>
   <li>オープン部門 <strong>1位</strong></li>
@@ -532,83 +583,4 @@ In
 </div>
 
 <p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders"]]></summary></entry><entry><title type="html">🌸 Enrollment in SOKENDAI for Doctoral Program</title><link href="https://gokamoda.github.io/news/sokendai-enrollment/" rel="alternate" type="text/html" title="🌸 Enrollment in SOKENDAI for Doctoral Program" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/sokendai-enrollment</id><content type="html" xml:base="https://gokamoda.github.io/news/sokendai-enrollment/"><![CDATA[<p>総合研究大学院大学 (SOKENDAI) 日本語言語科学コースの博士後期課程に進学しました。<br />
-JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語研究所 (NINJAL) で研究活動を行います。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[as Special Research Student]]></summary></entry><entry><title type="html">👑 Completed Master’s course and received the Dean’s Award</title><link href="https://gokamoda.github.io/news/dean-award/" rel="alternate" type="text/html" title="👑 Completed Master’s course and received the Dean’s Award" /><published>2025-03-25T00:00:00+00:00</published><updated>2025-03-25T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/dean-award</id><content type="html" xml:base="https://gokamoda.github.io/news/dean-award/"><![CDATA[<p>東北大学 情報科学研究科 学位授与式にて、学位記 (修士: 情報科学) とともに「研究科長賞」をいただきました。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[Graduate School of Information Sciences, Tohoku University]]></summary></entry><entry><title type="html">👑 2 papers received awards at NLP 2025</title><link href="https://gokamoda.github.io/news/nlp-awards/" rel="alternate" type="text/html" title="👑 2 papers received awards at NLP 2025" /><published>2025-03-13T00:00:00+00:00</published><updated>2025-03-13T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/nlp-awards</id><content type="html" xml:base="https://gokamoda.github.io/news/nlp-awards/"><![CDATA[<p>言語処理学会 第31回年次大会 (NLP 2025) にて、以下の2件の論文がそれぞれ「若手奨励賞」「日本経済新聞社 CDIO室賞」を受賞しました。</p>
-
-<div>
-  <ul>
-    <li>
-      
-      
-<!-- https://www.anlp.jp/guide/guideline.html -->
-    小林春斗,
-    
-
-    原知正,
-    
-
-    
-    <span class="underline">鴨田豪</span>,
-    
-
-    横井祥
-
-(2025).<br />
-<strong>層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ</strong>.<br />
-言語処理学会 第31回年次大会, pp. 1751-1756.
-
-    <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a>
-
-
-    <br />
-    <span class="link-row"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A5-1" target="_blank" class="link-btn btn">
-        
-        <i class="fa-regular fa-file" style="margin-right: 0.15em;"></i>
-        
-        予稿
-    </a></span>
-
-    </li>
-    <li>
-      
-      
-<!-- https://www.anlp.jp/guide/guideline.html -->
-    佐々木睦史,
-    
-
-    高橋良允,
-    
-
-    
-    <span class="underline">鴨田豪</span>,
-    
-
-    Benjamin Heinzerling,
-    
-
-    坂口慶祐,
-    
-
-    乾健太郎
-
-(2025).<br />
-<strong>LM は日本の時系列構造をどうエンコードするか</strong>.<br />
-言語処理学会 第31回年次大会, pp. 2642-2647.
-
-    <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
-
-
-    <br />
-    <span class="link-row"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/#A7-5" target="_blank" class="link-btn btn">
-        
-        <i class="fa-regular fa-file" style="margin-right: 0.15em;"></i>
-        
-        予稿
-    </a></span>
-
-    </li>
-  </ul>
-</div>
-
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[若手奨励賞 + 日本経済新聞社 CDIO室賞]]></summary></entry></feed>
+JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語研究所 (NINJAL) で研究活動を行います。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[as Special Research Student]]></summary></entry><entry><title type="html">👑 Completed Master’s course and received the Dean’s Award</title><link href="https://gokamoda.github.io/news/dean-award/" rel="alternate" type="text/html" title="👑 Completed Master’s course and received the Dean’s Award" /><published>2025-03-25T00:00:00+00:00</published><updated>2025-03-25T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/dean-award</id><content type="html" xml:base="https://gokamoda.github.io/news/dean-award/"><![CDATA[<p>東北大学 情報科学研究科 学位授与式にて、学位記 (修士: 情報科学) とともに「研究科長賞」をいただきました。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[Graduate School of Information Sciences, Tohoku University]]></summary></entry></feed>
