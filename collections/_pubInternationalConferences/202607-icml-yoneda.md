@@ -1,6 +1,6 @@
 ---
 title: "SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora"
-proceedings_title: "arXiv [cs.CL]"
+proceedings_title: "Forty-third International Conference on Machine Learning"
 authors:
   - Masataka Yoneda
   - Yusuke Matsushita
@@ -10,7 +10,8 @@ authors:
   - Masaki Waga
   - Sho Yokoi
 year: 2026
-month: 2
+month: 7
+pages:
 links:
   - name: "Project Page"
     url: "https://softmatcha.github.io/v2"
