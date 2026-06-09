@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-06-08T07:10:01+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the ICML 2026</title><link href="https://gokamoda.github.io/news/icml2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICML 2026" /><published>2026-05-01T00:00:00+00:00</published><updated>2026-05-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/icml2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/icml2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICML 2026.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-06-09T05:25:19+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the ICML 2026</title><link href="https://gokamoda.github.io/news/icml2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICML 2026" /><published>2026-05-01T00:00:00+00:00</published><updated>2026-05-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/icml2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/icml2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICML 2026.</p>
 
 <div>
   <ul>
@@ -32,7 +32,7 @@
 (2026).<br />
 <strong>SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora</strong>.<br />
 In
-<i>arXiv [cs.CL]</i>.
+<i>Forty-third International Conference on Machine Learning</i>.
 
     <br />
     <span class="link-row"><a href="https://softmatcha.github.io/v2" target="_blank" class="link-btn btn">
