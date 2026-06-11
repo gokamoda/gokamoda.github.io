@@ -23,6 +23,6 @@ links:
     url: "https://scholar.google.com/citations?view_op=view_citation&hl=ja&user=6hqExwkAAAAJ&sortby=pubdate&citation_for_view=6hqExwkAAAAJ:qjMakFHDy7sC"
     icon: "fa-brands fa-google-scholar"
   - name: "Project Page"
-    url: "https://softmatcha.github.io"
+    url: "https://softmatcha.github.io/v1/"
     logo: "/assets/softmatcha-logo.png"
 ---

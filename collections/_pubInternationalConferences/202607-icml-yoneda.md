@@ -14,7 +14,8 @@ month: 7
 pages:
 links:
   - name: "Project Page"
-    url: "https://softmatcha.github.io/v2"
+    url: "https://softmatcha.github.io/v2/"
+    logo: "/assets/softmatcha-logo.png"
   - name: "arXiv"
     url: "https://arxiv.org/abs/2602.10908"
     logo: "/assets/arxiv-logomark-small.svg"
