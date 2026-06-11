@@ -204,7 +204,7 @@ var store = [{
         "teaser": null
       },{
         "title": "✅ Paper accepted to the ICML 2026",
-        "excerpt":"We are pleased to announce that our paper has been accepted to ICML 2026.                                Masataka Yoneda,           Yusuke Matsushita,                Go Kamoda,           Kohei Suenaga,           Takuya Akiba,           Masaki Waga,      &amp;           Sho Yokoi  (2026).  SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora.  In Forty-third International Conference on Machine Learning.                              Project Page     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to ICML 2026.                                Masataka Yoneda,           Yusuke Matsushita,                Go Kamoda,           Kohei Suenaga,           Takuya Akiba,           Masaki Waga,      &amp;           Sho Yokoi  (2026).  SoftMatcha 2: A Fast and Soft Pattern Matcher for Trillion-Scale Corpora.  In Forty-third International Conference on Machine Learning.                                                Project Page     &nbsp;                                    arXiv                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/icml2026-accept/",
         "teaser": null
