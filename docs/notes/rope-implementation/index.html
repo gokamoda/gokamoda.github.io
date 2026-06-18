@@ -287,6 +287,19 @@
 		- q_m^{(d/2+1)} \\ - q_m^{(d/2+2)} \\ \vdots \\ - q_m^{(d)} \\ q_m^{(1)} \\ q_m^{(2)} \\ \vdots \\ q_m^{(d/2)}
 	\end{bmatrix}\\
 	&amp;=\begin{bmatrix}
+		\cos m\theta_1 &amp; 0 &amp; 0 &amp; 0 &amp; -\sin m\theta_1 &amp; 0 &amp; 0 &amp; 0  \\
+		 0 &amp; \cos m\theta_2 &amp;0 &amp; 0 &amp; 0               &amp; -\sin m\theta_2 &amp; 0 &amp; 0 \\
+		 \vdots &amp; \vdots  &amp;\ddots &amp; \vdots&amp;\vdots &amp; \vdots  &amp;\ddots &amp; \vdots&amp; \\
+		 0 &amp; 0  &amp; \cdots &amp; \cos m\theta_{d/2} &amp; 0 &amp; 0  &amp; \cdots &amp; -\sin m\theta_{d/2}\\
+		 \sin m\theta_1 &amp; 0 &amp; 0 &amp; 0 &amp; \cos m\theta_1 &amp; 0 &amp; 0 &amp; 0\\
+		 0 &amp; \sin m\theta_2 &amp;0 &amp; 0 &amp; 0               &amp; \cos m\theta_2 &amp; 0 &amp; 0 \\
+		 \vdots &amp;  \vdots&amp; \ddots &amp; \vdots &amp;\vdots &amp;  \vdots&amp; \ddots &amp; \vdots \\
+		 0 &amp; 0 &amp; \cdots &amp; \sin m\theta_{d/2} &amp; 0 &amp; 0  &amp; \cdots &amp; \cos m\theta_{d/2}
+	\end{bmatrix}
+	\begin{bmatrix}
+		q_m^{(1)} \\ q_m^{(2)} \\ \vdots \\ q_m^{(d/2)} \\ q_m^{(d/2+1)} \\ q_m^{(d/2+2)} \\ \vdots \\ q_m^{(d)}
+	\end{bmatrix}\\
+	&amp;=\begin{bmatrix}
 		q_m^{(1)}\cos m\theta_1 - q_m^{(d/2 + 1)}\sin m\theta_1 \\
 		q_m^{(2)}\cos m\theta_2 - q_m^{(d/2 + 2)}\sin m\theta_2 \\ 
 		\vdots \\
