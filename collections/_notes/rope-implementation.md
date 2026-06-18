@@ -107,6 +107,19 @@ $$
 		- q_m^{(d/2+1)} \\ - q_m^{(d/2+2)} \\ \vdots \\ - q_m^{(d)} \\ q_m^{(1)} \\ q_m^{(2)} \\ \vdots \\ q_m^{(d/2)}
 	\end{bmatrix}\\
 	&=\begin{bmatrix}
+		\cos m\theta_1 & 0 & 0 & 0 & -\sin m\theta_1 & 0 & 0 & 0  \\
+		 0 & \cos m\theta_2 &0 & 0 & 0               & -\sin m\theta_2 & 0 & 0 \\
+		 \vdots & \vdots  &\ddots & \vdots&\vdots & \vdots  &\ddots & \vdots& \\
+		 0 & 0  & \cdots & \cos m\theta_{d/2} & 0 & 0  & \cdots & -\sin m\theta_{d/2}\\
+		 \sin m\theta_1 & 0 & 0 & 0 & \cos m\theta_1 & 0 & 0 & 0\\
+		 0 & \sin m\theta_2 &0 & 0 & 0               & \cos m\theta_2 & 0 & 0 \\
+		 \vdots &  \vdots& \ddots & \vdots &\vdots &  \vdots& \ddots & \vdots \\
+		 0 & 0 & \cdots & \sin m\theta_{d/2} & 0 & 0  & \cdots & \cos m\theta_{d/2}
+	\end{bmatrix}
+	\begin{bmatrix}
+		q_m^{(1)} \\ q_m^{(2)} \\ \vdots \\ q_m^{(d/2)} \\ q_m^{(d/2+1)} \\ q_m^{(d/2+2)} \\ \vdots \\ q_m^{(d)}
+	\end{bmatrix}\\
+	&=\begin{bmatrix}
 		q_m^{(1)}\cos m\theta_1 - q_m^{(d/2 + 1)}\sin m\theta_1 \\
 		q_m^{(2)}\cos m\theta_2 - q_m^{(d/2 + 2)}\sin m\theta_2 \\ 
 		\vdots \\
