@@ -37,6 +37,15 @@
 
   <div class="author__urls-wrapper_customized">
     <ul class="author__urls_customized social-icons">
+      
+      {% if author.email %}
+      <li>
+        <a href="javascript:void(0);" onclick="email_copy()">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </li>
+      {% endif %}
+
       {% if author.github %}
         <li>
           <a href="https://github.com/{{ author.github }}" target="_blank">
@@ -45,11 +54,11 @@
         </li>
       {% endif %}
 
-      {% if author.email %}
+      {% if author.google_scholar %}
         <li>
-            <a href="javascript:void(0);" onclick="email_copy()">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
+          <a href="https://scholar.google.com/citations?user={{ author.google_scholar }}" target="_blank">
+            <i class="fa-brands fa-google-scholar"></i>
+          </a>
         </li>
       {% endif %}
 
