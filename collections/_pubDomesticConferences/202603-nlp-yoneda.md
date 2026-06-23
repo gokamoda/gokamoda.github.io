@@ -1,5 +1,5 @@
 ---
-title: "SoftMatcha 2: 一兆語規模のコーパスに対する柔らかく超高速な検索システム"
+title: "SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索"
 proceedings_title: "言語処理学会 第32回年次大会"
 authors:
   - 米田優峻
