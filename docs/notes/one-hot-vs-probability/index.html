@@ -1,0 +1,423 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>One-hot target と確率分布 - Go Kamoda</title>
+<meta name="description" content="言語モデルの教師ラベルはone-hotでよいのか、という疑問を少し解消するためのメモ。">
+
+
+  <meta name="author" content="Go Kamoda">
+  
+  <meta property="article:author" content="Go Kamoda">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Go Kamoda">
+<meta property="og:title" content="One-hot target と確率分布">
+<meta property="og:url" content="https://gokamoda.github.io/notes/one-hot-vs-probability/">
+
+
+  <meta property="og:description" content="言語モデルの教師ラベルはone-hotでよいのか、という疑問を少し解消するためのメモ。">
+
+
+
+  <meta property="og:image" content="https://gokamoda.github.io/assets/img/one-hot-vs-prob.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2026-03-16T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://gokamoda.github.io/notes/one-hot-vs-probability/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Go Kamoda Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href=/assets/favicon/favicon-96x96.png sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href=/assets/favicon/favicon.svg />
+<link rel="shortcut icon" href=/assets/favicon/favicon.ico />
+<link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
+<link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          G<img src=/assets/enaga-transparent-blackline.svg alt="" class="img-site-title"/>&nbsp;Kamoda
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/notes/"
+                
+                
+              >Notes</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #59876F; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          One-hot target と確率分布
+
+        
+      </h1>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-03-16T00:00:00+00:00">March 16, 2026</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="One-hot target と確率分布">
+    <meta itemprop="description" content="言語モデルの教師ラベルはone-hotでよいのか、という疑問を少し解消するためのメモ。">
+    <meta itemprop="datePublished" content="2026-03-16T00:00:00+00:00">
+    
+    <section class="page__content" itemprop="text">
+      <h2 id="tldr">TL;DR</h2>
+
+<p>言語モデルの次トークン予測では各位置の教師は one-hot だが、データ全体での負の対数尤度 (NLL) 最小化は、各文脈における経験的な次トークン分布へモデル分布を近づけることとして理解できる。</p>
+
+<h2 id="cross-entropy-loss">Cross Entropy Loss</h2>
+
+<p>言語モデルの学習は、通常、コーパス中の各位置における次トークンの負の対数尤度を最小化することとして定式化される。
+データセットを文脈と次トークンの組</p>
+
+\[\mathcal{D}=\{(x_i,y_i)\}_{i=1}^{M}\]
+
+<p>と書くと、負の対数尤度は</p>
+
+\[\mathcal{L}(\theta)
+= -\sum_{i=1}^{M}\log p_\theta(y_i\mid x_i)\label{eq:nll}\]
+
+<p>である。
+(平均 loss として定義する場合は、これを $M$ で割ればよいが、以下の最適化解には影響しない。)</p>
+
+<p>ここで、特定の文脈 $x$ の直後にトークン $y$ が出現する回数を $N(x,y)$ とし、文脈 $x$ の総出現回数を</p>
+
+\[N(x)=\sum_{y'}N(x,y')\]
+
+<p>とする。
+全体の損失 $\mathcal{L}(\theta)$ を、文脈 $x$ ごとにまとめると、</p>
+
+\[\begin{align}
+\mathcal{L}(\theta)
+&amp;= -\sum_x\sum_y N(x,y)\log p_\theta(y\mid x)\\
+&amp;= -\sum_x N(x)\sum_y \frac{N(x,y)}{N(x)}\log p_\theta(y\mid x)
+\end{align}\]
+
+<p>と書ける。</p>
+
+<p>さらに、経験的な条件付き分布を</p>
+
+\[\hat p(y\mid x)=\frac{N(x,y)}{N(x)}\]
+
+<p>と定義すれば、損失は</p>
+
+\[\mathcal{L}(\theta)
+= \sum_x N(x)
+\left[-\sum_y \hat p(y\mid x)\log p_\theta(y\mid x)\right]\]
+
+<p>と書き換えられる。</p>
+
+<p>角括弧の中身は、経験分布 $\hat p(\cdot\mid x)$ とモデル分布 $p_\theta(\cdot\mid x)$ の cross entropy である。
+したがって、「one-hot target に対する負の対数尤度を最小化すること (式$\ref{eq:nll}$)」は、同じ文脈 $x$ ごとに集約して見れば、「経験分布とモデル分布の cross entropy を最小化すること」に対応している。</p>
+
+<h2 id="idealized-optimum">Idealized Optimum</h2>
+
+<p>次に、モデルが各文脈 $x$ に対して任意の分布 $p(\cdot\mid x)$ を独立に割り当てられる理想化された設定を考える。
+このとき、各 $x$ についての最適化問題は</p>
+
+\[\min_{p(\cdot\mid x)}
+-\sum_y N(x,y)\log p(y\mid x)
+\quad
+\text{s.t.}\quad
+\sum_y p(y\mid x)=1,\quad
+p(y\mid x)\geq 0\]
+
+<p>となる。</p>
+
+<p>制約 $\sum_y p(y\mid x)=1$ をラグランジュ乗数 $\lambda$ を用いて組み込むと、ラグランジュ関数は</p>
+
+\[\mathcal{J}_x
+= -\sum_y N(x,y)\log p(y\mid x)
++\lambda\left(\sum_y p(y\mid x)-1\right)\]
+
+<p>である。
+正の確率が割り当てられる各 $p(y\mid x)$ について偏微分すると、</p>
+
+\[\frac{\partial \mathcal{J}_x}{\partial p(y\mid x)}
+= -\frac{N(x,y)}{p(y\mid x)}+\lambda\]
+
+<p>であり、次のときに $0$ になる。</p>
+
+\[p(y\mid x)=\frac{N(x,y)}{\lambda}\label{eq:lagrange}\]
+
+<p>正規化条件を用いると、</p>
+
+\[\sum_y p(y\mid x)
+=\sum_y\frac{N(x,y)}{\lambda}
+=\frac{1}{\lambda}\sum_y N(x,y)
+=1\]
+
+<p>より、</p>
+
+\[\lambda=\sum_y N(x,y)\]
+
+<p>である。
+これを式$\ref{eq:lagrange}$ に代入すると、</p>
+
+\[p^*(y\mid x)
+=\frac{N(x,y)}{\sum_{y'}N(x,y')}
+=\hat p(y\mid x)\]
+
+<p>を得る。</p>
+
+<p>つまり、学習データは各位置で one-hot target として与えられているが、同じ文脈 $x$ が複数回現れ、その後続トークンにばらつきがある場合、理想的な最適解は one-hot 分布ではなく、その文脈に対する経験的な次トークン分布になる。</p>
+
+<h2 id="注意点">注意点</h2>
+
+<p>上の議論は、各文脈 $x$ について独立に分布を選べる理想化された場合の話である。
+実際のニューラル言語モデルではパラメータが文脈間で共有されているため、各 $x$ の分布を完全に独立に最適化できるわけではない。</p>
+
+<p>また、softmax による有限の logit では $p(y\mid x)=0$ を厳密には実現できない。
+そのため、$N(x,y)=0$ のトークンについては、確率を $0$ に近づける極限として理解するのが自然である。</p>
+
+<p>さらに、有限のコーパスでは、長い文脈 $x$ がまったく同じ形で何度も現れるとは限らない。
+上の導出は、同じ文脈ごとに経験分布を考えられる理想化された見方であり、実際の言語モデルではパラメータ共有によって多数の文脈から統計的な傾向を学習する。</p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<ul>
+  <li>各訓練例の target は one-hot である。</li>
+  <li>しかし同じ文脈 $x$ ごとに集約すると、loss は経験分布 $\hat p(\cdot\mid x)$ とモデル分布 $p_\theta(\cdot\mid x)$ の cross entropy になる。</li>
+  <li>各文脈に対して自由に分布を割り当てられる理想化設定では、最適解は経験分布 $p^*(y\mid x)=\hat p(y\mid x)$ である。</li>
+  <li>したがって、各サンプルの教師が one-hot であること自体は、次トークン分布を学習するという目的と矛盾しない。</li>
+</ul>
+
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2020 - 2026 <a href="https://gokamoda.github.io">Go Kamoda</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/copy_code.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQCS7FXG9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDQCS7FXG9', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1],
+        diag: ["\\mathrm{diag}\\left(#1\\right)", 1],
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </body>
+</html>
