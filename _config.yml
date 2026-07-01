@@ -115,8 +115,8 @@ analytics:
 author:
   name             : "Go Kamoda"
   avatar           : "/assets/go_kamoda_profile.jpeg" 
-  bio              : "Ph.D. Student<br><i class=\"fas fa-fw fa-map-marker-alt\" aria-hidden=\"true\"></i>  SOKENDAI/NINJAL"
-  location         : "SOKENDAI/NINJAL"
+  bio              : "Ph.D. Student<br><i class=\"fas fa-fw fa-map-marker-alt\" aria-hidden=\"true\"></i>  SOKENDAI/NINJAL<br><a href=\"https://yokoi-lab.net/\" target=\"_blank\">Yokoi Lab</a>"
+  location         : "SOKENDAI/NINJAL, Yokoi Lab"
   email            : "gokamoda@gmail.com"
   twitter          : "go2oo2"
   facebook         : "61552671941935"
