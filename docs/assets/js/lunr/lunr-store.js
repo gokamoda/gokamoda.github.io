@@ -144,7 +144,7 @@ var store = [{
         "teaser": "/assets/img/one-hot-vs-prob.png"
       },{
         "title": "✅ Paper accepted to the COLING 2025",
-        "excerpt":"We are pleased to announce that our paper has been accepted to COLING 2025. Go Kamoda, Akari Asai, Ana Brassard, &amp; Keisuke Sakaguchi (2025). Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment. In Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025). ACL Anthology &nbsp; Google...","categories": ["News"],
+        "excerpt":"We are pleased to announce that our paper has been accepted to COLING 2025. Go Kamoda, Akari Asai, Ana Brassard, &amp; Keisuke Sakaguchi (2025). Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment. In Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025). ACL Anthology Google Scholar...","categories": ["News"],
         "tags": [],
         "url": "/news/coling2025-accept/",
         "teaser": null
@@ -204,13 +204,13 @@ var store = [{
         "teaser": null
       },{
         "title": "🎤 Presentation at NLP 2026",
-        "excerpt":"NLP 2026 にて以下の発表があります。 [Update 2026/03/02]: 全て口頭発表に選出されました！ 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page &nbsp; NLP 2026 プログラム 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 若手奨励賞 (21/517件) NLP...","categories": ["News"],
+        "excerpt":"NLP 2026 にて以下の発表があります。 [Update 2026/03/02]: 全て口頭発表に選出されました！ 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page NLP 2026 プログラム 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 若手奨励賞 (21/517件) NLP 2026...","categories": ["News"],
         "tags": [],
         "url": "/news/nlp2026-presentation/",
         "teaser": null
       },{
         "title": "👑 3 papers received awards at NLP 2026",
-        "excerpt":"2026年3月9日から13日にかけて宇都宮（栃木）で開催された 言語処理学会第32回年次大会 (NLP 2026) にて、以下の研究で3件の受賞がありました。 3件の発表のうち、以下の賞を受賞しました。 優秀賞 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page &nbsp; NLP 2026 プログラム 若手奨励賞 賞は第一著者に与えられる． 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会...","categories": ["News"],
+        "excerpt":"2026年3月9日から13日にかけて宇都宮（栃木）で開催された 言語処理学会第32回年次大会 (NLP 2026) にて、以下の研究で3件の受賞がありました。 3件の発表のうち、以下の賞を受賞しました。 優秀賞 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page NLP 2026 プログラム 若手奨励賞 賞は第一著者に与えられる． 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 若手奨励賞...","categories": ["News"],
         "tags": [],
         "url": "/news/nlp2026-awards/",
         "teaser": null
@@ -387,7 +387,7 @@ var store = [{
     "excerpt":"","url": "https://gokamoda.github.io/notes/"
   },{
     "title": "Publications & Activities",
-    "excerpt":"## Education - Doctoral Student / 博士後期課程 [2025.04 - ] [Graduate Institute for Advanced Studies, SOKENDAI.](https://www.soken.ac.jp/en/) / [総合研究大学院大学](https://www.soken.ac.jp/)Supervisor: Assoc. Prof. Sho Yokoi - Master of Information Science / 修士（情報科学） [2023.04 - 2025.03][Graduate School of Information Sciences, Tohoku University.](https://www.is.tohoku.ac.jp/en/) / [東北大学大学院情報科学研究科](https://www.is.tohoku.ac.jp/)Supervisor: Prof. Jun Suzuki & Assoc. Prof. Keisuke Sakaguchi [Dean Award...","url": "https://gokamoda.github.io/cv/"
+    "excerpt":"     Go Kamoda         {{ site.author.email }}{% if site.url %} · {{ site.url }}{% endif %}         Export as PDF   Print            Education     International Conferences     Domestic Conferences     {% if site.pubPreprint.size > 0 %}     Preprints     {% endif %}     {% if site.experiences.size > 0 %}     Experiences     {% endif %}        {% include cv-content.html %} ","url": "https://gokamoda.github.io/cv/"
   },{
     "title": "",
     "excerpt":"","url": "https://gokamoda.github.io/index.html"
