@@ -195,7 +195,7 @@ $$
 \begin{align}
 \nabla A(\bm{\eta})
 &= \frac{1}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
-&= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx}\,dx\\
+&= \frac{1}{\exp(A(\bm{\eta}))} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
 &= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\,dx\\
 &= \int_{\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\,dx\\
 &= \int_{\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\,dx\\
@@ -204,21 +204,7 @@ $$
 \end{align}
 $$
 
-離散分布の場合も同様に、
-
-$$
-\begin{align}
-\nabla A(\bm{\eta})
-&= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
-&= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))}\\
-&= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\\
-&= \sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\\
-&= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
-&= \mathbb{E}_{p_{\bm{\eta}}}[\bm{T}(X)]
-\label{eq:log-partition-gradient-discrete}
-\end{align}
-$$
-
+離散分布の場合も同様である。
 
 ## 3. KL divergence
 
@@ -239,7 +225,7 @@ $$
 \end{equation}
 $$
 
-ここで、同じ指数型分布族内の 2 つの分布
+ここで、同じ指数型分布族内 (つまり $h(x)$, $\bm{T}(x)$, $A(\bm{\eta})$ が共通)の 2 つの分布
 $p_{\bm{\eta}}(x)$ と $p_{\bm{\eta}'}(x)$ の KL divergence は、
 
 $$
@@ -312,9 +298,11 @@ $$
 $$
 \begin{align}
 \nabla A(\bm{z}) 
-&= \mathbb{E}_{\bm{z}}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient-discrete})\\
+&= \mathbb{E}_{\operatorname{softmax}(\bm{z})}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient})\\
 &= \sum_i \operatorname{softmax}(\bm{z})_i \bm{e}_i\\
-&= \operatorname{softmax}(\bm{z}) = \bm{p}
+&= \operatorname{softmax}(\bm{z})\\
+&= \frac{\exp(\bm{z})}{\sum_j \exp(z_j)}\\
+&= \bm{p}
 \label{eq:softmax-gradient}
 \end{align}
 $$
