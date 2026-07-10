@@ -365,7 +365,7 @@ A(\bm{\eta}) = \log \sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))
 \[\begin{align}
 \nabla A(\bm{\eta})
 &amp;= \frac{1}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
-&amp;= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx}\,dx\\
+&amp;= \frac{1}{\exp(A(\bm{\eta}))} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
 &amp;= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\,dx\\
 &amp;= \int_{\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\,dx\\
 &amp;= \int_{\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\,dx\\
@@ -373,18 +373,7 @@ A(\bm{\eta}) = \log \sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))
 \label{eq:log-partition-gradient}
 \end{align}\]
 
-<p>離散分布の場合も同様に、</p>
-
-\[\begin{align}
-\nabla A(\bm{\eta})
-&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
-&amp;= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))}\\
-&amp;= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\\
-&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\\
-&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
-&amp;= \mathbb{E}_{p_{\bm{\eta}}}[\bm{T}(X)]
-\label{eq:log-partition-gradient-discrete}
-\end{align}\]
+<p>離散分布の場合も同様である。</p>
 
 <h2 id="3-kl-divergence">3. KL divergence</h2>
 
@@ -401,7 +390,7 @@ A(\bm{\eta}) = \log \sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))
 \label{eq:exponential-family-log-density}
 \end{equation}\]
 
-<p>ここで、同じ指数型分布族内の 2 つの分布
+<p>ここで、同じ指数型分布族内 (つまり $h(x)$, $\bm{T}(x)$, $A(\bm{\eta})$ が共通)の 2 つの分布
 $p_{\bm{\eta}}(x)$ と $p_{\bm{\eta}’}(x)$ の KL divergence は、</p>
 
 \[\begin{align}
@@ -468,9 +457,11 @@ h(i)\exp\left(\bm{\eta}^\top \bm{T}(i)-A(\bm{\eta})\right)
 
 \[\begin{align}
 \nabla A(\bm{z}) 
-&amp;= \mathbb{E}_{\bm{z}}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient-discrete})\\
+&amp;= \mathbb{E}_{\operatorname{softmax}(\bm{z})}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient})\\
 &amp;= \sum_i \operatorname{softmax}(\bm{z})_i \bm{e}_i\\
-&amp;= \operatorname{softmax}(\bm{z}) = \bm{p}
+&amp;= \operatorname{softmax}(\bm{z})\\
+&amp;= \frac{\exp(\bm{z})}{\sum_j \exp(z_j)}\\
+&amp;= \bm{p}
 \label{eq:softmax-gradient}
 \end{align}\]
 
