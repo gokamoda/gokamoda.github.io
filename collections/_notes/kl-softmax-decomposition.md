@@ -53,15 +53,15 @@ Bregman divergence は、任意の微分可能な凸関数 $F$ を用いて定�
 $$
 \begin{equation}
 D_F(\bm{p}\|\bm{q})
-=F(\bm{p})-F(\bm{q})-\nabla_{\bm{p}} F(\bm{q})^\top(\bm{p}-\bm{q})
+=F(\bm{p})-F(\bm{q})-\nabla F(\bm{q})^\top(\bm{p}-\bm{q})
 \label{eq:bregman-definition}
 \end{equation}
 $$
 
-$F$ を点 $\bm{q}$ の周りで一次近似すると
+$F$ を点 $\bm{q}$ の周りで1次のテイラー展開で近似すると、
 
 $$
-F(\bm{p}) \approx F(\bm{q}) + \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})
+F(\bm{p}) \approx F(\bm{q}) + \nabla F(\bm{q})^\top (\bm{p}-\bm{q})
 $$
 
 となる。したがって、Bregman divergence は、
@@ -79,7 +79,7 @@ $$
 
 $$
 \begin{align}
-\nabla_{\bm{p}} F(\bm{p}) = 2\bm{p}
+\nabla F(\bm{p}) = 2\bm{p}
 \end{align}
 $$
 
@@ -88,7 +88,7 @@ $$
 $$
 \begin{align}
 D_F(\bm{p}\|\bm{q})
-&= F(\bm{p}) - F(\bm{q}) - \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})
+&= F(\bm{p}) - F(\bm{q}) - \nabla F(\bm{q})^\top (\bm{p}-\bm{q})
 \quad(\because \text{式}\ref{eq:bregman-definition})\\
 &= \sum_i p_i^2 - \sum_i q_i^2 - 2\bm{q}^\top (\bm{p}-\bm{q})\\
 &= \sum_i p_i^2 - \sum_i q_i^2 - 2\sum_i q_i(p_i-q_i)\\
@@ -110,7 +110,7 @@ $F: \mathbb{R}^n \to \mathbb{R}$ を $C^2$ 級の関数とする。
 
 $$
 \begin{align}
-F(\bm{x}) = F(\bm{a}) + \nabla_{\bm{x}} F(\bm{a})^\top (\bm{x}-\bm{a}) + \int_0^1 (1-t)(\bm{x}-\bm{a})^\top \nabla^2_{\bm{x}} F(\bm{a}+t(\bm{x}-\bm{a}))(\bm{x}-\bm{a})\,dt
+F(\bm{x}) = F(\bm{a}) + \nabla F(\bm{a})^\top (\bm{x}-\bm{a}) + \int_0^1 (1-t)(\bm{x}-\bm{a})^\top \nabla^2 F(\bm{a}+t(\bm{x}-\bm{a}))(\bm{x}-\bm{a})\,dt
 \end{align}
 $$
 
@@ -118,7 +118,7 @@ $$
 
 $$
 \begin{align}
-F(\bm{p}) = F(\bm{q}) + \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q}) + \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2_{\bm{p}} F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
+F(\bm{p}) = F(\bm{q}) + \nabla F(\bm{q})^\top (\bm{p}-\bm{q}) + \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
 \end{align}
 $$
 
@@ -127,9 +127,9 @@ $$
 $$
 \begin{align}
 D_F(\bm{p}\|\bm{q})
-&= F(\bm{p}) - F(\bm{q}) - \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})
+&= F(\bm{p}) - F(\bm{q}) - \nabla F(\bm{q})^\top (\bm{p}-\bm{q})
 \quad(\because \text{式}\ref{eq:bregman-definition})\\
-&= \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2_{\bm{p}} F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
+&= \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
 \label{eq:bregman-integral}
 \end{align}
 $$
@@ -193,7 +193,7 @@ $A(\bm{\eta})$ の微分は、十分統計量の期待値に対応する。
 
 $$
 \begin{align}
-\nabla_{\bm{\eta}} A(\bm{\eta})
+\nabla A(\bm{\eta})
 &= \frac{1}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
 &= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx}\,dx\\
 &= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\,dx\\
@@ -208,7 +208,7 @@ $$
 
 $$
 \begin{align}
-\nabla_{\bm{\eta}} A(\bm{\eta})
+\nabla A(\bm{\eta})
 &= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
 &= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))}\\
 &= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\\
@@ -271,11 +271,11 @@ $$
 $$
 \begin{align}
 D_{\mathrm{KL}}(p_{\bm{\eta}}\|p_{\bm{\eta}'})
-&= (\bm{\eta}-\bm{\eta}')^\top \nabla_{\bm{\eta}} A(\bm{\eta})
+&= (\bm{\eta}-\bm{\eta}')^\top \nabla A(\bm{\eta})
 -A(\bm{\eta})+A(\bm{\eta}')
 \quad(\because \text{式}\ref{eq:log-partition-gradient})\\
 &= A(\bm{\eta}')-A(\bm{\eta})
--\nabla_{\bm{\eta}} A(\bm{\eta})^\top(\bm{\eta}'-\bm{\eta})\\
+-\nabla A(\bm{\eta})^\top(\bm{\eta}'-\bm{\eta})\\
 &= D_A(\bm{\eta}'\|\bm{\eta})
 \label{eq:kl-bregman}
 \end{align}
@@ -311,7 +311,7 @@ $$
 
 $$
 \begin{align}
-\nabla_{\bm{z}} A(\bm{z}) 
+\nabla A(\bm{z}) 
 &= \mathbb{E}_{\bm{z}}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient-discrete})\\
 &= \sum_i \operatorname{softmax}(\bm{z})_i \bm{e}_i\\
 &= \operatorname{softmax}(\bm{z}) = \bm{p}
@@ -332,7 +332,7 @@ $$
 
 $$
 \begin{align}
-\nabla^2_{\bm{z}} A(\bm{z})
+\nabla^2 A(\bm{z})
 &= \frac{1}{S}\operatorname{diag}(\exp(\bm{z}))
 -\frac{1}{S^2}\exp(\bm{z})\exp(\bm{z})^\top\\
 &= \operatorname{diag}\left(\frac{\exp(\bm{z})}{S}\right)
