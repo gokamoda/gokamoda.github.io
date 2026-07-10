@@ -143,6 +143,12 @@ var store = [{
         "url": "/notes/one-hot-vs-probability/",
         "teaser": "/assets/img/one-hot-vs-prob.png"
       },{
+        "title": "softmax(A+B+C) における A, B, C の寄与度の KL 分解",
+        "excerpt":"$\\bm{z}=\\sum_k\\bm{z}^{(k)}$ と分解したとき、 \\[\\begin{equation} D_{\\mathrm{KL}}(\\operatorname{softmax}(\\bm{z})\\|\\operatorname{uniform}) % = \\int_0^1 t\\operatorname{Var}_{i\\sim\\bm{p}(t)}(z_i)\\,dt = \\sum_k I_k \\label{eq:kl-additive-decomposition-summary} \\end{equation}\\] \\[\\begin{align} I_k &amp;= \\int_0^1 t\\operatorname{Cov}_{i\\sim\\bm{p}(t)}(z_i^{(k)},z_i)\\,dt\\\\ &amp;= \\bm{z}^{(k)\\top} \\left(\\bm{p}(1) - \\int_0^1 \\bm{p}(t)\\,dt\\right) \\end{align}\\] \\[\\bm{p}(t) = \\operatorname{softmax}( t\\bm{z})\\] またこの $I_k$ は、加法的に分解された logit 成分 $\\bm{z}^{(k)}$に対する component-wise Integrated Gradients attribution、すなわち成分ごとの Integrated Gradients 寄与に対応する。 1. Bregman divergence 1.1. 定義 Bregman divergence は、任意の微分可能な凸関数...","categories": [],
+        "tags": [],
+        "url": "/notes/kl-softmax-decomposition/",
+        "teaser": "/assets/img/kl-softmax-decomposition.png"
+      },{
         "title": "✅ Paper accepted to the COLING 2025",
         "excerpt":"We are pleased to announce that our paper has been accepted to COLING 2025. Go Kamoda, Akari Asai, Ana Brassard, &amp; Keisuke Sakaguchi (2025). Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment. In Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025). ACL Anthology Google Scholar...","categories": ["News"],
         "tags": [],

@@ -1,0 +1,1078 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>softmax(A+B+C) における A, B, C の寄与度の KL 分解 - Go Kamoda</title>
+<meta name="description" content="softmax(A+B+C) の分布変化に対して、A, B, C がどれだけ寄与しているかを KL ベースで定量化するためのメモ。">
+
+
+  <meta name="author" content="Go Kamoda">
+  
+  <meta property="article:author" content="Go Kamoda">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Go Kamoda">
+<meta property="og:title" content="softmax(A+B+C) における A, B, C の寄与度の KL 分解">
+<meta property="og:url" content="https://gokamoda.github.io/notes/kl-softmax-decomposition/">
+
+
+  <meta property="og:description" content="softmax(A+B+C) の分布変化に対して、A, B, C がどれだけ寄与しているかを KL ベースで定量化するためのメモ。">
+
+
+
+  <meta property="og:image" content="https://gokamoda.github.io/assets/img/kl-softmax-decomposition.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2026-07-10T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://gokamoda.github.io/notes/kl-softmax-decomposition/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Go Kamoda Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href=/assets/favicon/favicon-96x96.png sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href=/assets/favicon/favicon.svg />
+<link rel="shortcut icon" href=/assets/favicon/favicon.ico />
+<link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
+<link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          G<img src=/assets/enaga-transparent-blackline.svg alt="" class="img-site-title"/>&nbsp;Kamoda
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/notes/"
+                
+                
+              >Notes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #59876F; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          softmax(A+B+C) における A, B, C の寄与度の KL 分解
+
+        
+      </h1>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-07-10T00:00:00+00:00">July 10, 2026</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page page--has-toc" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="softmax(A+B+C) における A, B, C の寄与度の KL 分解">
+    <meta itemprop="description" content="softmax(A+B+C) の分布変化に対して、A, B, C がどれだけ寄与しているかを KL ベースで定量化するためのメモ。">
+    <meta itemprop="datePublished" content="2026-07-10T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-bregman-divergence">1. Bregman divergence</a><ul><li><a href="#11-定義">1.1. 定義</a></li><li><a href="#12-l2-距離">1.2. L2 距離</a></li><li><a href="#13-テイラーの定理の利用">1.3. テイラーの定理の利用</a></li></ul></li><li><a href="#2-指数型分布族">2. 指数型分布族</a><ul><li><a href="#21-定義">2.1. 定義</a></li><li><a href="#22-正規化項">2.2. 正規化項</a></li><li><a href="#23-正規化項の微分">2.3. 正規化項の微分</a></li></ul></li><li><a href="#3-kl-divergence">3. KL divergence</a></li><li><a href="#4-softmax">4. Softmax</a><ul><li><a href="#41-指数型分布族としての-softmaxとその-kl-divergence-の経路積分表現">4.1. 指数型分布族としての softmaxと、その KL divergence の経路積分表現</a></li><li><a href="#42-bmz-の分解">4.2. $\bm{z}$ の分解</a><ul><li><a href="#421-解釈">4.2.1. 解釈</a></li><li><a href="#422-integrated-gradients-との接続">4.2.2. Integrated Gradients との接続</a></li></ul></li><li><a href="#43-leave-one-out-kl">4.3. Leave-one-out KL</a><ul><li><a href="#431-integrated-gradients-との接続">4.3.1. Integrated Gradients との接続</a></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <!-- タイトル等は数式が使えないのでzではなくA, B, Cを用いる -->
+
+<p>$\bm{z}=\sum_k\bm{z}^{(k)}$ と分解したとき、</p>
+
+\[\begin{equation}
+D_{\mathrm{KL}}(\operatorname{softmax}(\bm{z})\|\operatorname{uniform})
+% = \int_0^1 t\operatorname{Var}_{i\sim\bm{p}(t)}(z_i)\,dt
+= \sum_k I_k \label{eq:kl-additive-decomposition-summary}
+\end{equation}\]
+
+<!-- が成り立つ。
+ただし、 -->
+
+\[\begin{align}
+I_k
+&amp;= \int_0^1 t\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)\,dt\\
+&amp;= \bm{z}^{(k)\top} \left(\bm{p}(1) - \int_0^1 \bm{p}(t)\,dt\right)
+\end{align}\]
+
+\[\bm{p}(t) = \operatorname{softmax}( t\bm{z})\]
+
+<p>またこの $I_k$ は、加法的に分解された logit 成分 $\bm{z}^{(k)}$に対する component-wise Integrated Gradients attribution、すなわち成分ごとの Integrated Gradients 寄与に対応する。</p>
+
+<h2 id="1-bregman-divergence">1. Bregman divergence</h2>
+
+<h3 id="11-定義">1.1. 定義</h3>
+
+<p>Bregman divergence は、任意の微分可能な凸関数 $F$ を用いて定義される、2つの点や確率分布の間の非対称な差異を測る尺度であり、以下のように定義される。</p>
+
+\[\begin{equation}
+D_F(\bm{p}\|\bm{q})
+=F(\bm{p})-F(\bm{q})-\nabla_{\bm{p}} F(\bm{q})^\top(\bm{p}-\bm{q})
+\label{eq:bregman-definition}
+\end{equation}\]
+
+<p>$F$ を点 $\bm{q}$ の周りで一次近似すると</p>
+
+\[F(\bm{p}) \approx F(\bm{q}) + \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})\]
+
+<p>となる。したがって、Bregman divergence は、</p>
+<blockquote>
+  <p>点 $\bm{q}$ における $F$ の接平面による $F(\bm{p})$ の予測値と、実際の $F(\bm{p})$ の差</p>
+</blockquote>
+
+<p>と解釈できる。</p>
+
+<h3 id="12-l2-距離">1.2. L2 距離</h3>
+
+\[F(\bm{p}) = \sum_i p_i^2\]
+
+<p>とし、</p>
+
+\[\begin{align}
+\nabla_{\bm{p}} F(\bm{p}) = 2\bm{p}
+\end{align}\]
+
+<p>を利用すると</p>
+
+\[\begin{align}
+D_F(\bm{p}\|\bm{q})
+&amp;= F(\bm{p}) - F(\bm{q}) - \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})
+\quad(\because \text{式}\ref{eq:bregman-definition})\\
+&amp;= \sum_i p_i^2 - \sum_i q_i^2 - 2\bm{q}^\top (\bm{p}-\bm{q})\\
+&amp;= \sum_i p_i^2 - \sum_i q_i^2 - 2\sum_i q_i(p_i-q_i)\\
+&amp;= \sum_i p_i^2 - \sum_i q_i^2 - 2\sum_i p_iq_i + 2\sum_i q_i^2\\
+&amp;= \sum_i p_i^2 - 2\sum_i p_iq_i + \sum_i q_i^2\\
+&amp;= \sum_i (p_i-q_i)^2\\
+&amp;= \|\bm{p}-\bm{q}\|_2^2
+\end{align}\]
+
+<p>となり、Bregman divergence は L2 距離の二乗に対応する。</p>
+
+<h3 id="13-テイラーの定理の利用">1.3. テイラーの定理の利用</h3>
+
+<p>$F: \mathbb{R}^n \to \mathbb{R}$ を $C^2$ 級の関数とする。
+点 $\bm{a}\in\mathbb{R}^n$ の周りでの Taylor 展開は、積分剰余形を用いて以下のように表せる。</p>
+
+\[\begin{align}
+F(\bm{x}) = F(\bm{a}) + \nabla_{\bm{x}} F(\bm{a})^\top (\bm{x}-\bm{a}) + \int_0^1 (1-t)(\bm{x}-\bm{a})^\top \nabla^2_{\bm{x}} F(\bm{a}+t(\bm{x}-\bm{a}))(\bm{x}-\bm{a})\,dt
+\end{align}\]
+
+<p>したがって、</p>
+
+\[\begin{align}
+F(\bm{p}) = F(\bm{q}) + \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q}) + \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2_{\bm{p}} F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
+\end{align}\]
+
+<p>より、</p>
+
+\[\begin{align}
+D_F(\bm{p}\|\bm{q})
+&amp;= F(\bm{p}) - F(\bm{q}) - \nabla_{\bm{p}} F(\bm{q})^\top (\bm{p}-\bm{q})
+\quad(\because \text{式}\ref{eq:bregman-definition})\\
+&amp;= \int_0^1 (1-t)(\bm{p}-\bm{q})^\top \nabla^2_{\bm{p}} F(\bm{q}+t(\bm{p}-\bm{q}))(\bm{p}-\bm{q})\,dt
+\label{eq:bregman-integral}
+\end{align}\]
+
+<h2 id="2-指数型分布族">2. 指数型分布族</h2>
+
+<h3 id="21-定義">2.1. 定義</h3>
+
+<p>ある確率分布が</p>
+
+\[\begin{equation}
+p_{\bm{\eta}}(x)
+= h(x)\exp\left(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta})\right)
+\label{eq:exponential-family}
+\end{equation}\]
+
+<p>と書けるとき、この分布族を指数型分布族という。</p>
+
+<p>ここで各項は</p>
+<ul>
+  <li>$\bm{\eta}$ : 自然パラメータ (natural parameter), $\bm{\eta}\in\mathbb{R}^k$</li>
+  <li>$\bm{T}(x)$ : 十分統計量 (sufficient statistic), $\bm{T}:\mathcal{X}\to\mathbb{R}^k$</li>
+  <li>$A(\bm{\eta})$ : 正規化項 (log-partition function), $A:\mathbb{R}^k\to\mathbb{R}$</li>
+  <li>$h(x)$ : 基底測度 (base measure), $h:\mathcal{X}\to\mathbb{R}_{\ge 0}$</li>
+</ul>
+
+<p>である。</p>
+
+<h3 id="22-正規化項">2.2. 正規化項</h3>
+
+<p>$p_{\bm{\eta}}(x)$ が確率分布であるためには、以下が成り立つ必要がある。</p>
+
+\[\begin{align}
+\int_{\mathcal{X}} p_{\bm{\eta}}(x)\,dx
+&amp;=\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\,dx\\
+&amp;=\exp(-A(\bm{\eta}))\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
+&amp;=1
+\end{align}\]
+
+<p>従って、</p>
+
+\[\begin{align}
+A(\bm{\eta}) = \log \int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx
+\end{align}\]
+
+<p>離散分布の場合も同様に、</p>
+
+\[\begin{align}
+A(\bm{\eta}) = \log \sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))
+\end{align}\]
+
+<h3 id="23-正規化項の微分">2.3. 正規化項の微分</h3>
+
+<p>$A(\bm{\eta})$ の微分は、十分統計量の期待値に対応する。</p>
+
+\[\begin{align}
+\nabla_{\bm{\eta}} A(\bm{\eta})
+&amp;= \frac{1}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx} \int_{\mathcal{X}} h(x) \bm{T}(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx\\
+&amp;= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\int_{\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))\,dx}\,dx\\
+&amp;= \int_{\mathcal{X}} \bm{T}(x) \frac{h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\,dx\\
+&amp;= \int_{\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\,dx\\
+&amp;= \int_{\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\,dx\\
+&amp;= \mathbb{E}_{p_{\bm{\eta}}}[\bm{T}(X)]
+\label{eq:log-partition-gradient}
+\end{align}\]
+
+<p>離散分布の場合も同様に、</p>
+
+\[\begin{align}
+\nabla_{\bm{\eta}} A(\bm{\eta})
+&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
+&amp;= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\sum_{x\in\mathcal{X}} h(x)\exp(\bm{\eta}^\top \bm{T}(x))}\\
+&amp;= \frac{\sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x))}{\exp(A(\bm{\eta}))}\\
+&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) h(x)\exp(\bm{\eta}^\top \bm{T}(x)-A(\bm{\eta}))\\
+&amp;= \sum_{x\in\mathcal{X}} \bm{T}(x) p_{\bm{\eta}}(x)\\
+&amp;= \mathbb{E}_{p_{\bm{\eta}}}[\bm{T}(X)]
+\label{eq:log-partition-gradient-discrete}
+\end{align}\]
+
+<h2 id="3-kl-divergence">3. KL divergence</h2>
+
+<p>指数型分布族では、</p>
+
+\[p_{\bm{\eta}}(x)
+=h(x)\exp\left(\bm{\eta}^\top\bm{T}(x)-A(\bm{\eta})\right)\]
+
+<p>であった。両辺の対数をとると、</p>
+
+\[\begin{equation}
+\log p_{\bm{\eta}}(x)
+=\log h(x)+\bm{\eta}^\top\bm{T}(x)-A(\bm{\eta})
+\label{eq:exponential-family-log-density}
+\end{equation}\]
+
+<p>ここで、同じ指数型分布族内の 2 つの分布
+$p_{\bm{\eta}}(x)$ と $p_{\bm{\eta}’}(x)$ の KL divergence は、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(p_{\bm{\eta}}\|p_{\bm{\eta}'})
+&amp;= \sum_x p_{\bm{\eta}}(x) \log \frac{p_{\bm{\eta}}(x)}{p_{\bm{\eta}'}(x)}\\
+&amp;= \sum_x p_{\bm{\eta}}(x)
+\left(
+\log h(x)+\bm{\eta}^\top\bm{T}(x)-A(\bm{\eta})
+-\log h(x)-\bm{\eta}'^\top\bm{T}(x)+A(\bm{\eta}')
+\right)
+\quad(\because \text{式}\ref{eq:exponential-family-log-density})\\
+&amp;= \sum_x p_{\bm{\eta}}(x)
+\left(
+(\bm{\eta}-\bm{\eta}')^\top\bm{T}(x)
+-A(\bm{\eta})+A(\bm{\eta}')
+\right)\\
+&amp;= (\bm{\eta}-\bm{\eta}')^\top
+\sum_x p_{\bm{\eta}}(x)\bm{T}(x)
+-A(\bm{\eta})+A(\bm{\eta}')\\
+&amp;= (\bm{\eta}-\bm{\eta}')^\top
+\mathbb{E}_{p_{\bm{\eta}}}[\bm{T}(X)]
+-A(\bm{\eta})+A(\bm{\eta}')
+\end{align}\]
+
+<p>指数型分布族の特徴である式$\ref{eq:log-partition-gradient}$を用いると、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(p_{\bm{\eta}}\|p_{\bm{\eta}'})
+&amp;= (\bm{\eta}-\bm{\eta}')^\top \nabla_{\bm{\eta}} A(\bm{\eta})
+-A(\bm{\eta})+A(\bm{\eta}')
+\quad(\because \text{式}\ref{eq:log-partition-gradient})\\
+&amp;= A(\bm{\eta}')-A(\bm{\eta})
+-\nabla_{\bm{\eta}} A(\bm{\eta})^\top(\bm{\eta}'-\bm{\eta})\\
+&amp;= D_A(\bm{\eta}'\|\bm{\eta})
+\label{eq:kl-bregman}
+\end{align}\]
+
+<p>となる。
+したがって、指数型分布族における KL divergence は、正規化項 $A$ による Bregman divergence に対応する。</p>
+
+<h2 id="4-softmax">4. Softmax</h2>
+
+<h3 id="41-指数型分布族としての-softmaxとその-kl-divergence-の経路積分表現">4.1. 指数型分布族としての softmaxと、その KL divergence の経路積分表現</h3>
+
+<p>$\bm{p}=\operatorname{softmax}(\bm{z})$ は、指数型分布族の一種であり、</p>
+<ul>
+  <li>自然パラメータ $\bm{\eta}=\bm{z}$</li>
+  <li>十分統計量 $\bm{T}(i)=\bm{e}_i$（$\bm{e}_i$ は第 $i$ 標準基底ベクトル）</li>
+  <li>正規化項 $A(\bm{\eta})=\log \sum_j \exp(\eta_j)$</li>
+  <li>基底測度 $h(i)=1$</li>
+</ul>
+
+<p>で表せる。
+実際、</p>
+
+\[\begin{align}
+h(i)\exp\left(\bm{\eta}^\top \bm{T}(i)-A(\bm{\eta})\right)
+&amp;= 1 \cdot \exp\left(z_i - \log \sum_j \exp(z_j)\right)\\
+&amp;= \frac{\exp(z_i)}{\sum_j \exp(z_j)}\\
+&amp;= \operatorname{softmax}(\bm{z})_i
+\end{align}\]
+
+<p>となる。このとき、</p>
+
+\[\begin{align}
+\nabla_{\bm{z}} A(\bm{z}) 
+&amp;= \mathbb{E}_{\bm{z}}[\bm{T}(I)]\quad (\because \text{式}\ref{eq:log-partition-gradient-discrete})\\
+&amp;= \sum_i \operatorname{softmax}(\bm{z})_i \bm{e}_i\\
+&amp;= \operatorname{softmax}(\bm{z}) = \bm{p}
+\label{eq:softmax-gradient}
+\end{align}\]
+
+<p>である。
+$\sum_j \exp(z_j)=S$ とおくと、</p>
+
+\[\begin{equation}
+\frac{\partial S}{\partial z_i} = \exp(z_i) 
+\end{equation}\]
+
+<p>であり、</p>
+
+\[\begin{align}
+\nabla^2_{\bm{z}} A(\bm{z})
+&amp;= \frac{1}{S}\operatorname{diag}(\exp(\bm{z}))
+-\frac{1}{S^2}\exp(\bm{z})\exp(\bm{z})^\top\\
+&amp;= \operatorname{diag}\left(\frac{\exp(\bm{z})}{S}\right)
+-\frac{\exp(\bm{z})\exp(\bm{z})^\top}{S^2}\\
+&amp;= \operatorname{diag}(\bm{p}) - \bm{p}\bm{p}^\top
+\label{eq:softmax-hessian}
+\end{align}\]
+
+<p>ここで、あるベースラインベクトル $\bm{\alpha}$ を用意し、</p>
+
+<p>\(\begin{equation}
+\bm{p}(t) = \operatorname{softmax}(\bm{\alpha}+t\bm{z})
+\label{eq:softmax-path}
+\end{equation}\)
+とおく。
+ここでは、$\bm{z}$ を加えた結果として得られる最終分布を基準に変化を評価するため、
+$D_{\mathrm{KL}}(\bm{p}(1)|\bm{p}(0))$ を用いる。</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+&amp;= D_A(\bm{\alpha}\|\bm{\alpha}+\bm{z})
+\quad(\because \text{式}\ref{eq:kl-bregman})\\
+&amp;= \int_0^1 (1-t)(\bm{\alpha}-\bm{\alpha}-\bm{z})^\top \nabla^2 A(\bm{\alpha}+\bm{z}+t(\bm{\alpha}-\bm{\alpha}-\bm{z}))(\bm{\alpha}-\bm{\alpha}-\bm{z})\,dt\\
+&amp;= \int_0^1 (1-t)(-\bm{z})^\top \nabla^2 A(\bm{\alpha}+(1-t)\bm{z})(-\bm{z})\,dt\\
+&amp;= \int_0^1 (1-t)\bm{z}^\top \nabla^2 A(\bm{\alpha}+(1-t)\bm{z})\bm{z}\,dt\\
+&amp;= \int_0^1 t\bm{z}^\top \nabla^2 A(\bm{\alpha}+t\bm{z})\bm{z}\,dt
+\label{eq:kl-path-hessian}
+\end{align}\]
+
+<p>ここで、</p>
+
+\[\begin{align}
+\bm{z}^\top \nabla^2 A(\bm{\alpha}+t\bm{z})\bm{z}
+&amp;= \bm{z}^\top
+\left(\operatorname{diag}(\bm{p}(t))-\bm{p}(t)\bm{p}(t)^\top\right)\bm{z}
+\quad(\because \text{式}\ref{eq:softmax-hessian})\\
+&amp;= \sum_i z_i^2p(t)_i-\left(\sum_i z_ip(t)_i\right)^2\\
+&amp;= \mathbb{E}_{i\sim\bm{p}(t)}[z_i^2]
+-\left(\mathbb{E}_{i\sim\bm{p}(t)}[z_i]\right)^2\\
+&amp;= \operatorname{Var}_{i\sim\bm{p}(t)}(z_i)
+\label{eq:softmax-path-variance}
+\end{align}\]
+
+<p>より、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+&amp;= \int_0^1 t\operatorname{Var}_{i\sim\bm{p}(t)}(z_i)\,dt
+\quad(\because \text{式}\ref{eq:kl-path-hessian},\ \text{式}\ref{eq:softmax-path-variance})
+\label{eq:kl-path-variance}
+\end{align}\]
+
+<p>なお、</p>
+
+\[\begin{align}
+\frac{d}{dt}p(t)_i
+&amp;= \frac{d}{dt}\operatorname{softmax}(\alpha_i+t z_i)\\
+&amp;= \frac{d}{dt}\frac{\exp(\alpha_i+t z_i)}{\sum_j \exp(\alpha_j+t z_j)}\\
+&amp;= \frac{z_i\exp(\alpha_i+t z_i)\left(\sum_j \exp(\alpha_j+t z_j)\right) - \exp(\alpha_i+t z_i)\left(\sum_j z_j\exp(\alpha_j+t z_j)\right)}{\left(\sum_j \exp(\alpha_j+t z_j)\right)^2}\\
+&amp;= z_i p(t)_i - p(t)_i \frac{\sum_j z_j\exp(\alpha_j+t z_j)}{\sum_j \exp(\alpha_j+t z_j)}\\
+&amp;= z_i p(t)_i - p(t)_i \sum_j z_j p(t)_j\\
+&amp;= p(t)_i\left(z_i - \sum_j z_j p(t)_j\right)\\
+\end{align}\]
+
+<p>より、</p>
+
+\[\begin{align}
+\frac{d}{dt}\mathbb{E}_{i\sim\bm{p}(t)}[z_i]
+&amp;= \frac{d}{dt}\sum_i z_i p(t)_i\\
+&amp;= \sum_i z_i \frac{d}{dt}p(t)_i\\
+&amp;= \sum_i z_i p(t)_i\left(z_i - \sum_j z_j p(t)_j\right)\\
+&amp;= \sum_i z_i^2 p(t)_i - \sum_i z_i p(t)_i \sum_j z_j p(t)_j\\
+&amp;= \mathbb{E}_{i\sim\bm{p(t)}}[z_i^2] - \left(\mathbb{E}_{i\sim\bm{p(t)}}[z_i]\right)^2\\
+&amp;= \operatorname{Var}_{i\sim\bm{p(t)}}(z_i)
+\label{eq:kl-path-variance-derivative}
+\end{align}\]
+
+<p>であるから、式 \ref{eq:kl-path-variance} は</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+&amp;= \int_0^1 t\left(\frac{d}{dt}\mathbb{E}_{i\sim\bm{p}(t)}[z_i]\right)\,dt\\
+&amp;= \mathbb{E}_{i\sim\bm{p}(1)}[z_i] - \int_0^1 \mathbb{E}_{i\sim\bm{p}(t)}[z_i]\,dt\\
+&amp;= \bm{z}^\top \bm{p}(1) - \int_0^1 \bm{z}^\top \bm{p}(t)\,dt\\
+&amp;= \bm{z}^\top \left(\bm{p}(1) - \int_0^1 \bm{p}(t)\,dt\right)
+\end{align}\]
+
+<p>とも書ける。</p>
+
+<h3 id="42-bmz-の分解">4.2. $\bm{z}$ の分解</h3>
+
+<p>次に、$\bm{z}=\sum_k\bm{z}^{(k)}$ と分解する ($\bm{z}^{(k)}\in \mathbb{R}^n$)。
+$z_i=\sum_k z_i^{(k)}$ なので、</p>
+
+\[\begin{align}
+\operatorname{Var}_{i\sim\bm{p}(t)}(z_i)
+&amp;=\operatorname{Cov}_{i\sim\bm{p}(t)}\left(\sum_k z_i^{(k)},z_i\right)\\
+&amp;=\sum_k\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)
+\label{eq:variance-component-decomposition}
+\end{align}\]
+
+<p>である。したがって、</p>
+
+\[\begin{equation}
+I_k
+=
+\int_0^1
+t
+\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)
+\,dt
+\label{eq:component-contribution}
+\end{equation}\]
+
+<p>と定義すれば、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+&amp;= \int_0^1 t\operatorname{Var}_{i\sim\bm{p}(t)}(z_i)\,dt
+\quad(\because \text{式}\ref{eq:kl-path-variance})\\
+&amp;= \int_0^1 t\sum_k \operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)\,dt
+\quad(\because \text{式}\ref{eq:variance-component-decomposition})\\
+&amp;= \sum_k \int_0^1 t\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)\,dt\\
+&amp;= \sum_k I_k
+\quad(\because \text{式}\ref{eq:component-contribution})
+\label{eq:kl-additive-decomposition}
+\end{align}\]
+
+<p>が厳密に成り立つ。</p>
+
+<p>特に$\bm{\alpha}=\bm{0}$ とすると、冒頭の式 \ref{eq:kl-additive-decomposition-summary} が得られる。</p>
+
+<p>また、式\ref{eq:kl-path-variance-derivative} と同様に考えると、</p>
+
+\[\begin{align}
+\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)
+&amp;= \frac{d}{dt}\mathbb{E}_{i\sim\bm{p}(t)}[z_i^{(k)}]
+\end{align}\]
+
+<p>となり、</p>
+
+\[\begin{align}
+I_k 
+&amp;= \int_0^1 t\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)\,dt\\
+&amp;= \int_0^1 t\frac{d}{dt}\mathbb{E}_{i\sim\bm{p}(t)}[z_i^{(k)}]\,dt\\
+&amp;= \mathbb{E}_{i\sim\bm{p}(1)}[z_i^{(k)}] - \int_0^1 \mathbb{E}_{i\sim\bm{p}(t)}[z_i^{(k)}]\,dt\\
+&amp;= \bm{z}^{(k)\top} \left(\bm{p}(1) - \int_0^1 \bm{p}(t)\,dt\right)
+\end{align}\]
+
+<p>とも書ける。</p>
+
+<h4 id="421-解釈">4.2.1. 解釈</h4>
+
+<p>この定義では、各 $I_k$ は「その成分が、全体 $\bm{z}$ と同じ方向にどれだけ softmax 分布を動かしているか」を表す符号付き寄与と解釈できる。経路上の各点で $\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)$ が正であれば、その成分は全体の分布変化を強める方向に働き、負であれば打ち消す方向に働く。</p>
+
+<p>ここで、$\bm{p}:=\bm{p}(1)$、$\bm{q}:=\bm{p}(0)$ とおくと、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}\|\bm{q})
+&amp;= \sum_i p_i\log\frac{p_i}{q_i}\\
+&amp;= \sum_i p_i\log p_i-\sum_i p_i\log q_i\\
+&amp;= \sum_k I_k
+\quad(\because \text{式}\ref{eq:kl-additive-decomposition})
+\end{align}\]
+
+<p>である。したがって、</p>
+
+\[\begin{align}
+\sum_i p_i\log p_i
+&amp;=
+\sum_i p_i\log q_i
++
+\sum_k I_k
+\end{align}\]
+
+<p>と書ける。すなわち、各 $I_k$ は、ベースライン $\bm{q}$ の対数確率を
+最終分布 $\bm{p}$ のもとで評価した値から、最終分布自身の対数確率を
+同じく $\bm{p}$ のもとで評価した値へ至る差を加法分解している。</p>
+
+<p>特に、$\bm{\alpha}=c\bm{1}$（例えば $\bm{\alpha}=\bm{0}$）なら、
+ベースライン分布は $n$ 個のカテゴリ上の一様分布
+$q_i=1/n$ となる。このとき、</p>
+
+\[\begin{align}
+\sum_i p_i\log p_i
+&amp;=\sum_i p_i\log (1/n)
++
+\sum_k I_k\\
+&amp;=-\log n + \sum_k I_k
+\end{align}\]
+
+<p>左辺は $\bm{p}$ の負のエントロピー $-H(\bm{p})$ なので、</p>
+
+\[\begin{equation}
+H(\bm{p})
+=
+\log n-\sum_k I_k
+\label{eq:entropy-contribution}
+\end{equation}\]
+
+<p>となる。したがって、$\sum_k I_k$ は、一様分布の最大エントロピー
+$\log n$ から、$\bm{z}$ を加えることでどれだけエントロピーが減少し、
+分布が集中したかを表す。
+各 $I_k$ はこのエントロピー減少への符号付き寄与と解釈でき、
+$I_k&gt;0$ なら分布を集中させる側、$I_k&lt;0$ なら集中を打ち消して
+一様分布に近づける側に寄与している。</p>
+
+<h4 id="422-integrated-gradients-との接続">4.2.2. Integrated Gradients との接続</h4>
+<p>ベクトル $\bm{x}\in\mathbb{R}^n$ を関数$F$ に入力したときの、$i$番目の成分の寄与度を計算する Integrated Gradients は、ベースラインベクトル $\bm{x}’$ を用いて</p>
+
+\[\begin{equation}
+\operatorname{IG}_i(\bm{x}) = (x_i-x_i')\int_0^1 \left.\frac{\partial F(\bm{u})}{\partial u_i}\right|_{\bm{u}=\bm{x}' + t(\bm{x}-\bm{x}')}\,dt
+\label{eq:integrated-gradients}
+\end{equation}\]
+
+<p>で表される。</p>
+
+<p>ここでは、</p>
+
+<p>\(\begin{align}
+\bm{p}(\bm{s}) = \operatorname{softmax}\left(\bm{\alpha}+\sum_j s_j\bm{z}^{(j)}\right)
+\label{eq:gated-softmax}
+\end{align}\)
+とおき、</p>
+
+<ul>
+  <li>$\bm{x}$ を $\bm{s}$</li>
+  <li>$\bm{x}’$ を $\bm{0}$</li>
+  <li>$F(\bm{u})$ を $D_{\mathrm{KL}}(\bm{p}(\bm{u})|\bm{p }(\bm{0}))$</li>
+</ul>
+
+<p>とした以下を考える</p>
+
+\[\begin{align}
+\operatorname{IG}_k(\bm{s})
+&amp;= (s_k-0)\int_0^1 \frac{\partial D_{\mathrm{KL}}(\bm{p}(\bm{u})\|\bm{p}(\bm{0}))}{\partial u_k}\Big|_{\bm{u}=\bm{0} + t(\bm{s}-\bm{0})}\,dt
+\quad(\because \text{式}\ref{eq:integrated-gradients})\\
+&amp;= s_k\int_0^1 \frac{\partial D_{\mathrm{KL}}(\bm{p}(\bm{u})\|\bm{p}(\bm{0}))}{\partial u_k}\Big|_{\bm{u}=t\bm{s}}\,dt\\
+&amp;= s_k\int_0^1 \frac{\partial D_A(\bm{\alpha}\|\bm{\alpha}+\sum_j u_j\bm{z}^{(j)})}{\partial u_k}\Big|_{\bm{u}=t\bm{s}}\,dt
+\quad(\because \text{式}\ref{eq:kl-bregman})
+\end{align}\]
+
+<p>まず、$D_A(\bm{\alpha}|\bm{\eta})$ について、$\bm{\eta}$ で微分すると、</p>
+
+\[\begin{align}
+\nabla_{\bm{\eta}} D_A(\bm{\alpha}\|\bm{\eta})
+&amp;= \nabla_{\bm{\eta}} \left(A(\bm{\alpha})-A(\bm{\eta})-\nabla A(\bm{\eta})^\top(\bm{\alpha}-\bm{\eta})\right)\\
+&amp;= 0 - \nabla A(\bm{\eta}) - \nabla^2 A(\bm{\eta})(\bm{\alpha}-\bm{\eta}) + \nabla A(\bm{\eta})\\
+&amp;= \nabla^2 A(\bm{\eta})(\bm{\eta}-\bm{\alpha})
+\label{eq:bregman-gradient-second-argument}
+\end{align}\]
+
+<p>となる。
+次に、$\bm{\eta}$ が $\bm{u} \in \mathbb{R}^n$ に依存する場合を考え、$u_k$ ($\bm{u}$の$k$番目の成分)で微分すると、</p>
+
+\[\begin{align}
+\frac{\partial}{\partial u_k} D_A(\bm{\alpha}\|\bm{\eta}(\bm{u}))
+&amp;= \left(\frac{\partial \bm{\eta}(\bm{u})}{\partial u_k}\right)^\top \nabla_{\bm{\eta}} D_A(\bm{\alpha}\|\bm{\eta}(\bm{u}))\\
+&amp;= \left(\frac{\partial \bm{\eta}(\bm{u})}{\partial u_k}\right)^\top \nabla^2 A(\bm{\eta}(\bm{u}))(\bm{\eta}(\bm{u})-\bm{\alpha})
+\quad(\because \text{式}\ref{eq:bregman-gradient-second-argument})
+\end{align}\]
+
+<p>である。ここで、$\bm{\eta}(\bm{u})=\bm{\alpha}+\sum_j u_j\bm{z}^{(j)}$ とおくと、</p>
+
+\[\begin{align}
+\frac{\partial \bm{\eta}(\bm{u})}{\partial u_k} = \bm{z}^{(k)}
+\end{align}\]
+
+<p>より、</p>
+
+\[\begin{align}
+\frac{\partial}{\partial u_k} D_A(\bm{\alpha}\|\bm{\eta}(\bm{u}))
+&amp;= \left(\bm{z}^{(k)}\right)^\top \nabla^2 A(\bm{\eta}(\bm{u}))(\bm{\eta}(\bm{u})-\bm{\alpha})\\
+\end{align}\]
+
+<p>したがって、</p>
+
+\[\begin{align}
+\operatorname{IG}_k(\bm{s})
+&amp;= s_k\int_0^1 \left(\bm{z}^{(k)}\right)^\top \nabla^2 A(\bm{\eta}(\bm{u}))(\bm{\eta}(\bm{u})-\bm{\alpha})\Big|_{\bm{u}=t\bm{s}}\,dt
+\quad(\because \text{式}\ref{eq:bregman-gradient-second-argument})\\
+&amp;= s_k\int_0^1 \left(\bm{z}^{(k)}\right)^\top \nabla^2 A(\bm{\eta}(t\bm{s}))(\bm{\eta}(t\bm{s})-\bm{\alpha})\,dt\\
+\end{align}\]
+
+<p>$\bm{s}=\bm{1}$を代入すると、</p>
+
+\[\begin{align}
+\operatorname{IG}_k(\bm{1})
+&amp;= \int_0^1 \left(\bm{z}^{(k)}\right)^\top \nabla^2 A(\bm{\eta}(t\bm{1}))(\bm{\eta}(t\bm{1})-\bm{\alpha})\,dt\\
+&amp;= \int_0^1 \left(\bm{z}^{(k)}\right)^\top \nabla^2 A\left(\bm{\alpha}+t\sum_j \bm{z}^{(j)}\right)\left(\bm{\alpha}+t\sum_j \bm{z}^{(j)}-\bm{\alpha}\right)\,dt\\
+&amp;= \int_0^1 t\left(\bm{z}^{(k)}\right)^\top \nabla^2 A\left(\bm{\alpha}+t\sum_j \bm{z}^{(j)}\right)\left(\sum_j \bm{z}^{(j)}\right)\,dt\\
+&amp;= \int_0^1 t\operatorname{Cov}_{i\sim\bm{p}(t)}(z_i^{(k)},z_i)\,dt\\
+&amp;= I_k
+\quad(\because \text{式}\ref{eq:component-contribution})
+\label{eq:ig-equals-component-contribution}
+\end{align}\]
+
+<p>このことから、まとめると、以下が成り立つ</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+&amp;= \sum_k I_k
+\quad(\because \text{式}\ref{eq:kl-additive-decomposition})\\
+&amp;= \sum_k \operatorname{IG}_k(\bm{1})
+\quad(\because \text{式}\ref{eq:ig-equals-component-contribution})
+\label{eq:ig-completeness}
+\end{align}\]
+
+<h3 id="43-leave-one-out-kl">4.3. Leave-one-out KL</h3>
+
+<p>成分 $\bm{z}^{(k)}$ を除いたときの分布を</p>
+
+\[\begin{equation}
+\bm{p}_{-k}
+=
+\operatorname{softmax}\left(
+\bm{z}-\bm{z}^{(k)}
+\right)
+\label{eq:loo-distribution}
+\end{equation}\]
+
+<p>とおき、元の分布
+$\bm{p}=\operatorname{softmax}(\bm{z})$ との差</p>
+
+\[\begin{equation}
+L_k
+:=
+D_{\mathrm{KL}}(\bm{p}\|\bm{p}_{-k})
+\label{eq:loo-contribution}
+\end{equation}\]
+
+<p>を成分 $\bm{z}^{(k)}$ の leave-one-out 寄与と定義する。
+これは上記の議論で、ベースラインを
+$\bm{z}-\bm{z}^{(k)}$、そこに加えるベクトルを
+$\bm{z}^{(k)}$ とした場合に対応する。</p>
+
+<p>このときの経路を</p>
+
+\[\begin{equation}
+\bm{p}_k(t)
+=
+\operatorname{softmax}\left(
+\bm{z}-\bm{z}^{(k)}+t\bm{z}^{(k)}
+\right)
+\label{eq:loo-path}
+\end{equation}\]
+
+<p>とおけば、\(\bm{p}_k (0)=\bm{p}_{-k}, \bm{p}_k (1)=\bm{p}\) である。したがって、</p>
+
+\[\begin{align}
+L_k
+&amp;=
+\int_0^1
+t\operatorname{Var}_{i\sim\bm{p}_k(t)}
+\left(z_i^{(k)}\right)
+\,dt
+\quad(\because \text{式}\ref{eq:kl-path-variance})
+\label{eq:loo-path-variance}
+\end{align}\]
+
+<p>が成り立つ。$L_k\ge 0$ であり、成分 $\bm{z}^{(k)}$ を除くことで
+softmax 分布がどれだけ変化するかを表す。</p>
+
+<p>ただし、$L_k$ は各成分を異なるベースライン
+$\bm{z}-\bm{z}^{(k)}$ から評価した量である。そのため、一般には</p>
+
+\[D_{\mathrm{KL}}(\bm{p}(1)\|\bm{p}(0))
+\neq
+\sum_k L_k\]
+
+<p>であり、前節の $I_k$ のような KL divergence の加法分解にはならない。</p>
+
+<h4 id="431-integrated-gradients-との接続">4.3.1. Integrated Gradients との接続</h4>
+
+<p>他の成分を固定し、$\bm{z}^{(k)}$ だけを制御するスカラーのゲート $s$ を導入する。
+ここでは、</p>
+
+\[\begin{align}
+\bm{p}_k(s)
+=
+\operatorname{softmax}\left(
+\bm{z}-\bm{z}^{(k)}+s\bm{z}^{(k)}
+\right)
+\label{eq:loo-gated-softmax}
+\end{align}\]
+
+<p>とおき、</p>
+
+<ul>
+  <li>$x$ を $s$</li>
+  <li>$x’$ を $0$</li>
+  <li>$F(u)$ を $D_{\mathrm{KL}}(\bm{p}_k(u)|\bm{p}_k(0))$</li>
+</ul>
+
+<p>とした 1 次元の Integrated Gradients を考える。このとき、</p>
+
+\[\begin{align}
+\operatorname{IG}^{\mathrm{LOO}}_k(s)
+&amp;=
+(s-0)\int_0^1
+\left.
+\frac{\partial
+D_{\mathrm{KL}}(\bm{p}_k(u)\|\bm{p}_k(0))}
+{\partial u}
+\right|_{u=ts}
+\,dt
+\quad(\because \text{式}\ref{eq:integrated-gradients})
+\end{align}\]
+
+<p>である。</p>
+
+<p>ここで、</p>
+
+\[\begin{equation}
+\bm{\beta}_k
+:=
+\bm{z}-\bm{z}^{(k)}
+\label{eq:loo-baseline-logit}
+\end{equation}\]
+
+<p>とおくと、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}_k(u)\|\bm{p}_k(0))
+&amp;=
+D_A\left(
+\bm{\beta}_k\middle\|
+\bm{\beta}_k+u\bm{z}^{(k)}
+\right)
+\quad(\because \text{式}\ref{eq:kl-bregman})
+\end{align}\]
+
+<p>である。前節と同様に、Bregman divergence を $u$ で微分すると、</p>
+
+\[\begin{align}
+\frac{\partial}{\partial u}
+D_A\left(
+\bm{\beta}_k\middle\|
+\bm{\beta}_k+u\bm{z}^{(k)}
+\right)
+&amp;=
+\left(\bm{z}^{(k)}\right)^\top
+\nabla^2 A\left(
+\bm{\beta}_k+u\bm{z}^{(k)}
+\right)
+\left(u\bm{z}^{(k)}\right)
+\quad(\because \text{式}\ref{eq:bregman-gradient-second-argument})\\
+&amp;=
+u\operatorname{Var}_{i\sim\bm{p}_k(u)}
+\left(z_i^{(k)}\right)
+\label{eq:loo-kl-gradient}
+\end{align}\]
+
+<p>となる。したがって、$s=1$ を代入すると、</p>
+
+\[\begin{align}
+\operatorname{IG}^{\mathrm{LOO}}_k(1)
+&amp;=
+\int_0^1
+t\operatorname{Var}_{i\sim\bm{p}_k(t)}
+\left(z_i^{(k)}\right)
+\,dt
+\quad(\because \text{式}\ref{eq:loo-kl-gradient})\\
+&amp;=L_k
+\quad(\because \text{式}\ref{eq:loo-path-variance})
+\label{eq:loo-ig-equals-contribution}
+\end{align}\]
+
+<p>となる。まとめると、</p>
+
+\[\begin{align}
+D_{\mathrm{KL}}(\bm{p}\|\bm{p}_{-k})
+&amp;=L_k
+\quad(\because \text{式}\ref{eq:loo-contribution})\\
+&amp;=\operatorname{IG}^{\mathrm{LOO}}_k(1)
+\quad(\because \text{式}\ref{eq:loo-ig-equals-contribution})
+\end{align}\]
+
+<p>が成り立つ。つまり、$L_k$ は、他の成分をすべて固定し、
+$\bm{z}^{(k)}$ だけを除去状態から元の状態まで戻す 1 次元の
+Integrated Gradients と解釈できる。</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-07-10T00:00:00+00:00">July 10, 2026</time></p>
+
+      </footer>
+
+      
+
+      
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2020 - 2026 <a href="https://gokamoda.github.io">Go Kamoda</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/copy_code.js"></script>
+
+
+<script src="/assets/js/collapsible-sections.js"></script>
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQCS7FXG9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDQCS7FXG9', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      Macros: {
+        bm: ["\\boldsymbol{#1}", 1],
+        diag: ["\\mathrm{diag}\\left(#1\\right)", 1],
+      },
+      equationNumbers: { autoNumber: "all" } 
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+
+
+  MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+  MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </body>
+</html>
