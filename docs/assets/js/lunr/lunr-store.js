@@ -233,6 +233,18 @@ var store = [{
         "url": "/news/icml2026-accept/",
         "teaser": null
       },{
+        "title": "🎤 Presentation at YANS 2026",
+        "excerpt":"YANS 2026 にて以下の発表があります。                                    鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                               YANS 2026 プログラム                 発表番号: S4-P33（ポスターセッション4）   -&gt; Publications  ","categories": ["News"],
+        "tags": [],
+        "url": "/news/yans2026-presentation/",
+        "teaser": null
+      },{
+        "title": "👑 Award at YANS 2026",
+        "excerpt":"YANS 2026 にて、以下の発表が奨励賞（22/231件）を受賞しました。                                    鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                 奨励賞 (22/231)                               YANS 2026 プログラム                 -&gt; Publications  ","categories": ["News"],
+        "tags": [],
+        "url": "/news/yans2026-award/",
+        "teaser": null
+      },{
         "title": "Test-time Augmentation for Factual Probing",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -335,6 +347,12 @@ var store = [{
         "url": "/202603-nlp-yoneda",
         "teaser": null
       },{
+        "title": "大規模言語モデルにおける文内Attentionメカニズムの分析",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/202608-yans-kamoda",
+        "teaser": null
+      },{
         "title": "Test-time Augmentation for Factual Probing",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -403,4 +421,7 @@ var store = [{
   },{
     "title": " - page 3",
     "excerpt":"","url": "https://gokamoda.github.io/page/3/index.html"
+  },{
+    "title": " - page 4",
+    "excerpt":"","url": "https://gokamoda.github.io/page/4/index.html"
   }]

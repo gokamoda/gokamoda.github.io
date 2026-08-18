@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-07-10T16:33:06+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to the ICML 2026</title><link href="https://gokamoda.github.io/news/icml2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICML 2026" /><published>2026-05-01T00:00:00+00:00</published><updated>2026-05-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/icml2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/icml2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICML 2026.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-08-18T18:30:14+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">👑 Award at YANS 2026</title><link href="https://gokamoda.github.io/news/yans2026-award/" rel="alternate" type="text/html" title="👑 Award at YANS 2026" /><published>2026-08-18T00:00:00+00:00</published><updated>2026-08-18T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/yans2026-award</id><content type="html" xml:base="https://gokamoda.github.io/news/yans2026-award/"><![CDATA[<p>YANS 2026 にて、以下の発表が<strong>奨励賞（22/231件）</strong>を受賞しました。</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    <span class="underline">鴨田豪</span>,
+    
+
+    窪田悠介,
+    
+
+    横井祥
+
+(2026).<br />
+<strong>大規模言語モデルにおける文内Attentionメカニズムの分析</strong>.<br />
+第21回言語処理若手シンポジウム (YANS).
+
+    <br />
+        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">奨励賞 (22/231)</a>
+
+
+    <br />
+    <span class="link-row"><a href="https://yans.anlp.jp/entry/yans2026program" target="_blank" class="link-btn btn">
+        
+        YANS 2026 プログラム
+    </a></span>
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[「大規模言語モデルにおける文内Attentionメカニズムの分析」が奨励賞を受賞しました。]]></summary></entry><entry><title type="html">🎤 Presentation at YANS 2026</title><link href="https://gokamoda.github.io/news/yans2026-presentation/" rel="alternate" type="text/html" title="🎤 Presentation at YANS 2026" /><published>2026-08-16T00:00:00+00:00</published><updated>2026-08-16T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/yans2026-presentation</id><content type="html" xml:base="https://gokamoda.github.io/news/yans2026-presentation/"><![CDATA[<p>YANS 2026 にて以下の発表があります。</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+<!-- https://www.anlp.jp/guide/guideline.html -->
+    
+    <span class="underline">鴨田豪</span>,
+    
+
+    窪田悠介,
+    
+
+    横井祥
+
+(2026).<br />
+<strong>大規模言語モデルにおける文内Attentionメカニズムの分析</strong>.<br />
+第21回言語処理若手シンポジウム (YANS).
+
+
+    <br />
+    <span class="link-row"><a href="https://yans.anlp.jp/entry/yans2026program" target="_blank" class="link-btn btn">
+        
+        YANS 2026 プログラム
+    </a></span>
+
+    </li>
+  </ul>
+</div>
+
+<p>発表番号: S4-P33（ポスターセッション4）</p>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[YANS 2026 にて「大規模言語モデルにおける文内Attentionメカニズムの分析」を発表します。]]></summary></entry><entry><title type="html">✅ Paper accepted to the ICML 2026</title><link href="https://gokamoda.github.io/news/icml2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the ICML 2026" /><published>2026-05-01T00:00:00+00:00</published><updated>2026-05-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/icml2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/icml2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to ICML 2026.</p>
 
 <div>
   <ul>
@@ -584,5 +653,4 @@ In
   </ul>
 </div>
 
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders"]]></summary></entry><entry><title type="html">🌸 Enrollment in SOKENDAI for Doctoral Program</title><link href="https://gokamoda.github.io/news/sokendai-enrollment/" rel="alternate" type="text/html" title="🌸 Enrollment in SOKENDAI for Doctoral Program" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/sokendai-enrollment</id><content type="html" xml:base="https://gokamoda.github.io/news/sokendai-enrollment/"><![CDATA[<p>総合研究大学院大学 (SOKENDAI) 日本語言語科学コースの博士後期課程に進学しました。<br />
-JST BOOST の支援を受けるSOKENDAI特別研究員として、国立国語研究所 (NINJAL) で研究活動を行います。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[as Special Research Student]]></summary></entry><entry><title type="html">👑 Completed Master’s course and received the Dean’s Award</title><link href="https://gokamoda.github.io/news/dean-award/" rel="alternate" type="text/html" title="👑 Completed Master’s course and received the Dean’s Award" /><published>2025-03-25T00:00:00+00:00</published><updated>2025-03-25T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/dean-award</id><content type="html" xml:base="https://gokamoda.github.io/news/dean-award/"><![CDATA[<p>東北大学 情報科学研究科 学位授与式にて、学位記 (修士: 情報科学) とともに「研究科長賞」をいただきました。</p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA[Graduate School of Information Sciences, Tohoku University]]></summary></entry></feed>
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders"]]></summary></entry></feed>
