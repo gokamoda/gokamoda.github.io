@@ -10,4 +10,7 @@ month: 8
 links:
   - name: "YANS 2026 プログラム"
     url: "https://yans.anlp.jp/entry/yans2026program"
+awards:
+  - name: "奨励賞 (22/231)"
+    url: "https://yans.anlp.jp/entry/award"
 ---
