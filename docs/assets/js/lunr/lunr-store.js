@@ -245,6 +245,12 @@ var store = [{
         "url": "/news/yans2026-award/",
         "teaser": null
       },{
+        "title": "✅ Paper accepted to EMNLP 2026",
+        "excerpt":"We are pleased to announce that our paper has been accepted to EMNLP 2026. Raito Kiya, Satoki Ohashi, Kosuke Sato, Go Kamoda, Ryosuke Takahashi, Yuji Yamamoto, Daiki Shiono, Keisuke Sakaguchi, &amp; Goro Kobayashi (2026). It’s Not RoPE That Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention. In The...","categories": ["News"],
+        "tags": [],
+        "url": "/news/emnlp2026-accept/",
+        "teaser": null
+      },{
         "title": "Test-time Augmentation for Factual Probing",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -399,6 +405,12 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/202607-icml-yoneda",
+        "teaser": null
+      },{
+        "title": "It’s Not RoPE That Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/202611-emnlp-kiya",
         "teaser": null
       },{
         "title": "Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics",

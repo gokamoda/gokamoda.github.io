@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-08-18T18:30:14+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">👑 Award at YANS 2026</title><link href="https://gokamoda.github.io/news/yans2026-award/" rel="alternate" type="text/html" title="👑 Award at YANS 2026" /><published>2026-08-18T00:00:00+00:00</published><updated>2026-08-18T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/yans2026-award</id><content type="html" xml:base="https://gokamoda.github.io/news/yans2026-award/"><![CDATA[<p>YANS 2026 にて、以下の発表が<strong>奨励賞（22/231件）</strong>を受賞しました。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-08-21T05:04:10+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to EMNLP 2026</title><link href="https://gokamoda.github.io/news/emnlp2026-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to EMNLP 2026" /><published>2026-08-21T00:00:00+00:00</published><updated>2026-08-21T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/emnlp2026-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/emnlp2026-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to EMNLP 2026.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+
+    Raito Kiya,
+    
+
+    Satoki Ohashi,
+    
+
+    Kosuke Sato,
+    
+
+    
+    <span class="underline">Go Kamoda</span>,
+    
+
+    Ryosuke Takahashi,
+    
+
+    Yuji Yamamoto,
+    
+
+    Daiki Shiono,
+    
+
+    Keisuke Sakaguchi,
+    
+&amp; 
+    
+    Goro Kobayashi
+
+(2026).<br />
+<strong>It’s Not RoPE That Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention</strong>.<br />
+In
+<i>The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)</i>.
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["It’s Not RoPE That Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention"]]></summary></entry><entry><title type="html">👑 Award at YANS 2026</title><link href="https://gokamoda.github.io/news/yans2026-award/" rel="alternate" type="text/html" title="👑 Award at YANS 2026" /><published>2026-08-18T00:00:00+00:00</published><updated>2026-08-18T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/yans2026-award</id><content type="html" xml:base="https://gokamoda.github.io/news/yans2026-award/"><![CDATA[<p>YANS 2026 にて、以下の発表が<strong>奨励賞（22/231件）</strong>を受賞しました。</p>
 
 <div>
   <ul>
@@ -592,65 +638,4 @@ In
   </ul>
 </div>
 
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="Blog" /><summary type="html"><![CDATA["密度比の直接推定に基づく言語モデルの出力較正"]]></summary></entry><entry><title type="html">✅ Paper accepted to the Findings of EMNLP 2025</title><link href="https://gokamoda.github.io/news/emnlp2025findings-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the Findings of EMNLP 2025" /><published>2025-08-21T00:00:00+00:00</published><updated>2025-08-21T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/emnlp2025findings-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/emnlp2025findings-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the Findings of EMNLP 2025.</p>
-
-<div>
-  <ul>
-    <li>
-      
-      
-
-
-    Tatsuro Inaba,
-    
-
-    
-    <span class="underline">Go Kamoda</span>,
-    
-
-    Kentaro Inui,
-    
-
-    Masaru Isonuma,
-    
-
-    Yusuke Miyao,
-    
-
-    Yohei Oseki,
-    
-
-    Yu Takagi,
-    
-&amp; 
-    
-    Benjamin Heinzerling
-
-(2025).<br />
-<strong>How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders</strong>.<br />
-In
-<i>Findings of the Association for Computational Linguistics: EMNLP 2025</i>.
-
-    <br />
-    <span class="link-row"><a href="https://aclanthology.org/2025.findings-emnlp.725/" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        ACL Anthology
-    </a><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:UeHWp8X0CEIC" target="_blank" class="link-btn btn">
-        
-        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
-        
-        Google Scholar
-    </a><a href="https://arxiv.org/abs/2503.06394" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        arXiv
-    </a></span>
-
-    </li>
-  </ul>
-</div>
-
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["How a Bilingual LM Becomes Bilingual: Tracing Internal Representations with Sparse Autoencoders"]]></summary></entry></feed>
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="Blog" /><summary type="html"><![CDATA["密度比の直接推定に基づく言語モデルの出力較正"]]></summary></entry></feed>
