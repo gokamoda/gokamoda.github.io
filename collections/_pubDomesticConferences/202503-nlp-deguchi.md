@@ -10,7 +10,7 @@ authors:
   - 和賀正樹
   - 横井祥
 pages: 3310-3315
-year: 2024
+year: 2025
 month: 3
 links:
   - name: "予稿"
