@@ -15,4 +15,7 @@ year: 2026
 month: 11
 pages:
 links:
+  - name: "arXiv"
+    url: "https://arxiv.org/abs/2609.09085"
+    logo: "/assets/arxiv-logomark-small.svg"
 ---
