@@ -293,6 +293,12 @@ var store = [{
         "url": "/202409-yans-kobayashi",
         "teaser": null
       },{
+        "title": "文脈内学習設定における言語モデルの出力較正",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/202411-ibis-kamoda",
+        "teaser": null
+      },{
         "title": "SoftMatcha: 大規模コーパス検索のための柔らかくも高速なパターンマッチャー",
         "excerpt":" ","categories": [],
         "tags": [],
