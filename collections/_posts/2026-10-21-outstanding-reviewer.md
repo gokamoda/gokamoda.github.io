@@ -8,7 +8,7 @@ header:
   overlay_color: "#59876F"
 show_date: true
 ---
-I was recognized as an **Outstanding Reviewer at EMNLP 2026** for my reviewing service in the ACL Rolling Review (ARR) May 2026 cycle.
+I was recognized as an **Outstanding Reviewer at EMNLP 2026** in the ACL Rolling Review (ARR) May 2026 cycle.
 
 [Certificate](/assets/certificates/emnlp2026-outstanding-reviewer.pdf)
 
