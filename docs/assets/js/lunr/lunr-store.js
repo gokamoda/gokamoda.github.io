@@ -251,6 +251,12 @@ var store = [{
         "url": "/news/emnlp2026-accept/",
         "teaser": null
       },{
+        "title": "👑 Outstanding Reviewer at EMNLP 2026",
+        "excerpt":"ACL Rolling Review (ARR) May 2026での査読活動に対し、EMNLP 2026 Outstanding Reviewerとして表彰されました。   Certificate   -&gt; Publications &amp; Activities  ","categories": ["News"],
+        "tags": [],
+        "url": "/news/outstanding-reviewer/",
+        "teaser": null
+      },{
         "title": "Test-time Augmentation for Factual Probing",
         "excerpt":" ","categories": [],
         "tags": [],
