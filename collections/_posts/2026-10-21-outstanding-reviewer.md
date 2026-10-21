@@ -2,13 +2,13 @@
 layout: splash
 title: "👑 Outstanding Reviewer at EMNLP 2026"
 category: News
-excerpt: "ARR May 2026での査読活動に対し、EMNLP 2026 Outstanding Reviewerとして表彰されました。"
+excerpt: "Recognized as an Outstanding Reviewer at EMNLP 2026 for my service in the ARR May 2026 cycle."
 header:
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
 ---
-ACL Rolling Review (ARR) May 2026での査読活動に対し、**EMNLP 2026 Outstanding Reviewer**として表彰されました。
+I was recognized as an **Outstanding Reviewer at EMNLP 2026** for my reviewing service in the ACL Rolling Review (ARR) May 2026 cycle.
 
 [Certificate](/assets/certificates/emnlp2026-outstanding-reviewer.pdf)
 
