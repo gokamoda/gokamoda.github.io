@@ -252,7 +252,7 @@ var store = [{
         "teaser": null
       },{
         "title": "👑 Outstanding Reviewer at EMNLP 2026",
-        "excerpt":"ACL Rolling Review (ARR) May 2026での査読活動に対し、EMNLP 2026 Outstanding Reviewerとして表彰されました。   Certificate   -&gt; Publications &amp; Activities  ","categories": ["News"],
+        "excerpt":"I was recognized as an Outstanding Reviewer at EMNLP 2026 for my reviewing service in the ACL Rolling Review (ARR) May 2026 cycle.   Certificate   -&gt; Publications &amp; Activities  ","categories": ["News"],
         "tags": [],
         "url": "/news/outstanding-reviewer/",
         "teaser": null
