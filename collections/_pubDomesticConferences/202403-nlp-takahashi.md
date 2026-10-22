@@ -16,5 +16,7 @@ links:
     icon: "fa-regular fa-file"
 awards:
   - name: "若手奨励賞 (18/427)"
+    first_author_recipient: true
+    include_in_awards: false
     url: "https://www.anlp.jp/nlp2025/award.html"
 ---

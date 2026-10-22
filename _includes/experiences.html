@@ -14,7 +14,7 @@
 {% endif %}
 {% if experience.awards %}
     {%- for award in experience.awards -%}
-    <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="{{ award.url }}" target="_blank">{{ award.name}}</a>{% if forloop.last == false %}, {% endif %}
+    <i {% if award.include_in_awards == false %}data-include-in-awards="false" {% endif %}data-award-date="{{ award.year | default: experience.end-year | default: experience.start-year }}-{{ award.month | default: experience.end-month | default: experience.start-month | default: 0 | prepend: '0' | slice: -2, 2 }}" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="{{ award.url }}" target="_blank">{{ award.name}}</a>{% if award.first_author_recipient %} <small class="award-recipient">— 筆頭著者が受賞</small>{% endif %}{% if forloop.last == false %}, {% endif %}
     {%- endfor -%}<br>
 {% endif %}
 {% if experience.links %}

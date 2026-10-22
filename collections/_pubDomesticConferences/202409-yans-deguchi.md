@@ -16,7 +16,11 @@ links:
     logo: "/assets/softmatcha-logo.png"
 awards:
   - name: "デモ賞 (1/15)"
+    first_author_recipient: true
+    include_in_awards: false
     url: "https://yans.anlp.jp/entry/award"
   - name: "株式会社リクルート賞"
+    first_author_recipient: true
+    include_in_awards: false
     url: "https://yans.anlp.jp/entry/award"
 ---

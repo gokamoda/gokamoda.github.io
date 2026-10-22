@@ -10,6 +10,8 @@ description: |
     2026: <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/March" target="_blank">March</a> (4), <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/May" target="_blank">May</a> (6), <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/October" target="_blank">October</a> (3)
 awards:
   - name: "Outstanding Reviewer, EMNLP 2026 (ARR May 2026)"
+    year: 2026
+    month: 5
     url: "/assets/certificates/emnlp2026-outstanding-reviewer.pdf"
 links:
   - name: "ACL Rolling Review"

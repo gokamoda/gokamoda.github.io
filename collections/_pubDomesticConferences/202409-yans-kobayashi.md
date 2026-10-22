@@ -10,5 +10,7 @@ year: 2024
 month: 9
 awards:
   - name: "若手奨励賞 (23/187)"
+    first_author_recipient: true
+    include_in_awards: false
     url: "https://yans.anlp.jp/entry/award"
 ---

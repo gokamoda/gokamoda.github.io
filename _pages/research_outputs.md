@@ -55,6 +55,19 @@ header:
     text-decoration: underline;
   }
 
+  .cv-awards__context {
+    display: block;
+  }
+
+  .cv-award-source {
+    scroll-margin-top: 5rem;
+  }
+
+  .cv-award-source:target {
+    outline: 2px solid #5d9679;
+    outline-offset: 4px;
+  }
+
   @page {
     margin: 14mm 13mm;
     size: A4;
@@ -252,11 +265,12 @@ header:
     <li><a href="#education">Education</a></li>
     <li><a href="#international-conferences">International Conferences</a></li>
     <li><a href="#domestic-conferences">Domestic Conferences</a></li>
-    {% if site.pubPreprint.size > 0 %}
-    <li><a href="#preprints">Preprints</a></li>
-    {% endif %}
+    <li><a href="#awards">Awards</a></li>
     {% if site.experiences.size > 0 %}
     <li><a href="#experiences">Experiences</a></li>
+    {% endif %}
+    {% if site.pubPreprint.size > 0 %}
+    <li><a href="#preprints">Preprints</a></li>
     {% endif %}
   </ul>
 </nav>
@@ -273,4 +287,55 @@ header:
   });
 </script>
 
-{% include cv-content.html %}
+<div id="cv-entries" markdown="1">
+{% include cv-content.html show_awards=true %}
+</div>
+
+<script>
+  (function () {
+    const entries = document.getElementById('cv-entries');
+    const list = document.getElementById('cv-awards-list');
+
+    // ISO year/month keys sort newest first; equal dates retain page order.
+    const icons = Array.from(entries.querySelectorAll('.fa-award'));
+    icons.sort(function (a, b) {
+      return (b.dataset.awardDate || '').localeCompare(a.dataset.awardDate || '');
+    });
+    icons.forEach(function (icon, index) {
+      if (icon.dataset.includeInAwards === 'false') return;
+      const source = icon.closest('li');
+      if (!source) return;
+
+      // Read the award line, including annotations, up to the next line break.
+      const award = document.createElement('strong');
+      let node = icon.nextSibling;
+      while (node && node.nodeName !== 'BR' &&
+             !(node.nodeType === 1 && node.classList.contains('fa-award'))) {
+        award.appendChild(node.cloneNode(true));
+        node = node.nextSibling;
+      }
+      if (!award.textContent.trim()) return;
+
+      if (!source.id) source.id = 'cv-award-source-' + (index + 1);
+      source.classList.add('cv-award-source');
+      let section = source;
+      while (section && section !== entries && section.tagName !== 'H2') {
+        section = section.previousElementSibling || section.parentElement;
+      }
+      const title = source.querySelector('strong');
+      const context = document.createElement('a');
+      context.className = 'cv-awards__context';
+      context.href = '#' + source.id;
+      context.textContent = (section && section.tagName === 'H2' ? section.textContent + ' · ' : '') +
+        (title ? title.textContent : 'View entry');
+      const item = document.createElement('li');
+      const awardIcon = document.createElement('i');
+      awardIcon.className = 'fa-solid fa-award';
+      awardIcon.style.color = '#5d9679';
+      awardIcon.setAttribute('aria-hidden', 'true');
+      item.append(awardIcon, document.createTextNode(' '), award, context);
+      list.appendChild(item);
+    });
+
+  })();
+</script>
