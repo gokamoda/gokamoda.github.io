@@ -168,7 +168,7 @@ var store = [{
         "teaser": null
       },{
         "title": "👑 2 papers received awards at NLP 2025",
-        "excerpt":"言語処理学会 第31回年次大会 (NLP 2025) にて、以下の2件の論文がそれぞれ「若手奨励賞」「日本経済新聞社 CDIO室賞」を受賞しました。                               小林春斗,           原知正,                鴨田豪,           横井祥  (2025).  層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.  言語処理学会 第31回年次大会, pp. 1751-1756.                 若手奨励賞 (20/487)                                                 予稿                                    佐々木睦史,           高橋良允,                鴨田豪,           Benjamin Heinzerling,           坂口慶祐,           乾健太郎  (2025).  LM は日本の時系列構造をどうエンコードするか.  言語処理学会 第31回年次大会, pp. 2642-2647.                 日本経済新聞社 CDIO室賞                                                 予稿                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"言語処理学会 第31回年次大会 (NLP 2025) にて、以下の2件の論文がそれぞれ「若手奨励賞」「日本経済新聞社 CDIO室賞」を受賞しました。                                小林春斗,           原知正,                鴨田豪,           横井祥  (2025).  層の冗長性と層同士の独立性に基づく言語モデルの層交換の成否の特徴づけ.  言語処理学会 第31回年次大会, pp. 1751-1756.                 若手奨励賞 (20/487) — 筆頭著者が受賞                                                 予稿                                     佐々木睦史,           高橋良允,                鴨田豪,           Benjamin Heinzerling,           坂口慶祐,           乾健太郎  (2025).  LM は日本の時系列構造をどうエンコードするか.  言語処理学会 第31回年次大会, pp. 2642-2647.                 日本経済新聞社 CDIO室賞                                                 予稿                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/nlp-awards/",
         "teaser": null
@@ -198,7 +198,7 @@ var store = [{
         "teaser": null
       },{
         "title": "🎤 Presentation at YANS 2025",
-        "excerpt":"YANS 2025 にて以下の発表があります。                                    鴨田豪,           熊谷雄介,           松井孝太,           横井祥  (2025).  密度比の直接推定に基づく言語モデルの出力較正.  第20回言語処理若手シンポジウム (YANS).                   -&gt; Publications  ","categories": ["Blog"],
+        "excerpt":"YANS 2025 にて以下の発表があります。                                     鴨田豪,           熊谷雄介,           松井孝太,           横井祥  (2025).  密度比の直接推定に基づく言語モデルの出力較正.  第20回言語処理若手シンポジウム (YANS).                   -&gt; Publications  ","categories": ["Blog"],
         "tags": [],
         "url": "/blog/yans2025-presentation/",
         "teaser": null
@@ -210,7 +210,7 @@ var store = [{
         "teaser": null
       },{
         "title": "🎤 Presentation at NLP 2026",
-        "excerpt":"NLP 2026 にて以下の発表があります。 [Update 2026/03/02]: 全て口頭発表に選出されました！ 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page NLP 2026 プログラム 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 若手奨励賞 (21/517件) NLP 2026...","categories": ["News"],
+        "excerpt":"NLP 2026 にて以下の発表があります。 [Update 2026/03/02]: 全て口頭発表に選出されました！ 米田優峻, 鴨田豪, 松下祐介, 末永幸平, 秋葉拓哉, 和賀正樹, 横井祥 (2026). SoftMatcha 2: 1兆語規模コーパスの超高速かつ柔らかい検索. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 優秀賞 (13/789件) Project Page NLP 2026 プログラム 木谷頼斗, 大橋諭貴, 佐藤宏亮, 鴨田豪, 高橋良允, 山本悠士, 塩野大輝, 坂口慶祐, 小林悟郎 (2026). Attention Sink および Massive Activation の発生機序の分解. 言語処理学会 第32回年次大会. 言語処理学会第32回年次大会 若手奨励賞 (21/517件) — 筆頭著者が受賞...","categories": ["News"],
         "tags": [],
         "url": "/news/nlp2026-presentation/",
         "teaser": null
@@ -234,13 +234,13 @@ var store = [{
         "teaser": null
       },{
         "title": "🎤 Presentation at YANS 2026",
-        "excerpt":"YANS 2026 にて以下の発表があります。                                    鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                               YANS 2026 プログラム                 発表番号: S4-P33（ポスターセッション4）   -&gt; Publications  ","categories": ["News"],
+        "excerpt":"YANS 2026 にて以下の発表があります。                                     鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                               YANS 2026 プログラム                 発表番号: S4-P33（ポスターセッション4）   -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/yans2026-presentation/",
         "teaser": null
       },{
         "title": "👑 Award at YANS 2026",
-        "excerpt":"YANS 2026 にて、以下の発表が奨励賞（22/231件）を受賞しました。                                    鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                 奨励賞 (22/231)                               YANS 2026 プログラム                 -&gt; Publications  ","categories": ["News"],
+        "excerpt":"YANS 2026 にて、以下の発表が奨励賞（22/231件）を受賞しました。                                     鴨田豪,           窪田悠介,           横井祥  (2026).  大規模言語モデルにおける文内Attentionメカニズムの分析.  第21回言語処理若手シンポジウム (YANS).                 奨励賞 (22/231)                               YANS 2026 プログラム                 -&gt; Publications  ","categories": ["News"],
         "tags": [],
         "url": "/news/yans2026-award/",
         "teaser": null
@@ -435,7 +435,7 @@ var store = [{
     "excerpt":"","url": "https://gokamoda.github.io/notes/"
   },{
     "title": "Publications & Activities",
-    "excerpt":"     Go Kamoda         {{ site.author.email }}{% if site.url %} · {{ site.url }}{% endif %}         Export as PDF   Print            Education     International Conferences     Domestic Conferences     {% if site.pubPreprint.size > 0 %}     Preprints     {% endif %}     {% if site.experiences.size > 0 %}     Experiences     {% endif %}        {% include cv-content.html %} ","url": "https://gokamoda.github.io/cv/"
+    "excerpt":"     Go Kamoda         {{ site.author.email }}{% if site.url %} · {{ site.url }}{% endif %}         Export as PDF   Print            Education     International Conferences     Domestic Conferences     Awards     {% if site.experiences.size > 0 %}     Experiences     {% endif %}     {% if site.pubPreprint.size > 0 %}     Preprints     {% endif %}         {% include cv-content.html show_awards=true %}    ","url": "https://gokamoda.github.io/cv/"
   },{
     "title": "",
     "excerpt":"","url": "https://gokamoda.github.io/index.html"

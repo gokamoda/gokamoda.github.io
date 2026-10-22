@@ -218,6 +218,19 @@
     text-decoration: underline;
   }
 
+  .cv-awards__context {
+    display: block;
+  }
+
+  .cv-award-source {
+    scroll-margin-top: 5rem;
+  }
+
+  .cv-award-source:target {
+    outline: 2px solid #5d9679;
+    outline-offset: 4px;
+  }
+
   @page {
     margin: 14mm 13mm;
     size: A4;
@@ -415,11 +428,12 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#international-conferences">International Conferences</a></li>
     <li><a href="#domestic-conferences">Domestic Conferences</a></li>
-    
-    <li><a href="#preprints">Preprints</a></li>
-    
+    <li><a href="#awards">Awards</a></li>
     
     <li><a href="#experiences">Experiences</a></li>
+    
+    
+    <li><a href="#preprints">Preprints</a></li>
     
   </ul>
 </nav>
@@ -436,17 +450,18 @@
   });
 </script>
 
-<h2 id="education">Education</h2>
-<ul>
-  <li><strong>Doctoral Student / 博士後期課程</strong> [2025.04 - ]<br /> <a href="https://www.soken.ac.jp/en/">Graduate Institute for Advanced Studies, SOKENDAI.</a> / <a href="https://www.soken.ac.jp/">総合研究大学院大学</a><br /><a href="https://yokoi-lab.net/">Yokoi Lab / 横井研究室</a><br />Supervisor: Assoc. Prof. Sho Yokoi<br /></li>
-  <li><strong>Master of Information Science / 修士（情報科学）</strong> [2023.04 - 2025.03]<br /><a href="https://www.is.tohoku.ac.jp/en/">Graduate School of Information Sciences, Tohoku University.</a> / <a href="https://www.is.tohoku.ac.jp/">東北大学大学院情報科学研究科</a><br />Supervisor: Prof. Jun Suzuki &amp; Assoc. Prof. Keisuke Sakaguchi<br /><i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1593.html">Dean Award / 研究科長賞</a> (4/126)</li>
-  <li><strong>Bachelor of Engineering / 学士（工学）</strong> [2020.04 - 2023.03]<br /><a href="https://www.eng.tohoku.ac.jp/english/">School of Engineering, Tohoku University.</a> / <a href="https://www.eng.tohoku.ac.jp/">東北大学工学部</a><br />Supervisor: Prof. Kentaro Inui &amp; Assoc. Prof. Keisuke Sakaguchi<br /><i class="fa-solid fa-award" style="color: #5d9679;"></i>Early Graduation / 早期卒業 (1/252)</li>
-</ul>
-
-<h2 id="international-conferences">International Conferences</h2>
-
-<div>
+<div id="cv-entries">
+  <h2 id="education">Education</h2>
   <ul>
+    <li><strong>Doctoral Student / 博士後期課程</strong> [2025.04 - ]<br /> <a href="https://www.soken.ac.jp/en/">Graduate Institute for Advanced Studies, SOKENDAI.</a> / <a href="https://www.soken.ac.jp/">総合研究大学院大学</a><br /><a href="https://yokoi-lab.net/">Yokoi Lab / 横井研究室</a><br />Supervisor: Assoc. Prof. Sho Yokoi<br /></li>
+    <li><strong>Master of Information Science / 修士（情報科学）</strong> [2023.04 - 2025.03]<br /><a href="https://www.is.tohoku.ac.jp/en/">Graduate School of Information Sciences, Tohoku University.</a> / <a href="https://www.is.tohoku.ac.jp/">東北大学大学院情報科学研究科</a><br />Supervisor: Prof. Jun Suzuki &amp; Assoc. Prof. Keisuke Sakaguchi<br /><i data-award-date="2025-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1593.html">Dean Award / 研究科長賞</a> (4/126)</li>
+    <li><strong>Bachelor of Engineering / 学士（工学）</strong> [2020.04 - 2023.03]<br /><a href="https://www.eng.tohoku.ac.jp/english/">School of Engineering, Tohoku University.</a> / <a href="https://www.eng.tohoku.ac.jp/">東北大学工学部</a><br />Supervisor: Prof. Kentaro Inui &amp; Assoc. Prof. Keisuke Sakaguchi<br /><i data-award-date="2023-03" class="fa-solid fa-award" style="color: #5d9679;"></i>Early Graduation / 早期卒業 (1/252)</li>
+  </ul>
+
+  <h2 id="international-conferences">International Conferences</h2>
+
+  <div>
+  <ol reversed="">
     
     <li>
         
@@ -890,18 +905,19 @@ In
       </li>
     
 
-  </ul>
+  </ol>
 
 </div>
 
-<h2 id="domestic-conferences">Domestic Conferences</h2>
+  <h2 id="domestic-conferences">Domestic Conferences</h2>
 
-<div>
-  <ul>
+  <div>
+  <ol reversed="">
     
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     
     <span class="underline">鴨田豪</span>,
     
@@ -916,7 +932,7 @@ In
 第21回言語処理若手シンポジウム (YANS).
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">奨励賞 (22/231)</a>
+        <i data-award-date="2026-08" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">奨励賞 (22/231)</a>
 
 
     <br />
@@ -930,6 +946,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     米田優峻,
     
 
@@ -956,7 +973,7 @@ In
 言語処理学会 第32回年次大会.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 優秀賞 (13/789件)</a>
+        <i data-award-date="2026-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 優秀賞 (13/789件)</a>
 
 
     <br />
@@ -973,6 +990,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     大橋諭貴,
     
 
@@ -1005,7 +1023,7 @@ In
 言語処理学会 第32回年次大会.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="hhttps://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 若手奨励賞 (21/517件)</a>
+        <i data-include-in-awards="false" data-award-date="2026-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 若手奨励賞 (21/517件)</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
     <br />
@@ -1019,6 +1037,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     木谷頼斗,
     
 
@@ -1051,7 +1070,7 @@ In
 言語処理学会 第32回年次大会.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 若手奨励賞 (21/517件)</a>
+        <i data-include-in-awards="false" data-award-date="2026-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2026/award.html" target="_blank">言語処理学会第32回年次大会 若手奨励賞 (21/517件)</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
     <br />
@@ -1065,6 +1084,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     
     <span class="underline">鴨田豪</span>,
     
@@ -1089,6 +1109,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     佐藤宏亮,
     
 
@@ -1121,6 +1142,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     佐々木睦史,
     
 
@@ -1144,7 +1166,7 @@ In
 言語処理学会 第31回年次大会, pp. 2642-2647.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
+        <i data-award-date="2025-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">日本経済新聞社 CDIO室賞</a>
 
 
     <br />
@@ -1160,6 +1182,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     工藤慧音,
     
 
@@ -1202,6 +1225,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     小林春斗,
     
 
@@ -1219,7 +1243,7 @@ In
 言語処理学会 第31回年次大会, pp. 1751-1756.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a>
+        <i data-include-in-awards="false" data-award-date="2025-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (20/487)</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
     <br />
@@ -1235,6 +1259,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     
     <span class="underline">鴨田豪</span>,
     
@@ -1273,6 +1298,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     出口祥之,
     
 
@@ -1314,6 +1340,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     
     <span class="underline">*鴨田豪</span>,
     
@@ -1346,6 +1373,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     小林春斗,
     
 
@@ -1363,7 +1391,7 @@ In
 第19回言語処理若手シンポジウム (YANS).
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">若手奨励賞 (23/187)</a>
+        <i data-include-in-awards="false" data-award-date="2024-09" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">若手奨励賞 (23/187)</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
       </li>
@@ -1371,6 +1399,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     *伊藤郁海,
     
 
@@ -1395,6 +1424,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     出口祥之,
     
 
@@ -1418,8 +1448,8 @@ In
 第19回言語処理若手シンポジウム (YANS).
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">デモ賞 (1/15)</a>, <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">株式会社リクルート賞</a>
+        <i data-include-in-awards="false" data-award-date="2024-09" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">デモ賞 (1/15)</a> <small class="award-recipient">— 筆頭著者が受賞</small>, <br />
+        <i data-include-in-awards="false" data-award-date="2024-09" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://yans.anlp.jp/entry/award" target="_blank">株式会社リクルート賞</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
     <br />
@@ -1435,6 +1465,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     熊谷雄介,
     
 
@@ -1467,6 +1498,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     良允高橋,
     
 
@@ -1487,7 +1519,7 @@ In
 言語処理学会 第30回年次大会, pp. 2864-2869.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (18/427)</a>
+        <i data-include-in-awards="false" data-award-date="2024-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.anlp.jp/nlp2025/award.html" target="_blank">若手奨励賞 (18/427)</a> <small class="award-recipient">— 筆頭著者が受賞</small>
 
 
     <br />
@@ -1503,6 +1535,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     
     <span class="underline">鴨田豪</span>,
     
@@ -1520,7 +1553,7 @@ In
 言語処理学会 第30回年次大会, pp. 673-678.
 
     <br />
-        <i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.anlp.jp/nlp2024/award.html" target="_blank">優秀賞 (12/599)</a>
+        <i data-award-date="2024-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://www.anlp.jp/nlp2024/award.html" target="_blank">優秀賞 (12/599)</a>
 
 
     <br />
@@ -1536,6 +1569,7 @@ In
     <li>
         
 <!-- https://www.anlp.jp/guide/guideline.html -->
+
     Go Kamoda,
     
 
@@ -1565,61 +1599,17 @@ In
       </li>
     
 
-  </ul>
+  </ol>
 
 </div>
 
-<h2 id="preprints">Preprints</h2>
-<div>
-  <ul>
-    
-    <li>
-        
-
-
-    Mutsumi Sasaki,
-    
-
-    
-    <span class="underline">Go Kamoda</span>,
-    
-
-    Ryosuke Takahashi,
-    
-
-    Kosuke Sato,
-    
-
-    Kentaro Inui,
-    
-
-    Keisuke Sakaguchi,
-    
-&amp; 
-    
-    Benjamin Heinzerling
-
-(2026).<br />
-<strong>Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics</strong>.<br />
-In
-<i>arXiv [cs.CL]</i>.
-
-    <br />
-    <span class="link-row"><a href="https://arxiv.org/abs/2606.03982" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        arXiv
-    </a></span>
-
-      </li>
-    
-
-  </ul>
+  <h2 id="awards">Awards</h2>
+  <div>
+  <ol reversed="" id="cv-awards-list"></ol>
 </div>
 
-<h2 id="experiences">Experiences</h2>
-<div>
+  <h2 id="experiences">Experiences</h2>
+  <div>
   <ul>
     
     <li>
@@ -1654,7 +1644,7 @@ In
 
 数学タスク<br />
 
-<i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://llm-jp.github.io/tuning-competition/" target="_blank">総合2位 / オープン部門1位</a><br />
+<i data-award-date="2026-03" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="https://llm-jp.github.io/tuning-competition/" target="_blank">総合2位 / オープン部門1位</a><br />
 
 
     <span class="link-row"><a href="https://llm-jp.github.io/tuning-competition/" target="_blank" class="link-btn btn">
@@ -1676,7 +1666,7 @@ Reviewed 19 submissions across 5 ACL Rolling Review cycles.<br />
 2026: <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/March" target="_blank">March</a> (4), <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/May" target="_blank">May</a> (6), <a href="https://openreview.net/group?id=aclweb.org/ACL/ARR/2026/October" target="_blank">October</a> (3)
 <br />
 
-<i class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="/assets/certificates/emnlp2026-outstanding-reviewer.pdf" target="_blank">Outstanding Reviewer, EMNLP 2026 (ARR May 2026)</a><br />
+<i data-award-date="2026-05" class="fa-solid fa-award" style="color: #5d9679;"></i> <a href="/assets/certificates/emnlp2026-outstanding-reviewer.pdf" target="_blank">Outstanding Reviewer, EMNLP 2026 (ARR May 2026)</a><br />
 
 
     <span class="link-row"><a href="https://aclrollingreview.org/" target="_blank" class="link-btn btn">
@@ -1865,14 +1855,114 @@ Programming Mentor &amp; School Management Member<br />
   </ul>
 </div>
 
-<!-- ## Invited Talks -->
-<div>
+  <h2 id="preprints">Preprints</h2>
+  <div>
+  <ul>
+    
+    <li>
+        
+
+
+    Mutsumi Sasaki,
+    
+
+    
+    <span class="underline">Go Kamoda</span>,
+    
+
+    Ryosuke Takahashi,
+    
+
+    Kosuke Sato,
+    
+
+    Kentaro Inui,
+    
+
+    Keisuke Sakaguchi,
+    
+&amp; 
+    
+    Benjamin Heinzerling
+
+(2026).<br />
+<strong>Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics</strong>.<br />
+In
+<i>arXiv [cs.CL]</i>.
+
+    <br />
+    <span class="link-row"><a href="https://arxiv.org/abs/2606.03982" target="_blank" class="link-btn btn">
+        
+        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
+        
+        arXiv
+    </a></span>
+
+      </li>
+    
+
+  </ul>
+</div>
+
+  <!-- ## Invited Talks -->
+  <div>
   <ol>
     
 
   </ol>
 
 </div>
+
+</div>
+
+<script>
+  (function () {
+    const entries = document.getElementById('cv-entries');
+    const list = document.getElementById('cv-awards-list');
+
+    // ISO year/month keys sort newest first; equal dates retain page order.
+    const icons = Array.from(entries.querySelectorAll('.fa-award'));
+    icons.sort(function (a, b) {
+      return (b.dataset.awardDate || '').localeCompare(a.dataset.awardDate || '');
+    });
+    icons.forEach(function (icon, index) {
+      if (icon.dataset.includeInAwards === 'false') return;
+      const source = icon.closest('li');
+      if (!source) return;
+
+      // Read the award line, including annotations, up to the next line break.
+      const award = document.createElement('strong');
+      let node = icon.nextSibling;
+      while (node && node.nodeName !== 'BR' &&
+             !(node.nodeType === 1 && node.classList.contains('fa-award'))) {
+        award.appendChild(node.cloneNode(true));
+        node = node.nextSibling;
+      }
+      if (!award.textContent.trim()) return;
+
+      if (!source.id) source.id = 'cv-award-source-' + (index + 1);
+      source.classList.add('cv-award-source');
+      let section = source;
+      while (section && section !== entries && section.tagName !== 'H2') {
+        section = section.previousElementSibling || section.parentElement;
+      }
+      const title = source.querySelector('strong');
+      const context = document.createElement('a');
+      context.className = 'cv-awards__context';
+      context.href = '#' + source.id;
+      context.textContent = (section && section.tagName === 'H2' ? section.textContent + ' · ' : '') +
+        (title ? title.textContent : 'View entry');
+      const item = document.createElement('li');
+      const awardIcon = document.createElement('i');
+      awardIcon.className = 'fa-solid fa-award';
+      awardIcon.style.color = '#5d9679';
+      awardIcon.setAttribute('aria-hidden', 'true');
+      item.append(awardIcon, document.createTextNode(' '), award, context);
+      list.appendChild(item);
+    });
+
+  })();
+</script>
 
 
     </section>
