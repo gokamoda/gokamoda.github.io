@@ -1,6 +1,6 @@
 ---
 title: "Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics"
-proceedings_title: "arXiv [cs.CL]"
+proceedings_title: "Findings of the Association for Computational Linguistics: EACL 2027 (to appear)"
 authors:
   - Mutsumi Sasaki
   - Go Kamoda
@@ -9,8 +9,7 @@ authors:
   - Kentaro Inui
   - Keisuke Sakaguchi
   - Benjamin Heinzerling
-year: 2026
-month: 6
+year: 2027
 links:
   - name: "arXiv"
     url: "https://arxiv.org/abs/2606.03982"
