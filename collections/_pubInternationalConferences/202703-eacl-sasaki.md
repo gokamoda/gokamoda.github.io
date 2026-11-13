@@ -10,6 +10,7 @@ authors:
   - Keisuke Sakaguchi
   - Benjamin Heinzerling
 year: 2027
+month: 3
 links:
   - name: "arXiv"
     url: "https://arxiv.org/abs/2606.03982"
