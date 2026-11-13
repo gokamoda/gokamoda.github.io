@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-10-22T05:58:37+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">👑 Outstanding Reviewer at EMNLP 2026</title><link href="https://gokamoda.github.io/news/outstanding-reviewer/" rel="alternate" type="text/html" title="👑 Outstanding Reviewer at EMNLP 2026" /><published>2026-10-21T00:00:00+00:00</published><updated>2026-10-21T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/outstanding-reviewer</id><content type="html" xml:base="https://gokamoda.github.io/news/outstanding-reviewer/"><![CDATA[<p>I was recognized as an <strong>Outstanding Reviewer at EMNLP 2026</strong> in the ACL Rolling Review (ARR) May 2026 cycle.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://gokamoda.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gokamoda.github.io/" rel="alternate" type="text/html" /><updated>2026-11-13T10:09:23+00:00</updated><id>https://gokamoda.github.io/feed.xml</id><title type="html">Go Kamoda</title><subtitle>This is Go Kamoda&apos;s profile page. He is a Ph.D. Student of SOKENDAI at NINJAL, researching computational linguistics and natural language processing. Checkout for his publications, posts, and more.</subtitle><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><entry><title type="html">✅ Paper accepted to Findings of EACL 2027</title><link href="https://gokamoda.github.io/news/eacl2027-findings-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to Findings of EACL 2027" /><published>2026-11-13T00:00:00+00:00</published><updated>2026-11-13T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/eacl2027-findings-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/eacl2027-findings-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to Findings of EACL 2027.</p>
+
+<div>
+  <ul>
+    <li>
+      
+      
+
+
+    Mutsumi Sasaki,
+    
+
+    
+    <span class="underline">Go Kamoda</span>,
+    
+
+    Ryosuke Takahashi,
+    
+
+    Kosuke Sato,
+    
+
+    Kentaro Inui,
+    
+
+    Keisuke Sakaguchi,
+    
+&amp; 
+    
+    Benjamin Heinzerling
+
+(2027).<br />
+<strong>Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics</strong>.<br />
+In
+<i>Findings of the Association for Computational Linguistics: EACL 2027 (to appear)</i>.
+
+    <br />
+    <span class="link-row"><a href="https://arxiv.org/abs/2606.03982" target="_blank" class="link-btn btn">
+        
+        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
+        
+        arXiv
+    </a></span>
+
+    </li>
+  </ul>
+</div>
+
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics"]]></summary></entry><entry><title type="html">👑 Outstanding Reviewer at EMNLP 2026</title><link href="https://gokamoda.github.io/news/outstanding-reviewer/" rel="alternate" type="text/html" title="👑 Outstanding Reviewer at EMNLP 2026" /><published>2026-10-21T00:00:00+00:00</published><updated>2026-10-21T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/outstanding-reviewer</id><content type="html" xml:base="https://gokamoda.github.io/news/outstanding-reviewer/"><![CDATA[<p>I was recognized as an <strong>Outstanding Reviewer at EMNLP 2026</strong> in the ACL Rolling Review (ARR) May 2026 cycle.</p>
 
 <p><a href="/assets/certificates/emnlp2026-outstanding-reviewer.pdf">Certificate</a></p>
 
@@ -575,56 +623,4 @@ In
   </ul>
 </div>
 
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki"]]></summary></entry><entry><title type="html">✅ Paper accepted to the 8th BlackboxNLP Workshop</title><link href="https://gokamoda.github.io/news/bbnlp2025-accept/" rel="alternate" type="text/html" title="✅ Paper accepted to the 8th BlackboxNLP Workshop" /><published>2025-09-18T00:00:00+00:00</published><updated>2025-09-18T00:00:00+00:00</updated><id>https://gokamoda.github.io/news/bbnlp2025-accept</id><content type="html" xml:base="https://gokamoda.github.io/news/bbnlp2025-accept/"><![CDATA[<p>We are pleased to announce that our paper has been accepted to the 8th BlackboxNLP Workshop.</p>
-
-<div>
-  <ul>
-    <li>
-      
-      
-
-
-    Ryosuke Takahashi,
-    
-
-    
-    <span class="underline">Go Kamoda</span>,
-    
-
-    Benjamin Heinzerling,
-    
-
-    Keisuke Sakaguchi,
-    
-&amp; 
-    
-    Kentaro Inui
-
-(2025).<br />
-<strong>Understanding the Side Effects of Rank-One Knowledge Editing</strong>.<br />
-In
-<i>BlackboxNLP 2025: The 8th Workshop on Analyzing and Interpreting Neural Networks for NLP</i>.
-
-    <br />
-    <span class="link-row"><a href="https://aclanthology.org/2025.blackboxnlp-1.11/" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/acl-logo.svg" alt="ACL Anthology logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        ACL Anthology
-    </a><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=ja&amp;user=6hqExwkAAAAJ&amp;sortby=pubdate&amp;citation_for_view=6hqExwkAAAAJ:IjCSPb-OGe4C" target="_blank" class="link-btn btn">
-        
-        <i class="fa-brands fa-google-scholar" style="margin-right: 0.15em;"></i>
-        
-        Google Scholar
-    </a><a href="https://arxiv.org/abs/2406.06032" target="_blank" class="link-btn btn">
-        
-        <img src="/assets/arxiv-logomark-small.svg" alt="arXiv logo" style="height: 1.2em; margin-right: 0.15em; vertical-align: middle;" />
-        
-        arXiv
-    </a></span>
-
-    </li>
-  </ul>
-</div>
-
-<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Understanding the Side Effects of Rank-One Knowledge Editing"]]></summary></entry></feed>
+<p>-&gt; <a href="/cv/">Publications</a></p>]]></content><author><name>Go Kamoda</name><email>gokamoda@gmail.com</email></author><category term="News" /><summary type="html"><![CDATA["Can Language Models Handle a Non-Gregorian Calendar? The Case of the Japanese wareki"]]></summary></entry></feed>

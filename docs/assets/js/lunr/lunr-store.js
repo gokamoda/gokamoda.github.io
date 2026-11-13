@@ -257,6 +257,12 @@ var store = [{
         "url": "/news/outstanding-reviewer/",
         "teaser": null
       },{
+        "title": "✅ Paper accepted to Findings of EACL 2027",
+        "excerpt":"We are pleased to announce that our paper has been accepted to Findings of EACL 2027. Mutsumi Sasaki, Go Kamoda, Ryosuke Takahashi, Kosuke Sato, Kentaro Inui, Keisuke Sakaguchi, &amp; Benjamin Heinzerling (2027). Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics. In Findings of the Association for Computational Linguistics: EACL...","categories": ["News"],
+        "tags": [],
+        "url": "/news/eacl2027-findings-accept/",
+        "teaser": null
+      },{
         "title": "Test-time Augmentation for Factual Probing",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -428,9 +434,9 @@ var store = [{
         "title": "Language Models Compare Quantities Using Number-specific and Unit-specific Heuristics",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/202606-arxiv-sasaki",
+        "url": "/2027-eacl-sasaki",
         "teaser": null
-      },{
+      },,{
     "title": "Notes",
     "excerpt":"","url": "https://gokamoda.github.io/notes/"
   },{
