@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".highlighter-rouge").forEach(wrapper => {
+  document.querySelectorAll(".highlighter-rouge:has(pre)").forEach(wrapper => {
+    if (wrapper.scrollHeight <= wrapper.clientHeight) return;
+
+    wrapper.classList.add("is-collapsible");
     const btn = document.createElement("button");
     btn.className = "code-toggle";
     btn.textContent = "Expand";

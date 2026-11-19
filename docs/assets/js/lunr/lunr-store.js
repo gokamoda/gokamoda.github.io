@@ -149,6 +149,12 @@ var store = [{
         "url": "/notes/kl-softmax-decomposition/",
         "teaser": "/assets/img/kl-softmax-decomposition.png"
       },{
+        "title": "Macを最初に買ったらやること",
+        "excerpt":"ソフトウェアアップデート 「システム設定」→「一般」→「ソフトウェアアップデート」で更新する。 Homebrewをインストールする Homebrew公式サイトからコマンドをコピーしてターミナルで実行する。 その間に以下設定をやってしまう。 Touch ID Settings →「Touch ID &amp; Password」 キーボード入力を最速に Settings →「Keyboard」→「Keyboard Repeat」→「Fastest」 Settings →「Keyboard」→「Delay Until Repeat」→「Short」 Dockの位置とサイズを変える Settings →「Desktop &amp; Dock」→「Size」→「Small」 Settings →「Desktop &amp; Dock」→「Dock Position on Screen」→「Left」 Settings →「Desktop &amp; Dock」→「Automatically hide and show the Dock」をオンにする。 タップでクリックをオンにする Settings →「Trackpad」→「Point &amp; Click」→「Tap to click」をオンにする。 Homebrewでアプリを入れる ターミナルで次のコマンドを実行する。...","categories": [],
+        "tags": [],
+        "url": "/notes/mac-initial-setup/",
+        "teaser": null
+      },{
         "title": "✅ Paper accepted to the COLING 2025",
         "excerpt":"We are pleased to announce that our paper has been accepted to COLING 2025. Go Kamoda, Akari Asai, Ana Brassard, &amp; Keisuke Sakaguchi (2025). Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment. In Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025). ACL Anthology Google Scholar...","categories": ["News"],
         "tags": [],
