@@ -286,7 +286,7 @@ pre:hover .copy-btn {
 }
 
 /* smoke */
-.highlighter-rouge:has(pre)::after {
+.highlighter-rouge.is-collapsible::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -307,7 +307,7 @@ pre:hover .copy-btn {
   max-height: none;
 }
 
-.highlighter-rouge.expanded:has(pre)::after {
+.highlighter-rouge.is-collapsible.expanded::after {
   opacity: 0;
 }
 
