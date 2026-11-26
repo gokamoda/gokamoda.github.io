@@ -2,6 +2,7 @@
 layout: splash
 title: "Starshipの設定"
 header:
+  teaser: /assets/img/starship.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
@@ -162,3 +163,5 @@ utc_time_offset = '+9'
 時刻は `utc_time_offset = '+9'` で日本時間に固定している。
 
 [Starship公式ガイド](https://starship.rs/guide/) · [MesloLG Nerd FontのHomebrewページ](https://formulae.brew.sh/cask/font-meslo-lg-nerd-font)
+
+
