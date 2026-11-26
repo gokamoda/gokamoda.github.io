@@ -256,6 +256,11 @@
       <li>Settings →「Keyboard」→「Keyboard Shortcuts」→「Mission Control」で「Switch to Desktop 1」〜「Switch to Desktop 5」をオンにし、それぞれ <code class="language-plaintext highlighter-rouge">ctrl + 1</code>〜<code class="language-plaintext highlighter-rouge">ctrl + 5</code> を割り当てる。</li>
     </ol>
   </li>
+  <li><strong>起動音をオフにする</strong>
+    <ol>
+      <li>Settings →「Sound」→「Play sound on startup」をオフにする。</li>
+    </ol>
+  </li>
   <li>たぶんここで一旦再起動するとよい。</li>
   <li><strong>google-japanese-imeの設定</strong>
     <ol>
@@ -295,6 +300,25 @@
       <li>iTerm2 → Settings →「Keys」→「Hotkey」→「Show/hide iTerm2 with a system-wide hotkey」をオンにする。</li>
     </ol>
   </li>
+  <li><strong>zshの入力候補と構文ハイライトを設定する</strong>
+    <ol>
+      <li>ターミナルでプラグインをインストールする。
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>zsh-autosuggestions zsh-syntax-highlighting
+</code></pre></div>        </div>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">~/.zshrc</code> の末尾に追加する。入力履歴から候補が表示され、コマンドに色が付く。
+        <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># zsh</span>
+<span class="nb">source</span> <span class="s2">"</span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/share/zsh-autosuggestions/zsh-autosuggestions.zsh"</span>
+<span class="nb">source</span> <span class="s2">"</span><span class="si">$(</span>brew <span class="nt">--prefix</span><span class="si">)</span><span class="s2">/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>ターミナルで新しいタブを開くと反映される。<code class="language-plaintext highlighter-rouge">zsh-syntax-highlighting</code> はほかのプラグインより最後に読み込む。</li>
+    </ol>
+  </li>
+  <li>starship</li>
+  <li>VSCode</li>
+  <li></li>
+  <li>tmux</li>
 </ol>
 
     </section>
