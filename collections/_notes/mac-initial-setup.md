@@ -42,6 +42,8 @@ excerpt: "新しいMacで最初にやる7つの設定。"
 1. **デスクトップを5つ作ってショートカットを設定する**
    1. `ctrl + ↑` で Mission Control を開き、画面上部の「+」でデスクトップが合計5つになるまで追加する。
    2. Settings →「Keyboard」→「Keyboard Shortcuts」→「Mission Control」で「Switch to Desktop 1」〜「Switch to Desktop 5」をオンにし、それぞれ `ctrl + 1`〜`ctrl + 5` を割り当てる。
+1. **起動音をオフにする**
+   1. Settings →「Sound」→「Play sound on startup」をオフにする。
 1. たぶんここで一旦再起動するとよい。
 1. **google-japanese-imeの設定**
    1. settings →「Keyboard」→「Input Sources」→「Edit」→「+」→「Japanese」→「Hiragana (Google)」
@@ -66,3 +68,19 @@ excerpt: "新しいMacで最初にやる7つの設定。"
       9. Bottom Right Quarter（右下） → `cmd + ctrl + shift + ↓`
 1. **iTerm2の設定**
    1. iTerm2 → Settings →「Keys」→「Hotkey」→「Show/hide iTerm2 with a system-wide hotkey」をオンにする。
+1. **zshの入力候補と構文ハイライトを設定する**
+   1. ターミナルでプラグインをインストールする。
+      ```sh
+      brew install zsh-autosuggestions zsh-syntax-highlighting
+      ```
+   2. `~/.zshrc` の末尾に追加する。入力履歴から候補が表示され、コマンドに色が付く。
+      ```zsh
+      # zsh
+      source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+      source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+      ```
+   3. ターミナルで新しいタブを開くと反映される。`zsh-syntax-highlighting` はほかのプラグインより最後に読み込む。
+1. starship
+2. VSCode
+3. 
+4. tmux
