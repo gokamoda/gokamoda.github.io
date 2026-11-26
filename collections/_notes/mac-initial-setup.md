@@ -80,7 +80,8 @@ excerpt: "新しいMacで最初にやる7つの設定。"
       source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
       ```
    3. ターミナルで新しいタブを開くと反映される。`zsh-syntax-highlighting` はほかのプラグインより最後に読み込む。
-1. starship
+1. **Starshipの設定**
+   1. [Starshipの設定]({{ "/notes/starship/" | relative_url }})を参照して、Starshipを導入し、プロンプトの見た目を整える。
 2. VSCode
 3. 
 4. tmux
