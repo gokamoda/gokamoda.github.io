@@ -2,6 +2,7 @@
 layout: splash
 title: "Macを最初に買ったらやること"
 header:
+  teaser: /assets/img/mac-initial-setup.png
   show_overlay_excerpt: false
   overlay_color: "#59876F"
 show_date: true
