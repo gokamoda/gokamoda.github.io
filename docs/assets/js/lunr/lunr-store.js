@@ -155,6 +155,12 @@ var store = [{
         "url": "/notes/mac-initial-setup/",
         "teaser": null
       },{
+        "title": "Starshipの設定",
+        "excerpt":"時刻、Python・Conda環境、ディレクトリ、Gitのブランチ・変更状況を表示する。現在のMacの設定をそのまま載せておく。 Starshipを入れる ターミナルで実行する。 brew install starship フォントを入れてiTerm2に設定する アイコンや区切り文字を正しく表示し、文字化け（□など）を防ぐためにNerd Fontを入れる。 brew install --cask font-meslo-lg-nerd-font iTerm2 → Settings →「Profiles」→「Text」→「Font」で「MesloLGL Nerd Font」の Regular、12pt を選ぶ。 zshでStarshipを有効にする ~/.zshrc に追加する。zsh-syntax-highlighting を読み込む行より前に置く。 # starship eval \"$(starship init zsh)\" 設定ファイルを作る mkdir -p ~/.config を実行し、以下の内容を ~/.config/starship.toml に保存する。既に設定がある場合はバックアップしてから置き換える。 ターミナルで新しいタブを開くと反映される。 ※ MesloLGL Nerd FontがPCに入っていれば、以下のコード内のアイコンも表示されます。未導入の場合は、□（豆腐）になることがあります。 #### icon # nf-ple-left_half_circle_thick # nf-pl-left_hard_divider #...","categories": [],
+        "tags": [],
+        "url": "/notes/starship/",
+        "teaser": null
+      },{
         "title": "✅ Paper accepted to the COLING 2025",
         "excerpt":"We are pleased to announce that our paper has been accepted to COLING 2025. Go Kamoda, Akari Asai, Ana Brassard, &amp; Keisuke Sakaguchi (2025). Quantifying the Influence of Evaluation Aspects on Long-Form Response Assessment. In Proceedings of the 31st International Conference on Computational Linguistics (COLING 2025). ACL Anthology Google Scholar...","categories": ["News"],
         "tags": [],

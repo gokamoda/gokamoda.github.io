@@ -1,0 +1,416 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Starshipの設定 - Go Kamoda</title>
+<meta name="description" content="Macで使っているStarshipとNerd Fontの設定。">
+
+
+  <meta name="author" content="Go Kamoda">
+  
+  <meta property="article:author" content="Go Kamoda">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Go Kamoda">
+<meta property="og:title" content="Starshipの設定">
+<meta property="og:url" content="https://gokamoda.github.io/notes/starship/">
+
+
+  <meta property="og:description" content="Macで使っているStarshipとNerd Fontの設定。">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-11-24T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://gokamoda.github.io/notes/starship/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Go Kamoda Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" href=/assets/favicon/favicon-96x96.png sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href=/assets/favicon/favicon.svg />
+<link rel="shortcut icon" href=/assets/favicon/favicon.ico />
+<link rel="apple-touch-icon" sizes="180x180" href=/assets/favicon/apple-touch-icon.png />
+<link rel="manifest" href=/assets/favicon/site.webmanifest />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          G<img src=/assets/enaga-transparent-blackline.svg alt="" class="img-site-title"/>&nbsp;Kamoda
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/notes/"
+                
+                
+              >Notes</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #59876F; background-image: url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Starshipの設定
+
+        
+      </h1>
+      
+      
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2026-11-24T00:00:00+00:00">November 24, 2026</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Starshipの設定">
+    <meta itemprop="description" content="Macで使っているStarshipとNerd Fontの設定。">
+    <meta itemprop="datePublished" content="2026-11-24T00:00:00+00:00">
+    
+    <section class="page__content" itemprop="text">
+      <style>
+.page__content pre,
+.page__content code,
+.page__content code span {
+  font-family: "MesloLGL Nerd Font", "MesloLGL Nerd Font Mono", "MesloLGL NF", "MesloLGL NFM", monospace;
+}
+</style>
+
+<p>時刻、Python・Conda環境、ディレクトリ、Gitのブランチ・変更状況を表示する。現在のMacの設定をそのまま載せておく。</p>
+
+<ol>
+  <li><strong>Starshipを入れる</strong>
+    <ol>
+      <li>ターミナルで実行する。
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>starship
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li><strong>フォントを入れてiTerm2に設定する</strong>
+    <ol>
+      <li>アイコンや区切り文字を正しく表示し、文字化け（□など）を防ぐためにNerd Fontを入れる。
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install</span> <span class="nt">--cask</span> font-meslo-lg-nerd-font
+</code></pre></div>        </div>
+      </li>
+      <li>iTerm2 → Settings →「Profiles」→「Text」→「Font」で「MesloLGL Nerd Font」の Regular、12pt を選ぶ。</li>
+    </ol>
+  </li>
+  <li><strong>zshでStarshipを有効にする</strong>
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">~/.zshrc</code> に追加する。<code class="language-plaintext highlighter-rouge">zsh-syntax-highlighting</code> を読み込む行より前に置く。
+        <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># starship</span>
+<span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>starship init zsh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li><strong>設定ファイルを作る</strong>
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">mkdir -p ~/.config</code> を実行し、以下の内容を <code class="language-plaintext highlighter-rouge">~/.config/starship.toml</code> に保存する。既に設定がある場合はバックアップしてから置き換える。</li>
+      <li>ターミナルで新しいタブを開くと反映される。</li>
+    </ol>
+  </li>
+</ol>
+
+<p>※ MesloLGL Nerd FontがPCに入っていれば、以下のコード内のアイコンも表示されます。未導入の場合は、□（豆腐）になることがあります。</p>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#### icon</span>
+<span class="c"># nf-ple-left_half_circle_thick</span>
+<span class="c"># nf-pl-left_hard_divider</span>
+<span class="c"># nf-pl-left_hard_divider</span>
+<span class="c"># nf-pl-right_hard_divider</span>
+<span class="c"># nf-ple-right_half_circle_thick</span>
+
+<span class="py">format</span> <span class="p">=</span> <span class="s">"""
+[](fg:#7aa2f7)</span><span class="se">\
+</span><span class="s">$os</span><span class="se">\
+</span><span class="s">$time</span><span class="se">\
+</span><span class="s">$conda</span><span class="se">\
+</span><span class="s">$python</span><span class="se">\
+</span><span class="s">[ ](fg:#7aa2f7 bg:#1a1b26)</span><span class="se">\
+</span><span class="s">$direnv</span><span class="se">\
+</span><span class="s">$directory</span><span class="se">\
+</span><span class="s">$git_branch</span><span class="se">\
+</span><span class="s">$git_status</span><span class="se">\
+</span><span class="s">$git_metrics</span><span class="se">\
+</span><span class="s">[](fg:#1a1b26)</span><span class="se">\
+\n</span><span class="s">$character</span><span class="se">\
+</span><span class="s">"""</span>
+
+<span class="nn">[os]</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">"[$symbol]($style)"</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#1a1b26 bg:#7aa2f7'</span>
+<span class="py">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="nn">[os.symbols]</span>
+<span class="py">Macos</span> <span class="p">=</span> <span class="s">"   "</span> <span class="c"># nf-fa-apple</span>
+<span class="py">Ubuntu</span> <span class="p">=</span> <span class="s">"  "</span> <span class="c"># nf-linux-ubuntu</span>
+<span class="py">Debian</span> <span class="p">=</span> <span class="s">"  "</span> <span class="c"># nf-linux-debian</span>
+
+<span class="nn">[directory]</span>
+<span class="py">truncation_length</span> <span class="p">=</span> <span class="mi">6</span>
+<span class="py">truncation_symbol</span> <span class="p">=</span> <span class="s">' '</span> <span class="c"># nf-fa-folder_open</span>
+<span class="py">truncate_to_repo</span> <span class="p">=</span> <span class="kc">false</span>
+<span class="py">home_symbol</span> <span class="p">=</span> <span class="s">' ~'</span> <span class="c"># nf-costum-home</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#7aa2f7 bg:#1a1b26'</span>
+<span class="py">read_only</span> <span class="p">=</span> <span class="s">' 󰌾 '</span> <span class="c"># nf-md-lock</span>
+<span class="py">read_only_style</span> <span class="p">=</span> <span class="s">'fg:#f7768e bg:#1a1b26'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[$path]($style)[$read_only]($read_only_style)'</span>
+
+<span class="nn">[git_branch]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">'  '</span> <span class="c"># nf-fa-github_alt, nf-fa-code_fork</span>
+<span class="py">truncation_length</span> <span class="p">=</span> <span class="mi">4</span>
+<span class="py">truncation_symbol</span> <span class="p">=</span> <span class="s">''</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#7aa2f7 bg:#1a1b26'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[  $symbol$branch(:$remote_branch)]($style)'</span> <span class="c"># nf-pl-left_soft_divider</span>
+
+<span class="nn">[git_status]</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#e0af68 bg:#1a1b26'</span>
+<span class="py">conflicted</span> <span class="p">=</span> <span class="py">'</span><span class="p">=</span><span class="s">'</span><span class="err">
+</span><span class="py">ahead</span> <span class="p">=</span> <span class="s">'⇡${count}'</span>
+<span class="py">behind</span> <span class="p">=</span> <span class="s">'⇣${count}'</span>
+<span class="py">diverged</span> <span class="p">=</span> <span class="s">'⇕'</span>
+<span class="py">up_to_date</span> <span class="p">=</span> <span class="s">'✓'</span>
+<span class="py">untracked</span> <span class="p">=</span> <span class="s">'?'</span>
+<span class="py">stashed</span> <span class="p">=</span> <span class="s">'$'</span>
+<span class="py">modified</span> <span class="p">=</span> <span class="s">'!${count}'</span>
+<span class="py">renamed</span> <span class="p">=</span> <span class="s">'»'</span>
+<span class="py">deleted</span> <span class="p">=</span> <span class="s">'✘'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'([\[$all_status$ahead_behind\]]($style))'</span>
+
+<span class="nn">[git_metrics]</span>
+<span class="py">added_style</span> <span class="p">=</span> <span class="s">'fg:#9ece6a bg:#1a1b26'</span>
+<span class="py">deleted_style</span> <span class="p">=</span> <span class="s">'fg:#9ece6a bg:#1a1b26'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[+$added/-$deleted]($deleted_style)'</span>
+<span class="py">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="nn">[fill]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">'─'</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'blue'</span>
+
+<span class="nn">[conda]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">'  '</span> <span class="c"># nf-dev-python</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#9ece6a bg:#1a1b26'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[ $symbol$environment ]($style)'</span>
+<span class="py">ignore_base</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="nn">[python]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">'  '</span> <span class="c"># nf-dev-python</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'</span>
+<span class="py">pyenv_version_name</span> <span class="p">=</span> <span class="kc">false</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#1a1b26 bg:#7aa2f7'</span>
+
+<span class="nn">[direnv]</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[$symbol$allowed]($style) '</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">"bold fg:#1a1b26 bg:#cba6f7"</span>
+<span class="py">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+
+<span class="nn">[character]</span>
+<span class="py">success_symbol</span> <span class="p">=</span> <span class="s">'[❯](bold #9ece6a)'</span>
+<span class="py">error_symbol</span> <span class="p">=</span> <span class="s">'[❯](bold red)'</span>
+
+<span class="nn">[cmd_duration]</span>
+<span class="py">min_time</span> <span class="p">=</span> <span class="mi">1</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#e0af68'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">"[   $duration]($style)"</span> <span class="c"># nf-pl-right_soft_divider, nf-mdi-clock</span>
+
+<span class="nn">[lua]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">""</span> <span class="c"># nf-seti-lua</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[  $symbol $version](blue)'</span> <span class="c"># nf-pl-right_soft_divider</span>
+
+<span class="nn">[rust]</span>
+<span class="py">symbol</span> <span class="p">=</span> <span class="s">""</span> <span class="c"># nf-dev-rust</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[  $symbol $version](red)'</span> <span class="c"># nf-pl-right_soft_divider</span>
+
+<span class="nn">[time]</span>
+<span class="py">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+<span class="py">style</span> <span class="p">=</span> <span class="s">'fg:#73daca'</span>
+<span class="py">format</span> <span class="p">=</span> <span class="s">'[  $time ]($style)'</span> <span class="c"># nf-pl-right_soft_divider, nf-fa-clock_o</span>
+<span class="py">time_format</span> <span class="p">=</span> <span class="s">'%T'</span>
+<span class="py">utc_time_offset</span> <span class="p">=</span> <span class="s">'+9'</span>
+</code></pre></div></div>
+
+<p>時刻は <code class="language-plaintext highlighter-rouge">utc_time_offset = '+9'</code> で日本時間に固定している。</p>
+
+<p><a href="https://starship.rs/guide/">Starship公式ガイド</a> · <a href="https://formulae.brew.sh/cask/font-meslo-lg-nerd-font">MesloLG Nerd FontのHomebrewページ</a></p>
+
+    </section>
+  </article>
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-copyright">&copy; 2020 - 2026 <a href="https://gokamoda.github.io">Go Kamoda</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="/assets/js/copy_code.js"></script>
+
+
+<script src="/assets/js/collapsible-sections.js"></script>
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQCS7FXG9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DDQCS7FXG9', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
