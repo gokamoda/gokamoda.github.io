@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Macを最初に買ったらやること"
+title: "Macを買ったら最初にやること"
 header:
   teaser: /assets/img/mac-initial-setup.png
   show_overlay_excerpt: false
