@@ -149,7 +149,7 @@ var store = [{
         "url": "/notes/kl-softmax-decomposition/",
         "teaser": "/assets/img/kl-softmax-decomposition.png"
       },{
-        "title": "Macを最初に買ったらやること",
+        "title": "Macを買ったら最初にやること",
         "excerpt":"ソフトウェアアップデート 「システム設定」→「一般」→「ソフトウェアアップデート」で更新する。 Homebrewをインストールする Homebrew公式サイトからコマンドをコピーしてターミナルで実行する。 その間に以下設定をやってしまう。 Touch ID Settings →「Touch ID &amp; Password」 キーボード入力を最速に Settings →「Keyboard」→「Keyboard Repeat」→「Fastest」 Settings →「Keyboard」→「Delay Until Repeat」→「Short」 Dockの位置とサイズを変える Settings →「Desktop &amp; Dock」→「Size」→「Small」 Settings →「Desktop &amp; Dock」→「Dock Position on Screen」→「Left」 Settings →「Desktop &amp; Dock」→「Automatically hide and show the Dock」をオンにする。 タップでクリックをオンにする Settings →「Trackpad」→「Point &amp; Click」→「Tap to click」をオンにする。 Homebrewでアプリを入れる ターミナルで次のコマンドを実行する。...","categories": [],
         "tags": [],
         "url": "/notes/mac-initial-setup/",
